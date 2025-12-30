@@ -2,69 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=goods.Goods.batchPush"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-货品类
-
-货品推送
-
-组合装查询
-
-货品档案查询
-
-平台货品查询
-
-平台货品推送
-
-物料清单推送
-
-生产单推送
-
-生产单查询
-
-货品分类查询
-
-品牌查询
-
-组合装创建/更新
-
-平台类目查询
-
-货品批量推送
-
-物料清单查询
-
-条码上传
-
-货品推送2
-
-新建分类
-
-货品品牌新建/更新
-
-生产结算单查询
-
-当前位置： API文档 > 货品类
-
 **goods.Goods.batchPush** **（货品批量推送）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -81,13 +19,6 @@ title: "API文档"
 | **2.1 举例说明：**自研商城、SCM、SRM、财务系统、SAP等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -206,7 +137,7 @@ title: "API文档"
 | --- | --- |
 | json格式请求报文 | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>112<br>113<br>114<br>115<br>116 | `[`<br>```[`<br>```{`<br>```"goods_no"``:``"testGoodsQ12-26 11:28:14_0"``,`<br>```"goods_name"``:``"testGoodsNameQ12-26 11:28:14_0"``,`<br>```"short_name"``:``"shortName"``,`<br>```"auto_create_bc"``:``true``,`<br>```"class_name"``:``"社区团购三级"``,`<br>```"brand_name"``:``"新建品牌3"``,`<br>```"goods_type"``: 1,`<br>```"alias"``:``"alias"``,`<br>```"pinyin"``:``"ceshi"``,`<br>```"origin"``:``"内蒙古呼和浩特市"``,`<br>```"remark"``:``"货品备注"``,`<br>```"prop1"``:``"P1"``,`<br>```"prop2"``:``"P2"``,`<br>```"prop3"``:``"P13"``,`<br>```"prop4"``:``"P14"``,`<br>```"prop5"``:``"P15"``,`<br>```"prop6"``:``"P16"``,`<br>```"flag_name"``:``""``,`<br>```"spec_list"``: [`<br>```{`<br>```"spec_no"``:``"spec_noQ12-26 11:28:14_0_0"``,`<br>```"spec_name"``:``"spec_nameQ12-26 11:28:14_0_0"``,`<br>```"spec_code"``:``"spec_code"``,`<br>```"barcode"``:``"spec_noQ12-26 11:28:14_0_0"``,`<br>```"is_not_need_examine"``: 1,`<br>```"pack_score"``: 12,`<br>```"lowest_price"``: 200,`<br>```"remark"``:``"单品备注"``,`<br>```"sn_type"``: 1,`<br>```"retail_price"``: 1,`<br>```"wholesale_price"``: 1,`<br>```"market_price"``: 1,`<br>```"is_single_batch"``: 1,`<br>```"custom_price1"``: 1,`<br>```"custom_price2"``: 2`<br>```},`<br>```{`<br>```"spec_no"``:``"spec_noQ12-26 11:28:14_0_1"``,`<br>```"spec_name"``:``"spec_nameQ12-26 11:28:14_0_1"``,`<br>```"spec_code"``:``"spec_code"``,`<br>```"barcode"``:``"spec_noQ12-26 11:28:14_0_1"``,`<br>```"is_not_need_examine"``: 1,`<br>```"pack_score"``: 12,`<br>```"lowest_price"``: 200,`<br>```"remark"``:``"单品备注"``,`<br>```"sn_type"``: 1,`<br>```"retail_price"``: 1,`<br>```"wholesale_price"``: 1,`<br>```"market_price"``: 1,`<br>```"is_single_batch"``: 1,`<br>```"custom_price1"``: 1,`<br>```"custom_price2"``: 2`<br>```}`<br>```]`<br>```},`<br>```{`<br>```"goods_no"``:``"testGoodsQ12-26 11:28:14_1"``,`<br>```"goods_name"``:``"testGoodsNameQ12-26 11:28:14_1"``,`<br>```"short_name"``:``"shortName"``,`<br>```"auto_create_bc"``:``true``,`<br>```"class_name"``:``"社区团购三级"``,`<br>```"brand_name"``:``"新建品牌3"``,`<br>```"goods_type"``: 1,`<br>```"alias"``:``"alias"``,`<br>```"pinyin"``:``"ceshi"``,`<br>```"origin"``:``"内蒙古呼和浩特市"``,`<br>```"remark"``:``"货品备注"``,`<br>```"prop1"``:``"P1"``,`<br>```"prop2"``:``"P2"``,`<br>```"prop3"``:``"P13"``,`<br>```"prop4"``:``"P14"``,`<br>```"prop5"``:``"P15"``,`<br>```"prop6"``:``"P16"``,`<br>```"flag_name"``:``""``,`<br>```"spec_list"``: [`<br>```{`<br>```"spec_no"``:``"spec_noQ12-26 11:28:14_1_0"``,`<br>```"spec_name"``:``"spec_nameQ12-26 11:28:14_1_0"``,`<br>```"spec_code"``:``"spec_code"``,`<br>```"barcode"``:``"spec_noQ12-26 11:28:14_1_0"``,`<br>```"is_not_need_examine"``: 1,`<br>```"pack_score"``: 12,`<br>```"lowest_price"``: 200,`<br>```"remark"``:``"单品备注"``,`<br>```"sn_type"``: 1,`<br>```"retail_price"``: 1,`<br>```"wholesale_price"``: 1,`<br>```"market_price"``: 1,`<br>```"is_single_batch"``: 1,`<br>```"custom_price1"``: 1,`<br>```"custom_price2"``: 2`<br>```},`<br>```{`<br>```"spec_no"``:``"spec_noQ12-26 11:28:14_1_1"``,`<br>```"spec_name"``:``"spec_nameQ12-26 11:28:14_1_1"``,`<br>```"spec_code"``:``"spec_code"``,`<br>```"barcode"``:``"spec_noQ12-26 11:28:14_1_1"``,`<br>```"is_not_need_examine"``: 1,`<br>```"pack_score"``: 12,`<br>```"lowest_price"``: 200,`<br>```"remark"``:``"单品备注"``,`<br>```"sn_type"``: 1,`<br>```"retail_price"``: 1,`<br>```"wholesale_price"``: 1,`<br>```"market_price"``: 1,`<br>```"is_single_batch"``: 1,`<br>```"custom_price1"``: 1,`<br>```"custom_price2"``: 2`<br>```}`<br>```]`<br>```}`<br>```]`<br>`]` | |
+|  | `[`<br>```[`<br>```{`<br>```"goods_no"``:``"testGoodsQ12-26 11:28:14_0"``,`<br>```"goods_name"``:``"testGoodsNameQ12-26 11:28:14_0"``,`<br>```"short_name"``:``"shortName"``,`<br>```"auto_create_bc"``:``true``,`<br>```"class_name"``:``"社区团购三级"``,`<br>```"brand_name"``:``"新建品牌3"``,`<br>```"goods_type"``: 1,`<br>```"alias"``:``"alias"``,`<br>```"pinyin"``:``"ceshi"``,`<br>```"origin"``:``"内蒙古呼和浩特市"``,`<br>```"remark"``:``"货品备注"``,`<br>```"prop1"``:``"P1"``,`<br>```"prop2"``:``"P2"``,`<br>```"prop3"``:``"P13"``,`<br>```"prop4"``:``"P14"``,`<br>```"prop5"``:``"P15"``,`<br>```"prop6"``:``"P16"``,`<br>```"flag_name"``:``""``,`<br>```"spec_list"``: [`<br>```{`<br>```"spec_no"``:``"spec_noQ12-26 11:28:14_0_0"``,`<br>```"spec_name"``:``"spec_nameQ12-26 11:28:14_0_0"``,`<br>```"spec_code"``:``"spec_code"``,`<br>```"barcode"``:``"spec_noQ12-26 11:28:14_0_0"``,`<br>```"is_not_need_examine"``: 1,`<br>```"pack_score"``: 12,`<br>```"lowest_price"``: 200,`<br>```"remark"``:``"单品备注"``,`<br>```"sn_type"``: 1,`<br>```"retail_price"``: 1,`<br>```"wholesale_price"``: 1,`<br>```"market_price"``: 1,`<br>```"is_single_batch"``: 1,`<br>```"custom_price1"``: 1,`<br>```"custom_price2"``: 2`<br>```},`<br>```{`<br>```"spec_no"``:``"spec_noQ12-26 11:28:14_0_1"``,`<br>```"spec_name"``:``"spec_nameQ12-26 11:28:14_0_1"``,`<br>```"spec_code"``:``"spec_code"``,`<br>```"barcode"``:``"spec_noQ12-26 11:28:14_0_1"``,`<br>```"is_not_need_examine"``: 1,`<br>```"pack_score"``: 12,`<br>```"lowest_price"``: 200,`<br>```"remark"``:``"单品备注"``,`<br>```"sn_type"``: 1,`<br>```"retail_price"``: 1,`<br>```"wholesale_price"``: 1,`<br>```"market_price"``: 1,`<br>```"is_single_batch"``: 1,`<br>```"custom_price1"``: 1,`<br>```"custom_price2"``: 2`<br>```}`<br>```]`<br>```},`<br>```{`<br>```"goods_no"``:``"testGoodsQ12-26 11:28:14_1"``,`<br>```"goods_name"``:``"testGoodsNameQ12-26 11:28:14_1"``,`<br>```"short_name"``:``"shortName"``,`<br>```"auto_create_bc"``:``true``,`<br>```"class_name"``:``"社区团购三级"``,`<br>```"brand_name"``:``"新建品牌3"``,`<br>```"goods_type"``: 1,`<br>```"alias"``:``"alias"``,`<br>```"pinyin"``:``"ceshi"``,`<br>```"origin"``:``"内蒙古呼和浩特市"``,`<br>```"remark"``:``"货品备注"``,`<br>```"prop1"``:``"P1"``,`<br>```"prop2"``:``"P2"``,`<br>```"prop3"``:``"P13"``,`<br>```"prop4"``:``"P14"``,`<br>```"prop5"``:``"P15"``,`<br>```"prop6"``:``"P16"``,`<br>```"flag_name"``:``""``,`<br>```"spec_list"``: [`<br>```{`<br>```"spec_no"``:``"spec_noQ12-26 11:28:14_1_0"``,`<br>```"spec_name"``:``"spec_nameQ12-26 11:28:14_1_0"``,`<br>```"spec_code"``:``"spec_code"``,`<br>```"barcode"``:``"spec_noQ12-26 11:28:14_1_0"``,`<br>```"is_not_need_examine"``: 1,`<br>```"pack_score"``: 12,`<br>```"lowest_price"``: 200,`<br>```"remark"``:``"单品备注"``,`<br>```"sn_type"``: 1,`<br>```"retail_price"``: 1,`<br>```"wholesale_price"``: 1,`<br>```"market_price"``: 1,`<br>```"is_single_batch"``: 1,`<br>```"custom_price1"``: 1,`<br>```"custom_price2"``: 2`<br>```},`<br>```{`<br>```"spec_no"``:``"spec_noQ12-26 11:28:14_1_1"``,`<br>```"spec_name"``:``"spec_nameQ12-26 11:28:14_1_1"``,`<br>```"spec_code"``:``"spec_code"``,`<br>```"barcode"``:``"spec_noQ12-26 11:28:14_1_1"``,`<br>```"is_not_need_examine"``: 1,`<br>```"pack_score"``: 12,`<br>```"lowest_price"``: 200,`<br>```"remark"``:``"单品备注"``,`<br>```"sn_type"``: 1,`<br>```"retail_price"``: 1,`<br>```"wholesale_price"``: 1,`<br>```"market_price"``: 1,`<br>```"is_single_batch"``: 1,`<br>```"custom_price1"``: 1,`<br>```"custom_price2"``: 2`<br>```}`<br>```]`<br>```}`<br>```]`<br>`]` | |
 | PHP | |     |     |
 | --- | --- |
 | 1 | `<br>` | |
@@ -221,7 +152,7 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"error_list"``: []`<br>```}`<br>`}` | |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"error_list"``: []`<br>```}`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -229,12 +160,4 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"error_list"``: [`<br>```{`<br>```"error"``:``"单品条数不得超过500条或为空"``,`<br>```"no"``:``"testGoodsQ12-21 10:52:32_0"`<br>```},`<br>```{`<br>```"error"``:``"单品条数不得超过500条或为空"``,`<br>```"no"``:``"testGoodsQ12-21 10:52:32_1"`<br>```}`<br>```]`<br>```}`<br>`}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"error_list"``: [`<br>```{`<br>```"error"``:``"单品条数不得超过500条或为空"``,`<br>```"no"``:``"testGoodsQ12-21 10:52:32_0"`<br>```},`<br>```{`<br>```"error"``:``"单品条数不得超过500条或为空"``,`<br>```"no"``:``"testGoodsQ12-21 10:52:32_1"`<br>```}`<br>```]`<br>```}`<br>`}` | |

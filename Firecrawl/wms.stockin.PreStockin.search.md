@@ -2,59 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=wms.stockin.PreStockin.search"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-售后类
-
-退货入库单查询
-
-原始退款单推送
-
-创建退货预入库
-
-退换单查询
-
-预入库单据查询
-
-退货预入库单取消
-
-历史退换单查询
-
-原始退款单查询
-
-原始退款单推送2
-
-退货入库单推送
-
-快速退货
-
-历史退货入库单查询
-
-历史原始退款单查询
-
-退货物流包裹查询
-
-当前位置： API文档 > 售后类
-
 **wms.stockin.PreStockin.search** **（预入库单据查询）**
-
-**¥标准**
 
 **1.接口说明**
 
@@ -73,13 +21,6 @@ title: "API文档"
 | **2.1** **举例说明：**自研商城、分销系统、全渠道等系统对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -218,11 +159,11 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `[{`<br>```"mt_from"``:``"2020-01-01 00:00:00"``,`<br>```"mt_to"``:``"2020-01-20 00:00:00"`<br>`}]` |
+|  | `[{`<br>```"mt_from"``:``"2020-01-01 00:00:00"``,`<br>```"mt_to"``:``"2020-01-20 00:00:00"`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->mt_from =``"2020-01-01 00:00:00"``;`<br>`$parMap``->mt_to   =``"2020-01-20 00:00:00"``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$response``=``$client``->pageCall(``"wms.stockin.PreStockin.search "``,``$pager``,``$parMap``);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->mt_from =``"2020-01-01 00:00:00"``;`<br>`$parMap``->mt_to   =``"2020-01-20 00:00:00"``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$response``=``$client``->pageCall(``"wms.stockin.PreStockin.search "``,``$pager``,``$parMap``);`<br>``<br>`?>` |
 
 |     |     |
 | --- | --- |
@@ -240,7 +181,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"logistics_name"``:``"小火柴其他物流"``,`<br>```"detail_list"``: [{`<br>```"rec_id"``: 206498,`<br>```"stockin_id"``: 86705,`<br>```"goods_id"``: 106369,`<br>```"spec_id"``: 276760,`<br>```"goods_name"``:``"隔离衣"``,`<br>```"goods_no"``:``"XT001"``,`<br>```"spec_name"``:``"XL"``,`<br>```"spec_no"``:``"XT001"``,`<br>```"expire_date"``:``""``,`<br>```"num"``:``"1.0000"``,`<br>```"num2"``:``"0.0100"``,`<br>```"production_date"``:``""``,`<br>```"batch_no"``:``""``,`<br>```"expect_num"``:``"0.0000"``,`<br>```"remark"``:``""``,`<br>```"weight"``:``"0.0000"``,`<br>```"goods_weight"``:``"0.0000"``,`<br>```"defect"``:``false``,`<br>```"modified_date"``:``"2022-09-14 19:43:49"``,`<br>```"created_date"``:``"2022-09-14 19:43:49"``,`<br>```"unit_ratio"``:``"100.0000"``,`<br>```"validity_days"``: 730,`<br>```"need_inspect_num"``:``"0.0000"``,`<br>```"unit_name"``:``"件"``,`<br>```"position_no"``:``"A01"``,`<br>```"aux_unit_name"``:``"箱(100件)"`<br>```}],`<br>```"goods_type_count"``: 1,`<br>```"remark"``:``""``,`<br>```"goods_count"``:``"1.0000"``,`<br>```"flag_name"``:``"无"``,`<br>```"src_order_no"``:``""``,`<br>```"logistics_id"``: 491,`<br>```"warehouse_no"``:``"234234234"``,`<br>```"modified"``: 1663155836000,`<br>```"note_count"``: 0,`<br>```"checker_name"``:``"系统"``,`<br>```"stockin_id"``: 86705,`<br>```"src_order_id"``: 0,`<br>```"logistics_no"``:``""``,`<br>```"created"``: 1663155829000,`<br>```"src_order_type"``: 22,`<br>```"version_id"``: 0,`<br>```"modified_date"``:``"2022-09-14 19:43:56"``,`<br>```"prop2"``:``""``,`<br>```"prop1"``:``""``,`<br>```"operator_name"``:``"nff"``,`<br>```"stockin_no"``:``"RK20220914224"``,`<br>```"created_date"``:``"2022-09-14 19:43:49"``,`<br>```"status"``: 10,`<br>```"warehouse_id"``: 330`<br>```}]`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"logistics_name"``:``"小火柴其他物流"``,`<br>```"detail_list"``: [{`<br>```"rec_id"``: 206498,`<br>```"stockin_id"``: 86705,`<br>```"goods_id"``: 106369,`<br>```"spec_id"``: 276760,`<br>```"goods_name"``:``"隔离衣"``,`<br>```"goods_no"``:``"XT001"``,`<br>```"spec_name"``:``"XL"``,`<br>```"spec_no"``:``"XT001"``,`<br>```"expire_date"``:``""``,`<br>```"num"``:``"1.0000"``,`<br>```"num2"``:``"0.0100"``,`<br>```"production_date"``:``""``,`<br>```"batch_no"``:``""``,`<br>```"expect_num"``:``"0.0000"``,`<br>```"remark"``:``""``,`<br>```"weight"``:``"0.0000"``,`<br>```"goods_weight"``:``"0.0000"``,`<br>```"defect"``:``false``,`<br>```"modified_date"``:``"2022-09-14 19:43:49"``,`<br>```"created_date"``:``"2022-09-14 19:43:49"``,`<br>```"unit_ratio"``:``"100.0000"``,`<br>```"validity_days"``: 730,`<br>```"need_inspect_num"``:``"0.0000"``,`<br>```"unit_name"``:``"件"``,`<br>```"position_no"``:``"A01"``,`<br>```"aux_unit_name"``:``"箱(100件)"`<br>```}],`<br>```"goods_type_count"``: 1,`<br>```"remark"``:``""``,`<br>```"goods_count"``:``"1.0000"``,`<br>```"flag_name"``:``"无"``,`<br>```"src_order_no"``:``""``,`<br>```"logistics_id"``: 491,`<br>```"warehouse_no"``:``"234234234"``,`<br>```"modified"``: 1663155836000,`<br>```"note_count"``: 0,`<br>```"checker_name"``:``"系统"``,`<br>```"stockin_id"``: 86705,`<br>```"src_order_id"``: 0,`<br>```"logistics_no"``:``""``,`<br>```"created"``: 1663155829000,`<br>```"src_order_type"``: 22,`<br>```"version_id"``: 0,`<br>```"modified_date"``:``"2022-09-14 19:43:56"``,`<br>```"prop2"``:``""``,`<br>```"prop1"``:``""``,`<br>```"operator_name"``:``"nff"``,`<br>```"stockin_no"``:``"RK20220914224"``,`<br>```"created_date"``:``"2022-09-14 19:43:49"``,`<br>```"status"``: 10,`<br>```"warehouse_id"``: 330`<br>```}]`<br>```}`<br>`}` |
 
 6.2异常响应示例
 
@@ -248,34 +189,4 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"status"``: 100,`<br>```"message"``:``"参数中必须包含起止时间"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1正常响应示例
-
-6.2异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"参数中必须包含起止时间"`<br>`}` |

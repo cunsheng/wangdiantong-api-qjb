@@ -2,83 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=wms.stockout.PurchaseReturn.queryWithDetail"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-采购类
-
-供应商货品查询
-
-采购退货单及明细查询
-
-采购退货单取消
-
-采购退货单新建
-
-采购入库单推送
-
-采购单及明细查询
-
-采购单新建
-
-采购结算单查询
-
-采购入库单查询
-
-采购退货出库单查询
-
-采购入库单取消
-
-采购单取消
-
-采购单停止等待
-
-采购退货单停止等待
-
-供应商货品推送
-
-采购退货出库单创建
-
-采购单标记更新
-
-采购申请单创建
-
-采购申请单查询
-
-采购退货批量取消
-
-创建采购结算单
-
-采购单取消（新）
-
-采购申请单取消
-
-采购申请单停止引用
-
-预约入库单查询
-
-创建采购退货结算单
-
-当前位置： API文档 > 采购类
-
 **wms.stockout.PurchaseReturn.queryWithDetail** **（采购退货出库单查询）**
-
-[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")**¥标准**
 
 **1.接口说明**
 
@@ -96,13 +20,6 @@ title: "API文档"
 | **2.1** **举例说明：** 财务系统、SAP、线下ERP、数据分析等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -246,11 +163,11 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `[{`<br>```"start_time"``:``"2019-12-11 00:00:00"``,`<br>```"end_time"``:``"2019-12-31 00:00:00"`<br>`}]` |
+|  | `[{`<br>```"start_time"``:``"2019-12-11 00:00:00"``,`<br>```"end_time"``:``"2019-12-31 00:00:00"`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$params``=``new``stdClass();`<br>`$params``->start_time =``'2019-12-11 00:00:00'``;`<br>`$params``->end_time =``'2019-12-31 00:00:00'``;`<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>`$data``=``$client``->pageCall(``"wms.stockout.PurchaseReturn.queryWithDetail"``,``$pager``,``$params``);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$params``=``new``stdClass();`<br>`$params``->start_time =``'2019-12-11 00:00:00'``;`<br>`$params``->end_time =``'2019-12-31 00:00:00'``;`<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>`$data``=``$client``->pageCall(``"wms.stockout.PurchaseReturn.queryWithDetail"``,``$pager``,``$params``);`<br>``<br>`?>` |
 
 |     |     |
 | --- | --- |
@@ -268,7 +185,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"order_no"``:``"CH2023020752"``,`<br>```"details_list"``: [{`<br>```"rec_id"``: 2849136,`<br>```"stockout_id"``: 1635205,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"defect"``:``false``,`<br>```"goods_count"``: 1,`<br>```"total_amount"``: 1.11,`<br>```"sell_price"``: 1.11,`<br>```"remark"``:``""``,`<br>```"brand_no"``:``"BRAND"``,`<br>```"brand_name"``:``"无"``,`<br>```"goods_name"``:``"wangdiantong"``,`<br>```"goods_no"``:``"wangdiantong"``,`<br>```"spec_name"``:``"暂无"``,`<br>```"spec_code"``:``"LL "``,`<br>```"cost_price"``: 9.9424,`<br>```"weight"``: 0.2,`<br>```"goods_type"``: 1,`<br>```"goods_unit"``:``"箱"``,`<br>```"batch_no"``:``"PC202301050002"``,`<br>```"expire_date"``:``""``,`<br>```"position_no"``:``""``,`<br>```"total_checked_cost_price"``: 9.9424,`<br>```"position_details_list"``: [{`<br>```"rec_id"``: 126237,`<br>```"stockout_detail_id"``: 2849136,`<br>```"position_id"``: 85441,`<br>```"position_no"``:``"102"``,`<br>```"batch_no"``:``""``,`<br>```"expire_date"``:``""``,`<br>```"position_goods_count"``: 1`<br>```}],`<br>```"prop1"``:``""``,`<br>```"prop2"``:``""`<br>```}],`<br>```"consign_time"``: 1675751007000,`<br>```"post_fee"``: 0,`<br>```"receiver_city"``:``"0"``,`<br>```"goods_type_count"``: 1,`<br>```"remark"``:``""``,`<br>```"goods_count"``: 1,`<br>```"stockout_id"``: 1635205,`<br>```"src_order_no"``:``"CT2302070001"``,`<br>```"warehouse_no"``:``"234234234"``,`<br>```"receiver_telno"``:``"12345678901"``,`<br>```"checked_goods_total_cost"``: 9.9424,`<br>```"receiver_name"``:``"小K"``,`<br>```"modified"``:``"2023-02-07 14:23:27"``,`<br>```"provider_name"``:``"秋天001"``,`<br>```"provider_no"``:``"20170808002"``,`<br>```"seq_no"``: 1,`<br>```"create_time"``: 1675751003000,`<br>```"receiver_province"``:``"0"``,`<br>```"logistics_no"``:``""``,`<br>```"receiver_district"``:``"0"``,`<br>```"weight"``: 0,`<br>```"goods_total_amount"``: 1.11,`<br>```"operator_name"``:``"nff"``,`<br>```"goods_total_cost"``:``"9.94240000"``,`<br>```"last_load_purchase_no"``:``""``,`<br>```"receiver_address"``:``"北京海淀区花园路2号"``,`<br>```"status"``: 110`<br>```}]`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"order_no"``:``"CH2023020752"``,`<br>```"details_list"``: [{`<br>```"rec_id"``: 2849136,`<br>```"stockout_id"``: 1635205,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"defect"``:``false``,`<br>```"goods_count"``: 1,`<br>```"total_amount"``: 1.11,`<br>```"sell_price"``: 1.11,`<br>```"remark"``:``""``,`<br>```"brand_no"``:``"BRAND"``,`<br>```"brand_name"``:``"无"``,`<br>```"goods_name"``:``"wangdiantong"``,`<br>```"goods_no"``:``"wangdiantong"``,`<br>```"spec_name"``:``"暂无"``,`<br>```"spec_code"``:``"LL "``,`<br>```"cost_price"``: 9.9424,`<br>```"weight"``: 0.2,`<br>```"goods_type"``: 1,`<br>```"goods_unit"``:``"箱"``,`<br>```"batch_no"``:``"PC202301050002"``,`<br>```"expire_date"``:``""``,`<br>```"position_no"``:``""``,`<br>```"total_checked_cost_price"``: 9.9424,`<br>```"position_details_list"``: [{`<br>```"rec_id"``: 126237,`<br>```"stockout_detail_id"``: 2849136,`<br>```"position_id"``: 85441,`<br>```"position_no"``:``"102"``,`<br>```"batch_no"``:``""``,`<br>```"expire_date"``:``""``,`<br>```"position_goods_count"``: 1`<br>```}],`<br>```"prop1"``:``""``,`<br>```"prop2"``:``""`<br>```}],`<br>```"consign_time"``: 1675751007000,`<br>```"post_fee"``: 0,`<br>```"receiver_city"``:``"0"``,`<br>```"goods_type_count"``: 1,`<br>```"remark"``:``""``,`<br>```"goods_count"``: 1,`<br>```"stockout_id"``: 1635205,`<br>```"src_order_no"``:``"CT2302070001"``,`<br>```"warehouse_no"``:``"234234234"``,`<br>```"receiver_telno"``:``"12345678901"``,`<br>```"checked_goods_total_cost"``: 9.9424,`<br>```"receiver_name"``:``"小K"``,`<br>```"modified"``:``"2023-02-07 14:23:27"``,`<br>```"provider_name"``:``"秋天001"``,`<br>```"provider_no"``:``"20170808002"``,`<br>```"seq_no"``: 1,`<br>```"create_time"``: 1675751003000,`<br>```"receiver_province"``:``"0"``,`<br>```"logistics_no"``:``""``,`<br>```"receiver_district"``:``"0"``,`<br>```"weight"``: 0,`<br>```"goods_total_amount"``: 1.11,`<br>```"operator_name"``:``"nff"``,`<br>```"goods_total_cost"``:``"9.94240000"``,`<br>```"last_load_purchase_no"``:``""``,`<br>```"receiver_address"``:``"北京海淀区花园路2号"``,`<br>```"status"``: 110`<br>```}]`<br>```}`<br>`}` |
 
 6.2异常响应示例
 
@@ -276,34 +193,4 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"status"``: 100,`<br>```"message"``:``"参数中必须包含起止时间"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1正常响应示例
-
-6.2异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"参数中必须包含起止时间"`<br>`}` |

@@ -2,69 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=goods.Goods.queryWithSpec"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-货品类
-
-货品推送
-
-组合装查询
-
-货品档案查询
-
-平台货品查询
-
-平台货品推送
-
-物料清单推送
-
-生产单推送
-
-生产单查询
-
-货品分类查询
-
-品牌查询
-
-组合装创建/更新
-
-平台类目查询
-
-货品批量推送
-
-物料清单查询
-
-条码上传
-
-货品推送2
-
-新建分类
-
-货品品牌新建/更新
-
-生产结算单查询
-
-当前位置： API文档 > 货品类
-
 ****goods.Goods.queryWithSpec**（货品档案查询）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -83,13 +21,6 @@ title: "API文档"
 | **2.1 举例说明：**自研商城、SCM、SRM、财务系统、SAP等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -254,11 +185,11 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5 | `[{`<br>`"start_time"``:``"2020-01-01 00:00:00"``,`<br>`"end_time"``:``"2020-01-20 00:00:00"``,`<br>`"hide_deleted"``: 1`<br>`}]` |
+|  | `[{`<br>`"start_time"``:``"2020-01-01 00:00:00"``,`<br>`"end_time"``:``"2020-01-20 00:00:00"``,`<br>`"hide_deleted"``: 1`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->start_time =``"2020-01-01 00:00:00"``;`<br>`$parMap``->end_time =``"2020-01-20 00:00:00"``;`<br>`$parMap``->hide_deleted=1;`<br>``<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>`$data``=``$client``->pageCall(``"goods.Goods.queryWithSpec"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->start_time =``"2020-01-01 00:00:00"``;`<br>`$parMap``->end_time =``"2020-01-20 00:00:00"``;`<br>`$parMap``->hide_deleted=1;`<br>``<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>`$data``=``$client``->pageCall(``"goods.Goods.queryWithSpec"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
 
 |     |     |
 | --- | --- |
@@ -276,7 +207,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"goods_list"``: [{`<br>```"goods_no"``:``"wangdiantong"``,`<br>```"origin"``:``""``,`<br>```"class_id"``: 7,`<br>```"goods_modified"``: 1678351062000,`<br>```"remark"``:``"12323213aaa"``,`<br>```"aux_unit_name"``:``"哒哒哒哒哒"``,`<br>```"goods_created"``:``"2017-08-06 22:01:20"``,`<br>```"flag_name"``:``"无"``,`<br>```"spec_list"``: [{`<br>```"spec_id"``: 1,`<br>```"goods_id"``: 1,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"spec_code"``:``"LL "``,`<br>```"barcode"``:``"wangdiantong"``,`<br>```"spec_name"``:``"暂无"``,`<br>```"lowest_price"``: 0,`<br>```"retail_price"``: 234,`<br>```"wholesale_price"``: 0,`<br>```"member_price"``: 0,`<br>```"market_price"``: 0,`<br>```"spec_created"``:``"2017-08-06 22:01:20"``,`<br>```"validity_days"``: 0,`<br>```"sales_days"``: 0,`<br>```"receive_days"``: 0,`<br>```"weight"``: 0.2,`<br>```"length"``: 1,`<br>```"width"``: 2,`<br>```"height"``: 3,`<br>```"sn_type"``: 0,`<br>```"is_lower_cost"``:``false``,`<br>```"tax_rate"``: 0,`<br>```"wms_process_mask"``: 8,`<br>```"deleted"``: 0,`<br>```"large_type"``: 0,`<br>```"remark"``:``"dsfdk;ds123"``,`<br>```"spec_modified"``: 1683771314000,`<br>```"prop1"``:``"自定义属性1"``,`<br>```"prop2"``:``"自定义属性2"``,`<br>```"prop3"``:``"自定义属性3"``,`<br>```"prop4"``:``"自定义属性4"``,`<br>```"prop5"``:``"自定义属性5"``,`<br>```"prop6"``:``"自定义属性6"``,`<br>```"img_url"``:``"cos:\/\/IMG135.jpg"``,`<br>```"is_not_use_air"``: 0,`<br>```"custom_price1"``: 0,`<br>```"custom_price2"``: 0,`<br>```"spec_unit_name"``:``"口"``,`<br>```"spec_aux_unit_name"``:``"锅"``,`<br>```"goods_label"``:``""``,`<br>```"tax_code"``:``""``,`<br>```"barcode_list"``: [{`<br>```"barcode"``:``"wangdiantong"``,`<br>```"type"``: 1,`<br>```"is_master"``: 1,`<br>```"modified"``:``"2022-08-31 11:18:59"`<br>```}]`<br>```}],`<br>```"alias"``:``""``,`<br>```"modified"``:``"2023-03-09 16:37:42"``,`<br>```"spec_count"``: 1,`<br>```"class_name"``:``"短袖1"``,`<br>```"goods_name"``:``"wangdiantong"``,`<br>```"goods_id"``: 1,`<br>```"brand_name"``:``"发发拉"``,`<br>```"prop6"``:``""``,`<br>```"prop5"``:``""``,`<br>```"prop4"``:``""``,`<br>```"brand_id"``: 2179,`<br>```"prop3"``:``""``,`<br>```"prop2"``:``""``,`<br>```"unit_name"``:``"箱"``,`<br>```"prop1"``:``""``,`<br>```"pinyin"``:``""``,`<br>```"deleted"``: 0,`<br>```"short_name"``:``""``,`<br>```"goods_type"``: 1`<br>```}],`<br>```"total_count"``: 1`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"goods_list"``: [{`<br>```"goods_no"``:``"wangdiantong"``,`<br>```"origin"``:``""``,`<br>```"class_id"``: 7,`<br>```"goods_modified"``: 1678351062000,`<br>```"remark"``:``"12323213aaa"``,`<br>```"aux_unit_name"``:``"哒哒哒哒哒"``,`<br>```"goods_created"``:``"2017-08-06 22:01:20"``,`<br>```"flag_name"``:``"无"``,`<br>```"spec_list"``: [{`<br>```"spec_id"``: 1,`<br>```"goods_id"``: 1,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"spec_code"``:``"LL "``,`<br>```"barcode"``:``"wangdiantong"``,`<br>```"spec_name"``:``"暂无"``,`<br>```"lowest_price"``: 0,`<br>```"retail_price"``: 234,`<br>```"wholesale_price"``: 0,`<br>```"member_price"``: 0,`<br>```"market_price"``: 0,`<br>```"spec_created"``:``"2017-08-06 22:01:20"``,`<br>```"validity_days"``: 0,`<br>```"sales_days"``: 0,`<br>```"receive_days"``: 0,`<br>```"weight"``: 0.2,`<br>```"length"``: 1,`<br>```"width"``: 2,`<br>```"height"``: 3,`<br>```"sn_type"``: 0,`<br>```"is_lower_cost"``:``false``,`<br>```"tax_rate"``: 0,`<br>```"wms_process_mask"``: 8,`<br>```"deleted"``: 0,`<br>```"large_type"``: 0,`<br>```"remark"``:``"dsfdk;ds123"``,`<br>```"spec_modified"``: 1683771314000,`<br>```"prop1"``:``"自定义属性1"``,`<br>```"prop2"``:``"自定义属性2"``,`<br>```"prop3"``:``"自定义属性3"``,`<br>```"prop4"``:``"自定义属性4"``,`<br>```"prop5"``:``"自定义属性5"``,`<br>```"prop6"``:``"自定义属性6"``,`<br>```"img_url"``:``"cos:\/\/IMG135.jpg"``,`<br>```"is_not_use_air"``: 0,`<br>```"custom_price1"``: 0,`<br>```"custom_price2"``: 0,`<br>```"spec_unit_name"``:``"口"``,`<br>```"spec_aux_unit_name"``:``"锅"``,`<br>```"goods_label"``:``""``,`<br>```"tax_code"``:``""``,`<br>```"barcode_list"``: [{`<br>```"barcode"``:``"wangdiantong"``,`<br>```"type"``: 1,`<br>```"is_master"``: 1,`<br>```"modified"``:``"2022-08-31 11:18:59"`<br>```}]`<br>```}],`<br>```"alias"``:``""``,`<br>```"modified"``:``"2023-03-09 16:37:42"``,`<br>```"spec_count"``: 1,`<br>```"class_name"``:``"短袖1"``,`<br>```"goods_name"``:``"wangdiantong"``,`<br>```"goods_id"``: 1,`<br>```"brand_name"``:``"发发拉"``,`<br>```"prop6"``:``""``,`<br>```"prop5"``:``""``,`<br>```"prop4"``:``""``,`<br>```"brand_id"``: 2179,`<br>```"prop3"``:``""``,`<br>```"prop2"``:``""``,`<br>```"unit_name"``:``"箱"``,`<br>```"prop1"``:``""``,`<br>```"pinyin"``:``""``,`<br>```"deleted"``: 0,`<br>```"short_name"``:``""``,`<br>```"goods_type"``: 1`<br>```}],`<br>```"total_count"``: 1`<br>```}`<br>`}` |
 
 6.2 异常响应示例
 
@@ -284,34 +215,4 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>`"status"``: 100,`<br>`"message"``:``"参数中必须包含起止时间"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>`"status"``: 100,`<br>`"message"``:``"参数中必须包含起止时间"`<br>`}` |

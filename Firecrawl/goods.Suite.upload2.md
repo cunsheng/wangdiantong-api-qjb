@@ -2,69 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=goods.Suite.upload2"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-货品类
-
-货品推送
-
-组合装查询
-
-货品档案查询
-
-平台货品查询
-
-平台货品推送
-
-物料清单推送
-
-生产单推送
-
-生产单查询
-
-货品分类查询
-
-品牌查询
-
-组合装创建/更新
-
-平台类目查询
-
-货品批量推送
-
-物料清单查询
-
-条码上传
-
-货品推送2
-
-新建分类
-
-货品品牌新建/更新
-
-生产结算单查询
-
-当前位置： API文档 > 货品类
-
 **goods.Suite.upload2** **（组合装推送/更新）**
-
-**¥标准**
 
 **1.接口说明**
 
@@ -83,13 +21,6 @@ title: "API文档"
 | **2.1 举例说明：**自研商城、SCM、SRM、财务系统、SAP等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -158,10 +89,10 @@ title: "API文档"
 | --- | --- |
 | json格式请求报文 | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14 | `[{`<br>```"suite_no"``:``"20220421002"``,`<br>```"suite_name"``:``"20220421002"``,`<br>```"goods_label_name"``:``"222222"``,`<br>```"print_suite_mode"``: 2`<br>```},`<br>```[{`<br>```"num"``: 1,`<br>```"spec_no"``:``"dongfangshuye"`<br>```}, {`<br>```"num"``: 10,`<br>```"spec_no"``:``"xiaowanzi01"`<br>```}]`<br>`]` | |
+|  | `[{`<br>```"suite_no"``:``"20220421002"``,`<br>```"suite_name"``:``"20220421002"``,`<br>```"goods_label_name"``:``"222222"``,`<br>```"print_suite_mode"``: 2`<br>```},`<br>```[{`<br>```"num"``: 1,`<br>```"spec_no"``:``"dongfangshuye"`<br>```}, {`<br>```"num"``: 10,`<br>```"spec_no"``:``"xiaowanzi01"`<br>```}]`<br>`]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>`$parMap``=``new``stdClass();`<br>`$parMap``->suite_name =``'20220421002'``;`<br>`$parMap``->suite_no =``'20220421002'``;`<br>`$parMap``->print_suite_mode= 2;`<br>`$parMap``->goods_label_name=``'222222'``;`<br>``<br>`$Detail``=``array`<br>`(`<br>```array``(``'spec_no'``=>``'dongfangshuye'``,`<br>```'num'``=> 1.0000,`<br>```),`<br>```array``(``'spec_no'``=>``'xiaowanzi01'``,`<br>```'num'``=> 10.0000,`<br>```));`<br>`$data``=``$client``->call(``"goods.Suite.upload2"``,``$parMap``,``$Detail``);`<br>`//var_dump($data);`<br>`$php_json``= json_encode(``$data``);`<br>`?>` | |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>`$parMap``=``new``stdClass();`<br>`$parMap``->suite_name =``'20220421002'``;`<br>`$parMap``->suite_no =``'20220421002'``;`<br>`$parMap``->print_suite_mode= 2;`<br>`$parMap``->goods_label_name=``'222222'``;`<br>``<br>`$Detail``=``array`<br>`(`<br>```array``(``'spec_no'``=>``'dongfangshuye'``,`<br>```'num'``=> 1.0000,`<br>```),`<br>```array``(``'spec_no'``=>``'xiaowanzi01'``,`<br>```'num'``=> 10.0000,`<br>```));`<br>`$data``=``$client``->call(``"goods.Suite.upload2"``,``$parMap``,``$Detail``);`<br>`//var_dump($data);`<br>`$php_json``= json_encode(``$data``);`<br>`?>` | |
 | JAVA |  |
 | C# |  |
 
@@ -173,7 +104,7 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `response: {`<br>`"status"``:0,`<br>`"data"``:274`<br>`}` | |
+|  | `response: {`<br>`"status"``:0,`<br>`"data"``:274`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -181,12 +112,4 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>`"status"``:100,`<br>`"message"``:``"商家编码:aaaaa 单品不存在"`<br>`}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>`"status"``:100,`<br>`"message"``:``"商家编码:aaaaa 单品不存在"`<br>`}` | |

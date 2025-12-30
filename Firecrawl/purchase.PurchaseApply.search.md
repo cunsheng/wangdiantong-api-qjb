@@ -2,83 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=purchase.PurchaseApply.search"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-[登录](javascript:gologin()) [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-采购类
-
-供应商货品查询
-
-采购退货单及明细查询
-
-采购退货单取消
-
-采购退货单新建
-
-采购入库单推送
-
-采购单及明细查询
-
-采购单新建
-
-采购结算单查询
-
-采购入库单查询
-
-采购退货出库单查询
-
-采购入库单取消
-
-采购单取消
-
-采购单停止等待
-
-采购退货单停止等待
-
-供应商货品推送
-
-采购退货出库单创建
-
-采购单标记更新
-
-采购申请单创建
-
-采购申请单查询
-
-采购退货批量取消
-
-创建采购结算单
-
-采购单取消（新）
-
-采购申请单取消
-
-采购申请单停止引用
-
-预约入库单查询
-
-创建采购退货结算单
-
-当前位置： API文档 > 采购类
-
 **purchase.PurchaseApply.search** **（采购申请单查询）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -97,13 +21,6 @@ title: "API文档"
 | **2.1 举例说明：**财务系统、SAP、线下ERP、数据分析等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -201,11 +118,11 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `[{`<br>`"start_time"``:``"2020-01-01 00:00:00"``,`<br>`"end_time"``:``"2020-01-20 00:00:00"`<br>`}]` |
+|  | `[{`<br>`"start_time"``:``"2020-01-01 00:00:00"``,`<br>`"end_time"``:``"2020-01-20 00:00:00"`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18 | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client =``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>`$parMap =``new``stdClass();`<br>`$parMap->start_time =``'2022-08-25 11:10:04'``;`<br>`$parMap->end_time =``'2022-08-30 11:10:04'``;`<br>`$pager =``new``Pager(``2``,``0``,``true``);`<br>`try``{`<br>```$data = $client->pageCall(``"purchase.PurchaseApply.search"``, $pager, $parMap);`<br>`}``catch``(WdtErpException $e)`<br>`{`<br>```echo $e->getMessage();`<br>`}`<br>`?>` |
+|  | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client =``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>`$parMap =``new``stdClass();`<br>`$parMap->start_time =``'2022-08-25 11:10:04'``;`<br>`$parMap->end_time =``'2022-08-30 11:10:04'``;`<br>`$pager =``new``Pager(``2``,``0``,``true``);`<br>`try``{`<br>```$data = $client->pageCall(``"purchase.PurchaseApply.search"``, $pager, $parMap);`<br>`}``catch``(WdtErpException $e)`<br>`{`<br>```echo $e->getMessage();`<br>`}`<br>`?>` |
 
 **6.响应示** **例**
 
@@ -215,7 +132,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31 | `{`<br>```"total_count"``: 1,`<br>```"order_list"``: [{`<br>```"purchase_apply_no"``:``"POA202212130002"``,`<br>```"warehouse_name"``:``"wdtapi3-test"``,`<br>```"warehouse_no"``:``"wdtapi3-test"``,`<br>```"created"``:``"2022-12-13 16:50:02"``,`<br>```"detail_list"``: [{`<br>```"purchase_apply_no"``:``"POA202212130002"``,`<br>```"goods_name"``:``"测试产品"``,`<br>```"stockin_num"``:``"0.0000"``,`<br>```"goods_no"``:``"wangdiantong"``,`<br>```"num"``:``"1.0000"``,`<br>```"brand_name"``:``"无"``,`<br>```"remark"``:``""``,`<br>```"rec_id"``: 377,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"ref_num"``:``"0.0000"``,`<br>```"spec_name"``:``"测试产品"``,`<br>```"provider_name"``:``"LCTtest11"``,`<br>```"provider_no"``:``"LCJtest"`<br>```}],`<br>```"modified"``:``"2022-12-13 16:50:02"``,`<br>```"remark"``:``""``,`<br>```"provider_name"``:``"LCTtest11"``,`<br>```"expected_time"``:``""``,`<br>```"apply_name"``:``"aaaaa"``,`<br>```"status"``: 20,`<br>```"provider_no"``:``"LCJtest"`<br>```}]`<br>`}` |
+|  | `{`<br>```"total_count"``: 1,`<br>```"order_list"``: [{`<br>```"purchase_apply_no"``:``"POA202212130002"``,`<br>```"warehouse_name"``:``"wdtapi3-test"``,`<br>```"warehouse_no"``:``"wdtapi3-test"``,`<br>```"created"``:``"2022-12-13 16:50:02"``,`<br>```"detail_list"``: [{`<br>```"purchase_apply_no"``:``"POA202212130002"``,`<br>```"goods_name"``:``"测试产品"``,`<br>```"stockin_num"``:``"0.0000"``,`<br>```"goods_no"``:``"wangdiantong"``,`<br>```"num"``:``"1.0000"``,`<br>```"brand_name"``:``"无"``,`<br>```"remark"``:``""``,`<br>```"rec_id"``: 377,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"ref_num"``:``"0.0000"``,`<br>```"spec_name"``:``"测试产品"``,`<br>```"provider_name"``:``"LCTtest11"``,`<br>```"provider_no"``:``"LCJtest"`<br>```}],`<br>```"modified"``:``"2022-12-13 16:50:02"``,`<br>```"remark"``:``""``,`<br>```"provider_name"``:``"LCTtest11"``,`<br>```"expected_time"``:``""``,`<br>```"apply_name"``:``"aaaaa"``,`<br>```"status"``: 20,`<br>```"provider_no"``:``"LCJtest"`<br>```}]`<br>`}` |
 
 6.2 异常响应示例
 
@@ -223,40 +140,4 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"status"``: 100,`<br>```"message"``:``"日期格式不合法"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-[1.接口说明](javascript:dgoto('1.%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E'))
-
-[2.调用场景](javascript:dgoto('2.%E8%B0%83%E7%94%A8%E5%9C%BA%E6%99%AF'))
-
-[3.请求参数说明](javascript:dgoto('3.%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E'))
-
-[3.1 请求地址](javascript:dgoto('3.1 %E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80'))
-
-[3.2 公共请求参数](javascript:dgoto('3.2 %E5%85%AC%E5%85%B1%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0'))
-
-[3.3 业务请求参数](javascript:dgoto('3.3 %E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0'))
-
-[4.响应参数](javascript:dgoto('4.%E5%93%8D%E5%BA%94%E5%8F%82%E6%95%B0'))
-
-[4.响应参数](javascript:dgoto('4.%E5%93%8D%E5%BA%94%E5%8F%82%E6%95%B0'))
-
-[4.响应参数](javascript:dgoto('4.%E5%93%8D%E5%BA%94%E5%8F%82%E6%95%B0'))
-
-[4.响应参数](javascript:dgoto('4.%E5%93%8D%E5%BA%94%E5%8F%82%E6%95%B0'))
-
-[5.请求示例](javascript:dgoto('5.%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B'))
-
-[6.响应示例](javascript:dgoto('6.%E5%93%8D%E5%BA%94%E7%A4%BA%E4%BE%8B'))
-
-[6.1 正常响应示例](javascript:dgoto('6.1 %E6%AD%A3%E5%B8%B8%E5%93%8D%E5%BA%94%E7%A4%BA%E4%BE%8B '))
-
-[6.2 异常响应示例](javascript:dgoto('6.2 %E5%BC%82%E5%B8%B8%E5%93%8D%E5%BA%94%E7%A4%BA%E4%BE%8B'))
-
-[常用工具](javascript:dgoto('G%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7'))
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"日期格式不合法"`<br>`}` |

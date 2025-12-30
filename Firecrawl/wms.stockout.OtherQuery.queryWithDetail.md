@@ -2,163 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=wms.stockout.OtherQuery.queryWithDetail"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-库存类
-
-移位单查询
-
-库存查询
-
-创建盘点单
-
-其他入库单新建
-
-调拨单查询
-
-其他出库单查询
-
-其他入库单查询
-
-调拨入库单查询
-
-可用库存查询
-
-其他出库单新建
-
-调拨出库单查询
-
-调拨单入库取消
-
-盘点入库单查询
-
-盘点出库单查询
-
-调拨单出库取消
-
-调拨单取消
-
-调拨入库单新建
-
-调拨出库单新建
-
-调拨单新建
-
-补货单查询
-
-库存变化查询
-
-存货成本查询
-
-调拨单停止等待
-
-其它出库业务单创建
-
-其它入库业务单创建
-
-生产出库查询
-
-生产入库查询
-
-外仓调整出库单创建
-
-外仓调整入库单创建
-
-外仓调整出库单查询
-
-外仓调整入库单查询
-
-调拨结算查询
-
-正残转换单查询
-
-其它出库业务单查询
-
-其它入库业务单查询
-
-分拣单全览
-
-默认货位查询
-
-虚拟仓库存查询
-
-虚拟仓单据创建
-
-虚拟仓单据查询
-
-装箱单查询
-
-JIT退货入库单查询
-
-JIT出库单查询
-
-SN码查询
-
-其它入库业务结算单创建
-
-库存查询2
-
-出库瞬时成本查询
-
-入库瞬时成本查询
-
-盘点单查询
-
-盘点单明细查询
-
-入库单查询
-
-出库单查询
-
-库存明细查询
-
-出库SN查询
-
-入库SN查询
-
-入库SN明细推送
-
-出库SN明细推送
-
-其他入库单取消
-
-其他出库单取消
-
-电子面单号查询
-
-箱码新建
-
-其他入库业务单据取消
-
-其他出库业务单据取消
-
-虚拟仓库存分配策略创建
-
-虚拟仓库存释放策略新建
-
-外仓快速调拨
-
-当前位置： API文档 > 库存类
-
 **w** **ms.stockout.OtherQuery.queryWithDetail** **（其他出库单查询）**
-
-[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")**¥标准**
 
 **1.接口说明**
 
@@ -177,13 +21,6 @@ SN码查询
 | **2.1** **举例说明：**SAP、线下ERP、SRM、SCM等系统对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -323,11 +160,11 @@ SN码查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `[{`<br>```"start_time"``:``"2019-12-11 00:00:00"``,`<br>```"end_time"``:``"2019-12-31 00:00:00"`<br>`}]` |
+|  | `[{`<br>```"start_time"``:``"2019-12-11 00:00:00"``,`<br>```"end_time"``:``"2019-12-31 00:00:00"`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$params``=``new``stdClass();`<br>`$params``->start_time =``'2019-12-11 00:00:00'``;`<br>`$params``->end_time =``'2019-12-31 00:00:00'``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>`$data``=``$client``->pageCall(``"wms.stockout.OtherQuery.queryWithDetail"``,``$pager``,``$params``);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$params``=``new``stdClass();`<br>`$params``->start_time =``'2019-12-11 00:00:00'``;`<br>`$params``->end_time =``'2019-12-31 00:00:00'``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>`$data``=``$client``->pageCall(``"wms.stockout.OtherQuery.queryWithDetail"``,``$pager``,``$params``);`<br>``<br>`?>` |
 
 **6.响应示** **例**
 
@@ -337,7 +174,7 @@ SN码查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63 | `{`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"order_no"``:``"CK2023091332"``,`<br>```"consign_time"``: 1694593831000,`<br>```"reason"``:``"无"``,`<br>```"post_fee"``: 0.0000,`<br>```"receiver_city"``:``""``,`<br>```"detail_list"``: [{`<br>```"goods_name"``:``"wangdiantong"``,`<br>```"spec_code"``:``"wangdiantong"``,`<br>```"batch_no"``:``""``,`<br>```"brand_no"``:``"001"``,`<br>```"goods_no"``:``"wangdiantong"``,`<br>```"weight"``: 10.0000,`<br>```"remark"``:``""``,`<br>```"brand_name"``:``"可口可乐"``,`<br>```"base_unit_id"``: 2,`<br>```"goods_count"``: 1.0000,`<br>```"rec_id"``: 864768,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"stockout_id"``: 665160,`<br>```"unit_name"``:``"只"``,`<br>```"defect"``:``false``,`<br>```"expire_date"``:``""``,`<br>```"total_amount"``: 10.9985,`<br>```"position_no"``:``""``,`<br>```"spec_name"``:``"wangdiantong"``,`<br>```"goods_type"``: 1,`<br>```"cost_price"``: 10.9985,`<br>```"position_id"``: 0,`<br>```"position_details_list"``: [{`<br>```"batch_no"``:``""``,`<br>```"expire_date"``:``""``,`<br>```"stockout_detail_id"``: 864768,`<br>```"position_no"``:``"B01-02"``,`<br>```"position_goods_count"``: 1.0000,`<br>```"rec_id"``: 245514,`<br>```"position_id"``: 64231`<br>```}]`<br>```}],`<br>```"remark"``:``""``,`<br>```"goods_count"``: 1.0000,`<br>```"stockout_id"``: 665160,`<br>```"src_order_no"``:``"QC202309130010"``,`<br>```"warehouse_no"``:``"wdtapi3-test"``,`<br>```"checked_goods_total_cost"``: 10.9985,`<br>```"receiver_name"``:``""``,`<br>```"modified"``: 1694593831000,`<br>```"order_type"``: 21,`<br>```"receiver_province"``:``""``,`<br>```"logistics_no"``:``"2444343"``,`<br>```"receiver_district"``:``""``,`<br>```"weight"``: 0.0000,`<br>```"goods_total_amount"``: 10.9985,`<br>```"receiver_mobile"``:``""``,`<br>```"logistics_company_no"``:``"0001"``,`<br>```"operator_name"``:``"aaa1"``,`<br>```"goods_total_cost"``:``"10.99850000"``,`<br>```"receiver_address"``:``""``,`<br>```"status"``: 110`<br>```}]`<br>`}` |
+|  | `{`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"order_no"``:``"CK2023091332"``,`<br>```"consign_time"``: 1694593831000,`<br>```"reason"``:``"无"``,`<br>```"post_fee"``: 0.0000,`<br>```"receiver_city"``:``""``,`<br>```"detail_list"``: [{`<br>```"goods_name"``:``"wangdiantong"``,`<br>```"spec_code"``:``"wangdiantong"``,`<br>```"batch_no"``:``""``,`<br>```"brand_no"``:``"001"``,`<br>```"goods_no"``:``"wangdiantong"``,`<br>```"weight"``: 10.0000,`<br>```"remark"``:``""``,`<br>```"brand_name"``:``"可口可乐"``,`<br>```"base_unit_id"``: 2,`<br>```"goods_count"``: 1.0000,`<br>```"rec_id"``: 864768,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"stockout_id"``: 665160,`<br>```"unit_name"``:``"只"``,`<br>```"defect"``:``false``,`<br>```"expire_date"``:``""``,`<br>```"total_amount"``: 10.9985,`<br>```"position_no"``:``""``,`<br>```"spec_name"``:``"wangdiantong"``,`<br>```"goods_type"``: 1,`<br>```"cost_price"``: 10.9985,`<br>```"position_id"``: 0,`<br>```"position_details_list"``: [{`<br>```"batch_no"``:``""``,`<br>```"expire_date"``:``""``,`<br>```"stockout_detail_id"``: 864768,`<br>```"position_no"``:``"B01-02"``,`<br>```"position_goods_count"``: 1.0000,`<br>```"rec_id"``: 245514,`<br>```"position_id"``: 64231`<br>```}]`<br>```}],`<br>```"remark"``:``""``,`<br>```"goods_count"``: 1.0000,`<br>```"stockout_id"``: 665160,`<br>```"src_order_no"``:``"QC202309130010"``,`<br>```"warehouse_no"``:``"wdtapi3-test"``,`<br>```"checked_goods_total_cost"``: 10.9985,`<br>```"receiver_name"``:``""``,`<br>```"modified"``: 1694593831000,`<br>```"order_type"``: 21,`<br>```"receiver_province"``:``""``,`<br>```"logistics_no"``:``"2444343"``,`<br>```"receiver_district"``:``""``,`<br>```"weight"``: 0.0000,`<br>```"goods_total_amount"``: 10.9985,`<br>```"receiver_mobile"``:``""``,`<br>```"logistics_company_no"``:``"0001"``,`<br>```"operator_name"``:``"aaa1"``,`<br>```"goods_total_cost"``:``"10.99850000"``,`<br>```"receiver_address"``:``""``,`<br>```"status"``: 110`<br>```}]`<br>`}` |
 
 6.2异常响应示例
 
@@ -345,34 +182,4 @@ SN码查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"status"``: 100,`<br>```"message"``:``"仓库不存在"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1正常响应示例
-
-6.2异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"仓库不存在"`<br>`}` |

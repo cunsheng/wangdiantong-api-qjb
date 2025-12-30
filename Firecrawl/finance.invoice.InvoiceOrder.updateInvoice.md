@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=finance.invoice.InvoiceOrder.updateInvoice"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 **finance.invoice.InvoiceOrder.updateInvoice**（发票信息更新）
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -127,13 +21,6 @@ JIT退货单查询
 | **2.1 举例说明：** |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -184,7 +71,7 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->invoice_order_no =``'FP202007020001'``;`<br>`$parMap``->invoice_no =``'pf0x00011111111'``;`<br>``<br>`$pager``=``new``Pager(50, 0, true);`<br>``<br>`$data``=``$client``->call(``"finance.invoice.InvoiceOrder.updateInvoice"``, [``$parMap``]);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->invoice_order_no =``'FP202007020001'``;`<br>`$parMap``->invoice_no =``'pf0x00011111111'``;`<br>``<br>`$pager``=``new``Pager(50, 0, true);`<br>``<br>`$data``=``$client``->call(``"finance.invoice.InvoiceOrder.updateInvoice"``, [``$parMap``]);`<br>``<br>`?>` |
 
 **6.响应示** **例**
 
@@ -194,7 +81,7 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>`"error_info"``: {},`<br>`"status"``: 0`<br>`}` |
+|  | `{`<br>`"error_info"``: {},`<br>`"status"``: 0`<br>`}` |
 
 6.2 异常响应示例
 
@@ -202,34 +89,4 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6 | `{`<br>```"error_info"``: {`<br>```"FP201902130005"``:``"发票不存在!"`<br>```},`<br>```"status"``: 0`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"error_info"``: {`<br>```"FP201902130005"``:``"发票不存在!"`<br>```},`<br>```"status"``: 0`<br>`}` |

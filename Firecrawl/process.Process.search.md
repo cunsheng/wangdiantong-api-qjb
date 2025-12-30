@@ -2,69 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=process.Process.search"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-货品类
-
-货品推送
-
-组合装查询
-
-货品档案查询
-
-平台货品查询
-
-平台货品推送
-
-物料清单推送
-
-生产单推送
-
-生产单查询
-
-货品分类查询
-
-品牌查询
-
-组合装创建/更新
-
-平台类目查询
-
-货品批量推送
-
-物料清单查询
-
-条码上传
-
-货品推送2
-
-新建分类
-
-货品品牌新建/更新
-
-生产结算单查询
-
-当前位置： API文档 > 货品类
-
 **process.Process.search** **（生产单查询）**
-
-[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")**¥标准**
 
 **1.接口说明**
 
@@ -83,13 +21,6 @@ title: "API文档"
 | **2.1** **举例说明：**SAP、线下ERP、SRM、SCM等系统对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -215,7 +146,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$params``=``new``stdClass();`<br>`$params``->start_time =``'2021-08-00 00:00:00'``;`<br>`$params``->end_time =``'2021-08-15 00:00:00'``;`<br>``<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>`$data``=``$client``->pageCall(``"process.Process.search"``,``$pager``,``$params``);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$params``=``new``stdClass();`<br>`$params``->start_time =``'2021-08-00 00:00:00'``;`<br>`$params``->end_time =``'2021-08-15 00:00:00'``;`<br>``<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>`$data``=``$client``->pageCall(``"process.Process.search"``,``$pager``,``$params``);`<br>``<br>`?>` |
 
 **6.响应示** **例**
 
@@ -225,7 +156,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"flag_id"``: 0,`<br>```"out_warehouse_no"``:``"wdtapi3-test"``,`<br>```"process_id"``: 471,`<br>```"in_warehouse_no"``:``"wdtapi3-test"``,`<br>```"operator_id"``: 504,`<br>```"detail_list"``: [{`<br>```"process_id"``: 471,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"bad_num"``: 0.0000,`<br>```"bad_in_num"``: 0.0000,`<br>```"in_num"``: 0.0000,`<br>```"out_num"``: 2.0000,`<br>```"process_num"``: 2.0000,`<br>```"num"``: 2.0000,`<br>```"is_product"``:``false``,`<br>```"batch_no"``:``""``,`<br>```"remark"``:``""`<br>```}, {`<br>```"process_id"``: 471,`<br>```"spec_no"``:``"08070201"``,`<br>```"bad_num"``: 0.0000,`<br>```"bad_in_num"``: 0.0000,`<br>```"in_num"``: 1.0000,`<br>```"out_num"``: 0.0000,`<br>```"process_num"``: 1.0000,`<br>```"num"``: 1.0000,`<br>```"is_product"``:``true``,`<br>```"batch_no"``:``""``,`<br>```"production_date"``: 1724256000000,`<br>```"validity_days"``: 0,`<br>```"remark"``:``""`<br>```}],`<br>```"remark"``:``""``,`<br>```"checker_id"``: 0,`<br>```"flag_name"``:``"无"``,`<br>```"total_fee"``: 0.0000,`<br>```"modified"``:``"2024-08-22 13:40:50"``,`<br>```"process_type"``:``false``,`<br>```"bom_name"``:``""``,`<br>```"checker_name"``:``"系统"``,`<br>```"reality_count"``: 1.0000,`<br>```"in_warehouse_id"``: 311,`<br>```"out_warehouse_id"``: 311,`<br>```"created"``:``"2024-08-22 13:40:50"``,`<br>```"process_count"``: 1.0000,`<br>```"settle_status"``: 3,`<br>```"operator_name"``:``"wdtapi3-test2_c"``,`<br>```"producer_name"``:``"刘子渲生产商"``,`<br>```"creator_id"``: 502,`<br>```"producer_id"``: 1,`<br>```"creator_name"``:``"aaa2"``,`<br>```"process_no"``:``"PS2024082201"``,`<br>```"loss_fee"``: 0.0000,`<br>```"bom_remark"``:``""``,`<br>```"bom_fee"``: 0.0000,`<br>```"status"``: 70,`<br>```"estimated_time"``:``""``,`<br>```"check_time"``:``"2024-08-22 13:40:50"`<br>```}]`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"flag_id"``: 0,`<br>```"out_warehouse_no"``:``"wdtapi3-test"``,`<br>```"process_id"``: 471,`<br>```"in_warehouse_no"``:``"wdtapi3-test"``,`<br>```"operator_id"``: 504,`<br>```"detail_list"``: [{`<br>```"process_id"``: 471,`<br>```"spec_no"``:``"wangdiantong"``,`<br>```"bad_num"``: 0.0000,`<br>```"bad_in_num"``: 0.0000,`<br>```"in_num"``: 0.0000,`<br>```"out_num"``: 2.0000,`<br>```"process_num"``: 2.0000,`<br>```"num"``: 2.0000,`<br>```"is_product"``:``false``,`<br>```"batch_no"``:``""``,`<br>```"remark"``:``""`<br>```}, {`<br>```"process_id"``: 471,`<br>```"spec_no"``:``"08070201"``,`<br>```"bad_num"``: 0.0000,`<br>```"bad_in_num"``: 0.0000,`<br>```"in_num"``: 1.0000,`<br>```"out_num"``: 0.0000,`<br>```"process_num"``: 1.0000,`<br>```"num"``: 1.0000,`<br>```"is_product"``:``true``,`<br>```"batch_no"``:``""``,`<br>```"production_date"``: 1724256000000,`<br>```"validity_days"``: 0,`<br>```"remark"``:``""`<br>```}],`<br>```"remark"``:``""``,`<br>```"checker_id"``: 0,`<br>```"flag_name"``:``"无"``,`<br>```"total_fee"``: 0.0000,`<br>```"modified"``:``"2024-08-22 13:40:50"``,`<br>```"process_type"``:``false``,`<br>```"bom_name"``:``""``,`<br>```"checker_name"``:``"系统"``,`<br>```"reality_count"``: 1.0000,`<br>```"in_warehouse_id"``: 311,`<br>```"out_warehouse_id"``: 311,`<br>```"created"``:``"2024-08-22 13:40:50"``,`<br>```"process_count"``: 1.0000,`<br>```"settle_status"``: 3,`<br>```"operator_name"``:``"wdtapi3-test2_c"``,`<br>```"producer_name"``:``"刘子渲生产商"``,`<br>```"creator_id"``: 502,`<br>```"producer_id"``: 1,`<br>```"creator_name"``:``"aaa2"``,`<br>```"process_no"``:``"PS2024082201"``,`<br>```"loss_fee"``: 0.0000,`<br>```"bom_remark"``:``""``,`<br>```"bom_fee"``: 0.0000,`<br>```"status"``: 70,`<br>```"estimated_time"``:``""``,`<br>```"check_time"``:``"2024-08-22 13:40:50"`<br>```}]`<br>```}`<br>`}` |
 
 6.2异常响应示例
 
@@ -233,34 +164,4 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"status"``: 100,`<br>```"message"``:``"您的查询时间过宽,查询时间不能大于30天"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1正常响应示例
-
-6.2异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"您的查询时间过宽,查询时间不能大于30天"`<br>`}` |

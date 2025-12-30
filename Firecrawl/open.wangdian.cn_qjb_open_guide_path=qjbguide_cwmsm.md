@@ -2,15 +2,11 @@
 url: "https://open.wangdian.cn/qjb/open/guide?path=qjbguide_cwmsm"
 title: "文档中心"
 ---
-
 ![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
 
 ![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
 
-
 ![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
 
 [慧策开放平台-旗舰版](https://open.wangdian.cn/open)
 

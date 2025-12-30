@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=sales.StockSync.calcStock"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 ### **sales.StockSync.calcStock（库存同步计算查询）**
-
-### **¥标准**
 
 **1.接口说明**
 
@@ -127,13 +21,6 @@ JIT退货单查询
 | **2.1 举例说明：** |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -210,11 +97,11 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `[`<br>`2447,`<br>`false`<br>`]` |
+|  | `[`<br>`2447,`<br>`false`<br>`]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$data``=``$client``->call(``"sales.StockSync.calcStock"``, 2447, false);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$data``=``$client``->call(``"sales.StockSync.calcStock"``, 2447, false);`<br>``<br>`?>` |
 
 **6.响应示** **例**
 
@@ -224,7 +111,7 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36 | `{`<br>`"status"``:0,`<br>`"data"``:{`<br>`"match_code"``:``"lz38"``,`<br>`"list_time"``:``""``,`<br>`"stock_syn_min"``:1.0000,`<br>`"stock_num"``:0,`<br>`"stock_syn_warehouses"``:``"6"``,`<br>`"sub_platform_id"``:0,`<br>`"outer_id"``:``"lz3"``,`<br>`"spec_outer_id"``:``"lz38"``,`<br>`"stock_syn_percent"``:100,`<br>`"spec_id"``:``"lz38"``,`<br>`"is_auto_delisting"``:1,`<br>`"stock_syn_plus"``:1.0000,`<br>`"is_auto_listing"``:1,`<br>`"match_target_id"``:12581,`<br>`"match_target_type"``:1,`<br>`"mask"``:0,`<br>`"syn_stock"``:1,`<br>`"reserve_s"``:``""``,`<br>`"stock_syn_rule_id"``:-10000,`<br>`"stock_syn_mask"``:0,`<br>`"goods_id"``:``"lz3"``,`<br>`"rec_id"``:2447,`<br>`"last_syn_num"``:-1,`<br>`"shop_id"``:69,`<br>`"stock_syn_max"``:550.0000,`<br>`"last_syn_time"``:``""``,`<br>`"delist_time"``:``""``,`<br>`"platform_id"``:127,`<br>`"stock_syn_rule_no"``:``""``,`<br>`"status"``:1,`<br>`"stock_change_count"``:2`<br>`}`<br>`}` |
+|  | `{`<br>`"status"``:0,`<br>`"data"``:{`<br>`"match_code"``:``"lz38"``,`<br>`"list_time"``:``""``,`<br>`"stock_syn_min"``:1.0000,`<br>`"stock_num"``:0,`<br>`"stock_syn_warehouses"``:``"6"``,`<br>`"sub_platform_id"``:0,`<br>`"outer_id"``:``"lz3"``,`<br>`"spec_outer_id"``:``"lz38"``,`<br>`"stock_syn_percent"``:100,`<br>`"spec_id"``:``"lz38"``,`<br>`"is_auto_delisting"``:1,`<br>`"stock_syn_plus"``:1.0000,`<br>`"is_auto_listing"``:1,`<br>`"match_target_id"``:12581,`<br>`"match_target_type"``:1,`<br>`"mask"``:0,`<br>`"syn_stock"``:1,`<br>`"reserve_s"``:``""``,`<br>`"stock_syn_rule_id"``:-10000,`<br>`"stock_syn_mask"``:0,`<br>`"goods_id"``:``"lz3"``,`<br>`"rec_id"``:2447,`<br>`"last_syn_num"``:-1,`<br>`"shop_id"``:69,`<br>`"stock_syn_max"``:550.0000,`<br>`"last_syn_time"``:``""``,`<br>`"delist_time"``:``""``,`<br>`"platform_id"``:127,`<br>`"stock_syn_rule_no"``:``""``,`<br>`"status"``:1,`<br>`"stock_change_count"``:2`<br>`}`<br>`}` |
 
 6.2 异常响应示例
 
@@ -232,18 +119,4 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>`"status"``:100,`<br>`"message"``:``"货品id:jitx002规格Id:jitx002 已停用或者未开启同步"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>`"status"``:100,`<br>`"message"``:``"货品id:jitx002规格Id:jitx002 已停用或者未开启同步"`<br>`}` |

@@ -2,57 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=setting.Shop.queryShop"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-基础类
-
-物流公司查询
-
-供应商查询
-
-仓库查询
-
-店铺查询
-
-供应商信息推送
-
-店铺更新
-
-员工查询
-
-虚拟仓仓库查询
-
-退换原因查询
-
-地址查询-省
-
-地址查询-市
-
-地址查询-区
-
-虚拟仓信息查询
-
-当前位置： API文档 > 基础类
-
 **setting.Shop.queryShop**（店铺查询）
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -71,13 +21,6 @@ title: "API文档"
 | **2.1 举例说明：** |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -173,7 +116,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->platform_id = 127;`<br>`$parMap``->shop_no =``"wdtapi3-test"``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$response``=``$client``->pageCall(``"setting.Shop.queryShop"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->platform_id = 127;`<br>`$parMap``->shop_no =``"wdtapi3-test"``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$response``=``$client``->pageCall(``"setting.Shop.queryShop"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
 
 |     |     |
 | --- | --- |
@@ -191,7 +134,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"details"``: [{`<br>```"city"``:``"北京市"``,`<br>```"re_expire_time"``:``""``,`<br>```"sub_platform_id"``: 0,`<br>```"remark"``:``""``,`<br>```"telno"``:``""``,`<br>```"province"``:``"北京"``,`<br>```"contact"``:``""``,`<br>```"auth_time"``:``"2022-08-19 08:16:07"``,`<br>```"modified"``:``"2023-03-28 16:48:12"``,`<br>```"email"``:``""``,`<br>```"shop_no"``:``"JD_test_wdt"``,`<br>```"zip"``:``""``,`<br>```"website"``:``""``,`<br>```"address"``:``"西直门外大街1号西环广场T1座7层"``,`<br>```"created"``:``"2023-03-08 10:35:57"``,`<br>```"is_disabled"``:``false``,`<br>```"mobile"``:``""``,`<br>```"auth_state"``: 1,`<br>```"expire_time"``:``"2029-11-19 05:59:59"``,`<br>```"shop_name"``:``"京东二次上架测试店铺"``,`<br>```"shop_id"``: 1122,`<br>```"account_id"``:``""``,`<br>```"group_id"``:``"无"``,`<br>```"district"``:``"西城区"``,`<br>```"platform_id"``: 3`<br>```}]`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"details"``: [{`<br>```"city"``:``"北京市"``,`<br>```"re_expire_time"``:``""``,`<br>```"sub_platform_id"``: 0,`<br>```"remark"``:``""``,`<br>```"telno"``:``""``,`<br>```"province"``:``"北京"``,`<br>```"contact"``:``""``,`<br>```"auth_time"``:``"2022-08-19 08:16:07"``,`<br>```"modified"``:``"2023-03-28 16:48:12"``,`<br>```"email"``:``""``,`<br>```"shop_no"``:``"JD_test_wdt"``,`<br>```"zip"``:``""``,`<br>```"website"``:``""``,`<br>```"address"``:``"西直门外大街1号西环广场T1座7层"``,`<br>```"created"``:``"2023-03-08 10:35:57"``,`<br>```"is_disabled"``:``false``,`<br>```"mobile"``:``""``,`<br>```"auth_state"``: 1,`<br>```"expire_time"``:``"2029-11-19 05:59:59"``,`<br>```"shop_name"``:``"京东二次上架测试店铺"``,`<br>```"shop_id"``: 1122,`<br>```"account_id"``:``""``,`<br>```"group_id"``:``"无"``,`<br>```"district"``:``"西城区"``,`<br>```"platform_id"``: 3`<br>```}]`<br>```}`<br>`}` |
 
 6.2 异常响应示例
 
@@ -199,34 +142,4 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>`"status"``: 100,`<br>`"message"``:``"参数中必须包含起止时间"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>`"status"``: 100,`<br>`"message"``:``"参数中必须包含起止时间"`<br>`}` |

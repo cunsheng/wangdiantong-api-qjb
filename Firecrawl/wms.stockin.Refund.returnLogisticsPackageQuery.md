@@ -2,59 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=wms.stockin.Refund.returnLogisticsPackageQuery"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-售后类
-
-退货入库单查询
-
-原始退款单推送
-
-创建退货预入库
-
-退换单查询
-
-预入库单据查询
-
-退货预入库单取消
-
-历史退换单查询
-
-原始退款单查询
-
-原始退款单推送2
-
-退货入库单推送
-
-快速退货
-
-历史退货入库单查询
-
-历史原始退款单查询
-
-退货物流包裹查询
-
-当前位置： API文档 > 售后类
-
 **wms.stockin.Refund.returnLogisticsPackageQuery（退货物流包裹查询** **）**
-
-**¥标准**
 
 **1.接口说明**
 
@@ -73,13 +21,6 @@ title: "API文档"
 | **2.1 举例说明：**财务系统、SAP、线下ERP、数据分析等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -164,10 +105,10 @@ title: "API文档"
 | --- | --- |
 | Json格式请求报文 | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8 | `[`<br>```{`<br>```"startTime"``:``"2024-02-21 00:00:00"``,`<br>```"endTime"``:``"2024-03-18 00:00:00"``,`<br>```"logistics_no"``:``"SF202403050012"`<br>```}`<br>`]` | |
+|  | `[`<br>```{`<br>```"startTime"``:``"2024-02-21 00:00:00"``,`<br>```"endTime"``:``"2024-03-18 00:00:00"``,`<br>```"logistics_no"``:``"SF202403050012"`<br>```}`<br>`]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`$client =``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>``<br>`$params =``new``stdClass();`<br>``<br>`$params->start_time =``'2022-06-05 11:42:56'``;`<br>`$params->end_time =``'2022-07-19 11:42:56'``;`<br>``<br>`$pager =``new``Pager(``1``,``0``,``true``);`<br>`$data = $client->pageCall(``"wms.stockin.Refund.returnLogisticsPackageQuery"``, $pager, $params);` | |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`$client =``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>``<br>`$params =``new``stdClass();`<br>``<br>`$params->start_time =``'2022-06-05 11:42:56'``;`<br>`$params->end_time =``'2022-07-19 11:42:56'``;`<br>``<br>`$pager =``new``Pager(``1``,``0``,``true``);`<br>`$data = $client->pageCall(``"wms.stockin.Refund.returnLogisticsPackageQuery"``, $pager, $params);` | |
 | JAVA |  |
 | C# |  |
 
@@ -179,7 +120,7 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31 | `{`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"record"``: [`<br>```{`<br>```"rec_id"``: 152,`<br>```"logistics_id"``: 9,`<br>```"logistics_name"``:``"销售退货专用物流"``,`<br>```"logistics_no"``:``"SF202403050012"``,`<br>```"operator_id"``: 0,`<br>```"created"``:``"2024-03-05 10:13:07"``,`<br>```"refund_remark"``:``"签收人: ZPPPP"``,`<br>```"stockin_time"``:``"2024-04-05 12:12:57"``,`<br>```"is_disabled"``:``false``,`<br>```"flag_name"``:``"标记名称"``,`<br>```"refund_no"``:``"TK1811050027"``,`<br>```"refund_status"``: 20,`<br>```"refund_stockin_status"``: 0,`<br>```"stockin_no"``:``"RK1909190004"``,`<br>```"stockin_status"``: 80,`<br>```"stockin_operator_id"``: 1,`<br>```"check_time"``:``"2019-09-19 11:25:42"``,`<br>```"pre_stockin_no"``:``"test"``,`<br>```"pre_stockin_status"``: 0,`<br>```"operator_name"``:``"系统"``,`<br>```"stockin_operator_name"``:``"小二y"`<br>```}`<br>```]`<br>```},`<br>```"status"``: 0`<br>`}` | |
+|  | `{`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"record"``: [`<br>```{`<br>```"rec_id"``: 152,`<br>```"logistics_id"``: 9,`<br>```"logistics_name"``:``"销售退货专用物流"``,`<br>```"logistics_no"``:``"SF202403050012"``,`<br>```"operator_id"``: 0,`<br>```"created"``:``"2024-03-05 10:13:07"``,`<br>```"refund_remark"``:``"签收人: ZPPPP"``,`<br>```"stockin_time"``:``"2024-04-05 12:12:57"``,`<br>```"is_disabled"``:``false``,`<br>```"flag_name"``:``"标记名称"``,`<br>```"refund_no"``:``"TK1811050027"``,`<br>```"refund_status"``: 20,`<br>```"refund_stockin_status"``: 0,`<br>```"stockin_no"``:``"RK1909190004"``,`<br>```"stockin_status"``: 80,`<br>```"stockin_operator_id"``: 1,`<br>```"check_time"``:``"2019-09-19 11:25:42"``,`<br>```"pre_stockin_no"``:``"test"``,`<br>```"pre_stockin_status"``: 0,`<br>```"operator_name"``:``"系统"``,`<br>```"stockin_operator_name"``:``"小二y"`<br>```}`<br>```]`<br>```},`<br>```"status"``: 0`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -187,12 +128,4 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"status"``: 100,`<br>```"message"``:``"end_time 不能为空"`<br>`}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"end_time 不能为空"`<br>`}` | |

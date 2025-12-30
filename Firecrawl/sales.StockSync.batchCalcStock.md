@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=sales.StockSync.batchCalcStock"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 ### **sales.StockSync.batchCalcStock 库存同步计算查询(支持批量查询)**
-
-### **¥标准**
 
 **1.接口说明**
 
@@ -127,13 +21,6 @@ JIT退货单查询
 | **2.1 举例说明：** |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -228,11 +115,11 @@ error\_date
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12 | `[`<br>```[`<br>```{`<br>```"api_goods_id"``: 2447,`<br>```"force_sync"``:``false`<br>```},`<br>```{`<br>```"api_goods_id"``: 2448,`<br>```"force_sync"``:``false`<br>```}`<br>```]`<br>`]` |
+|  | `[`<br>```[`<br>```{`<br>```"api_goods_id"``: 2447,`<br>```"force_sync"``:``false`<br>```},`<br>```{`<br>```"api_goods_id"``: 2448,`<br>```"force_sync"``:``false`<br>```}`<br>```]`<br>`]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22 | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$pars1``=``new``stdClass();`<br>`$pars1``->api_goods_id = 2447;`<br>`$pars1``->force_sync = false;`<br>`$pars2``=``new``stdClass();`<br>`$pars2``->api_goods_id = 2448;`<br>`$pars2``->force_sync = false;`<br>`$pars``=``array``();`<br>`array_push``(``$pars``,``$pars2``,``$pars1``);`<br>`//$data = $client->call("sales.StockSync.getSelfWaitSyncIdListOpen", $count, $position);`<br>`$data``=``$client``->call(``"sales.StockSync.batchCalcStock"``,``$pars``);`<br>``<br>`?>` |
+|  | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$pars1``=``new``stdClass();`<br>`$pars1``->api_goods_id = 2447;`<br>`$pars1``->force_sync = false;`<br>`$pars2``=``new``stdClass();`<br>`$pars2``->api_goods_id = 2448;`<br>`$pars2``->force_sync = false;`<br>`$pars``=``array``();`<br>`array_push``(``$pars``,``$pars2``,``$pars1``);`<br>`//$data = $client->call("sales.StockSync.getSelfWaitSyncIdListOpen", $count, $position);`<br>`$data``=``$client``->call(``"sales.StockSync.batchCalcStock"``,``$pars``);`<br>``<br>`?>` |
 
 **6.响应示** **例**
 
@@ -242,7 +129,7 @@ error\_date
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61 | `{`<br>```"success_date"``: [`<br>```{`<br>```"match_code"``:``"notebook【临】33333"``,`<br>```"list_time"``:``""``,`<br>```"stock_syn_min"``: 200,`<br>```"stock_num"``: 0,`<br>```"stock_syn_warehouses"``:``"6,12,11"``,`<br>```"sub_platform_id"``: 0,`<br>```"outer_id"``:``"notebook"``,`<br>```"spec_outer_id"``:``"【临】33333"``,`<br>```"stock_syn_percent"``: 100,`<br>```"spec_id"``:``"0"``,`<br>```"is_auto_delisting"``:``true``,`<br>```"stock_syn_plus"``: 1,`<br>```"is_auto_listing"``:``true``,`<br>```"match_target_id"``: 2695,`<br>```"match_target_type"``: 1,`<br>```"mask"``: 4,`<br>```"syn_stock"``: 0,`<br>```"area_stock"``: [`<br>```{`<br>```"api_warehouse_id"``: 1,`<br>```"api_warehouse_no"``:``"111"``,`<br>```"api_warehouse_name"``:``"sss门店1"``,`<br>```"outer_yc_owner_code"``:``""``,`<br>```"type"``: 0,`<br>```"stock_syn_rule_id"``: 13,`<br>```"stock_syn_rule_no"``:``"lzx2"``,`<br>```"stock_syn_warehouses"``:``"16,6,56,54,52,42,29,26,28,25,24,20,19,14,13,30,12,10,4,11"``,`<br>```"stock_syn_mask"``: 0,`<br>```"stock_syn_percent"``: 100,`<br>```"stock_syn_plus"``: 1,`<br>```"stock_syn_min"``: 10,`<br>```"stock_syn_max"``: 0,`<br>```"mask"``: 0,`<br>```"is_disable_syn"``:``false``,`<br>```"last_syn_num"``: -1,`<br>```"syn_stock"``: 0`<br>```}`<br>```],`<br>```"stock_syn_rule_id"``: 1,`<br>```"stock_syn_mask"``: 33263,`<br>```"goods_id"``:``"578208424251"``,`<br>```"rec_id"``: 2448,`<br>```"last_syn_num"``: -1,`<br>```"shop_id"``: 3,`<br>```"stock_syn_max"``: 500,`<br>```"last_syn_time"``:``""``,`<br>```"delist_time"``:``""``,`<br>```"stock_syn_high_frequency"``: 10.1,`<br>```"platform_id"``: 1,`<br>```"stock_syn_rule_no"``:``"001"``,`<br>```"status"``: 1,`<br>```"stock_change_count"``: 54`<br>```}`<br>```],`<br>```"error_date"``: [`<br>``<br>```]`<br>`}` |
+|  | `{`<br>```"success_date"``: [`<br>```{`<br>```"match_code"``:``"notebook【临】33333"``,`<br>```"list_time"``:``""``,`<br>```"stock_syn_min"``: 200,`<br>```"stock_num"``: 0,`<br>```"stock_syn_warehouses"``:``"6,12,11"``,`<br>```"sub_platform_id"``: 0,`<br>```"outer_id"``:``"notebook"``,`<br>```"spec_outer_id"``:``"【临】33333"``,`<br>```"stock_syn_percent"``: 100,`<br>```"spec_id"``:``"0"``,`<br>```"is_auto_delisting"``:``true``,`<br>```"stock_syn_plus"``: 1,`<br>```"is_auto_listing"``:``true``,`<br>```"match_target_id"``: 2695,`<br>```"match_target_type"``: 1,`<br>```"mask"``: 4,`<br>```"syn_stock"``: 0,`<br>```"area_stock"``: [`<br>```{`<br>```"api_warehouse_id"``: 1,`<br>```"api_warehouse_no"``:``"111"``,`<br>```"api_warehouse_name"``:``"sss门店1"``,`<br>```"outer_yc_owner_code"``:``""``,`<br>```"type"``: 0,`<br>```"stock_syn_rule_id"``: 13,`<br>```"stock_syn_rule_no"``:``"lzx2"``,`<br>```"stock_syn_warehouses"``:``"16,6,56,54,52,42,29,26,28,25,24,20,19,14,13,30,12,10,4,11"``,`<br>```"stock_syn_mask"``: 0,`<br>```"stock_syn_percent"``: 100,`<br>```"stock_syn_plus"``: 1,`<br>```"stock_syn_min"``: 10,`<br>```"stock_syn_max"``: 0,`<br>```"mask"``: 0,`<br>```"is_disable_syn"``:``false``,`<br>```"last_syn_num"``: -1,`<br>```"syn_stock"``: 0`<br>```}`<br>```],`<br>```"stock_syn_rule_id"``: 1,`<br>```"stock_syn_mask"``: 33263,`<br>```"goods_id"``:``"578208424251"``,`<br>```"rec_id"``: 2448,`<br>```"last_syn_num"``: -1,`<br>```"shop_id"``: 3,`<br>```"stock_syn_max"``: 500,`<br>```"last_syn_time"``:``""``,`<br>```"delist_time"``:``""``,`<br>```"stock_syn_high_frequency"``: 10.1,`<br>```"platform_id"``: 1,`<br>```"stock_syn_rule_no"``:``"001"``,`<br>```"status"``: 1,`<br>```"stock_change_count"``: 54`<br>```}`<br>```],`<br>```"error_date"``: [`<br>``<br>```]`<br>`}` |
 
 6.2 异常响应示例
 
@@ -250,18 +137,4 @@ error\_date
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12 | `{`<br>```"success_date"``: [`<br>```{`<br>```}`<br>```],`<br>```"error_date"``: [`<br>```{`<br>```"err_msg"``:``"force_sync"``,`<br>```"rec_id"``: 2447`<br>```}`<br>```]`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"success_date"``: [`<br>```{`<br>```}`<br>```],`<br>```"error_date"``: [`<br>```{`<br>```"err_msg"``:``"force_sync"``,`<br>```"rec_id"``: 2447`<br>```}`<br>```]`<br>`}` |

@@ -2,59 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=aftersales.refund.Refund.searchHistory"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-售后类
-
-退货入库单查询
-
-原始退款单推送
-
-创建退货预入库
-
-退换单查询
-
-预入库单据查询
-
-退货预入库单取消
-
-历史退换单查询
-
-原始退款单查询
-
-原始退款单推送2
-
-退货入库单推送
-
-快速退货
-
-历史退货入库单查询
-
-历史原始退款单查询
-
-退货物流包裹查询
-
-当前位置： API文档 > 售后类
-
 **aftersales.refund.Refund.searchHistory**（历史退换单查询）
-
-**¥标准**
 
 **1.接口说明**
 
@@ -80,13 +28,6 @@ title: "API文档"
 | **2.1 举例说明：** 自研商城、分销系统、全渠道等系统对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -271,7 +212,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15 | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>`$pars``=``array`<br>`(`<br>```'start_time'``=>``'2018-10-25 10:32:12'``,`<br>```'end_time'``=>``'2018-10-29 10:32:12'`<br>`);`<br>`$pager``=``new``Pager(50, 0, true);`<br>`$data``=``$client``->pageCall(``"aftersales.refund.Refund.searchHistory"``,``$pager``,``$pars``);``//分页方法`<br>`$php_json``= json_encode(``$data``);`<br>`echo``$php_json``;`<br>``<br>`?>` |
+|  | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>`$pars``=``array`<br>`(`<br>```'start_time'``=>``'2018-10-25 10:32:12'``,`<br>```'end_time'``=>``'2018-10-29 10:32:12'`<br>`);`<br>`$pager``=``new``Pager(50, 0, true);`<br>`$data``=``$client``->pageCall(``"aftersales.refund.Refund.searchHistory"``,``$pager``,``$pars``);``//分页方法`<br>`$php_json``= json_encode(``$data``);`<br>`echo``$php_json``;`<br>``<br>`?>` |
 
 **6.响应示** **例**
 
@@ -281,7 +222,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54 | `{`<br>`"status"``: 0,`<br>`"data"``: {`<br>`"total_count"``: 1,`<br>`"order"``: [`<br>`{`<br>`"flag_id"``: 0,`<br>`"reason"``:``"无"``,`<br>`"tid_list"``:``"AT201810260027"``,`<br>`"operator_id"``: 21,`<br>`"detail_list"``: [`<br>`],`<br>`"refund_no"``:``"TK1810260005"``,`<br>`"return_mobile "``:``""``,`<br>`"bad_reason"``: 0,`<br>`"remark"``:``""``,`<br>`"return_telno"``:``"~fSQFZ/yni5sB7AbC9Kt5oA==~1~"``,`<br>`"type"``: 3,`<br>`"stockin_status"``: 0,`<br>`"flag_name"``:``"无"``,`<br>`"salesman_id"``: 21,`<br>`"return_goods_count"``: 2.0000,`<br>`"pay_status"``: 0,`<br>`" receiver_telno"``:``"16619955153"``,`<br>`"receiver_name"``:``"王召红"``,`<br>`"modified"``:``"2018-10-26 14:52:15"``,`<br>`"return_name"``:``"~fSQFZ/yni5sB7AbC9Kt5oA==~1~"``,`<br>`"return_warehouse_id"``: 12,`<br>`"shop_no"``:``"001"``,`<br>`"from_type "``: 1,`<br>`"created"``:``"2018-10-26 14:49:02"``,`<br>`"trade_no_list"``:``"JY201810260048"``,`<br>`"return_logistics_no"``:``""``,`<br>`"return_goods_amount"``: 13.0000,`<br>`"guarantee_refund_amount"``: 0.0000,`<br>`"return_logistics_name"``:``"销 售退货专用物流"``,`<br>`"refund_id"``: 20,`<br>`"settle_time"``:``""``,`<br>`"reason_id"``: 0,`<br>`"shop_id"``: 10,`<br>`"buyer_nick"``:``"~GY2AcukFtGPJiW2+UvWl/y2Ri5KB5++K/7HI+nixOf0=~1~"``,`<br>`"actual_refund_amount"``: 12.9800,`<br>`"revert_reason "``: 0,`<br>`"return_warehouse_no"``:``"001"``,`<br>`"direct_refund_amount"``: 13.0000,`<br>`"stockin_no"``:``""``,`<br>`"receive_amount"``: 0.0200,`<br>`"salesman"``:``"W"``,`<br>`"return_mask"``: 0,`<br>`"status"``: 10`<br>`}`<br>`]`<br>`}`<br>`}` |
+|  | `{`<br>`"status"``: 0,`<br>`"data"``: {`<br>`"total_count"``: 1,`<br>`"order"``: [`<br>`{`<br>`"flag_id"``: 0,`<br>`"reason"``:``"无"``,`<br>`"tid_list"``:``"AT201810260027"``,`<br>`"operator_id"``: 21,`<br>`"detail_list"``: [`<br>`],`<br>`"refund_no"``:``"TK1810260005"``,`<br>`"return_mobile "``:``""``,`<br>`"bad_reason"``: 0,`<br>`"remark"``:``""``,`<br>`"return_telno"``:``"~fSQFZ/yni5sB7AbC9Kt5oA==~1~"``,`<br>`"type"``: 3,`<br>`"stockin_status"``: 0,`<br>`"flag_name"``:``"无"``,`<br>`"salesman_id"``: 21,`<br>`"return_goods_count"``: 2.0000,`<br>`"pay_status"``: 0,`<br>`" receiver_telno"``:``"16619955153"``,`<br>`"receiver_name"``:``"王召红"``,`<br>`"modified"``:``"2018-10-26 14:52:15"``,`<br>`"return_name"``:``"~fSQFZ/yni5sB7AbC9Kt5oA==~1~"``,`<br>`"return_warehouse_id"``: 12,`<br>`"shop_no"``:``"001"``,`<br>`"from_type "``: 1,`<br>`"created"``:``"2018-10-26 14:49:02"``,`<br>`"trade_no_list"``:``"JY201810260048"``,`<br>`"return_logistics_no"``:``""``,`<br>`"return_goods_amount"``: 13.0000,`<br>`"guarantee_refund_amount"``: 0.0000,`<br>`"return_logistics_name"``:``"销 售退货专用物流"``,`<br>`"refund_id"``: 20,`<br>`"settle_time"``:``""``,`<br>`"reason_id"``: 0,`<br>`"shop_id"``: 10,`<br>`"buyer_nick"``:``"~GY2AcukFtGPJiW2+UvWl/y2Ri5KB5++K/7HI+nixOf0=~1~"``,`<br>`"actual_refund_amount"``: 12.9800,`<br>`"revert_reason "``: 0,`<br>`"return_warehouse_no"``:``"001"``,`<br>`"direct_refund_amount"``: 13.0000,`<br>`"stockin_no"``:``""``,`<br>`"receive_amount"``: 0.0200,`<br>`"salesman"``:``"W"``,`<br>`"return_mask"``: 0,`<br>`"status"``: 10`<br>`}`<br>`]`<br>`}`<br>`}` |
 
 6.2 异常响应示例
 
@@ -290,35 +231,3 @@ title: "API文档"
 |     |     |
 | --- | --- |
 | 1 | `{``"status"``:100,``"message"``:``"您的查询时间过宽,查询时间不能大于30天"``}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-4.1 公共响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1

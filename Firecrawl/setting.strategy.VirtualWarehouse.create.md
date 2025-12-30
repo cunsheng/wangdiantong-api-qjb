@@ -2,160 +2,6 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=setting.strategy.VirtualWarehouse.create"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-库存类
-
-移位单查询
-
-库存查询
-
-创建盘点单
-
-其他入库单新建
-
-调拨单查询
-
-其他出库单查询
-
-其他入库单查询
-
-调拨入库单查询
-
-可用库存查询
-
-其他出库单新建
-
-调拨出库单查询
-
-调拨单入库取消
-
-盘点入库单查询
-
-盘点出库单查询
-
-调拨单出库取消
-
-调拨单取消
-
-调拨入库单新建
-
-调拨出库单新建
-
-调拨单新建
-
-补货单查询
-
-库存变化查询
-
-存货成本查询
-
-调拨单停止等待
-
-其它出库业务单创建
-
-其它入库业务单创建
-
-生产出库查询
-
-生产入库查询
-
-外仓调整出库单创建
-
-外仓调整入库单创建
-
-外仓调整出库单查询
-
-外仓调整入库单查询
-
-调拨结算查询
-
-正残转换单查询
-
-其它出库业务单查询
-
-其它入库业务单查询
-
-分拣单全览
-
-默认货位查询
-
-虚拟仓库存查询
-
-虚拟仓单据创建
-
-虚拟仓单据查询
-
-装箱单查询
-
-JIT退货入库单查询
-
-JIT出库单查询
-
-SN码查询
-
-其它入库业务结算单创建
-
-库存查询2
-
-出库瞬时成本查询
-
-入库瞬时成本查询
-
-盘点单查询
-
-盘点单明细查询
-
-入库单查询
-
-出库单查询
-
-库存明细查询
-
-出库SN查询
-
-入库SN查询
-
-入库SN明细推送
-
-出库SN明细推送
-
-其他入库单取消
-
-其他出库单取消
-
-电子面单号查询
-
-箱码新建
-
-其他入库业务单据取消
-
-其他出库业务单据取消
-
-虚拟仓库存分配策略创建
-
-虚拟仓库存释放策略新建
-
-外仓快速调拨
-
-当前位置： API文档 > 库存类
-
 **setting.strategy.VirtualWarehouse.create** **（虚拟仓订单创建)**
 
 **[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥定制**
@@ -177,13 +23,6 @@ SN码查询
 | **2.1 举例说明：**自研商城、SCM、SRM、财务系统、SAP等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -212,7 +51,7 @@ SN码查询
 | 单据类型 | order\_type | byte |  | 否 | 1:锁定分配,2:释放出库,3:虚拟仓间调拨,4:采购入库<br>默认值为1 |
 | 目标虚拟仓编号 | to\_virtual\_warehouse\_no | String |  | 否 | order\_type=3时必传 |
 | 是否预审核 | is\_pre\_check | Int |  | 否 | 仅在order\_type=3时生效<br>1：预设审核，   0：不审核 |
-| 库存不足则不审核 | insufficient\_stock\_not\_pre\_check | Int |  | 否 | 仅在order\_type=3时生效，默认0<br>1：审核，  0：不审核 |
+| 库存不足则不审核 | insufficient\_stock\_not\_pre\_check | Int |  | 否 | 仅在order\_type=3时生效，默认：审核，  0：不审核 |
 | 审核时间 | pre\_time | String |  | 否 | 仅在order\_type=3时生效, 格式: yyyy-MM-dd HH:mm, 时间要大于当前服务器时间2分钟以上 |
 | 备注 | remark | String |  | 否 | 默认为空 |
 | 是否审核单据 | is\_check | Int |  | 否 | 1：审核，   0：不审核<br>默认0不审核 |
@@ -254,11 +93,11 @@ SN码查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18 | `[{`<br>```"virtual_warehouse_no"``:``"yxfxnc001"``,`<br>```"order_type"``: 3,`<br>```"to_virtual_warehouse_no"``:``"gyy001"``,`<br>```"is_pre_check"``:``true``,`<br>```"insufficient_stock_not_pre_check"``:``true``,`<br>```"pre_time"``:``"2022-04-09 11:11"``,`<br>```"remark"``:``"api_test"``,`<br>```"is_check"``: 0`<br>`},`<br>`[{`<br>```"warehouse_no"``:``"lzx"``,`<br>```"spec_no"``:``"all3"``,`<br>```"num"``: 2,`<br>```"purchase_num"``: 2,`<br>```"factory_num"``: 2,`<br>```"price"``: 5`<br>`}]]` |
+|  | `[{`<br>```"virtual_warehouse_no"``:``"yxfxnc001"``,`<br>```"order_type"``: 3,`<br>```"to_virtual_warehouse_no"``:``"gyy001"``,`<br>```"is_pre_check"``:``true``,`<br>```"insufficient_stock_not_pre_check"``:``true``,`<br>```"pre_time"``:``"2022-04-09 11:11"``,`<br>```"remark"``:``"api_test"``,`<br>```"is_check"``: 0`<br>`},`<br>`[{`<br>```"warehouse_no"``:``"lzx"``,`<br>```"spec_no"``:``"all3"``,`<br>```"num"``: 2,`<br>```"purchase_num"``: 2,`<br>```"factory_num"``: 2,`<br>```"price"``: 5`<br>`}]]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>`$order``=``new``stdClass();`<br>`$order``->virtual_warehouse_no =``'yxfxnc001'``;`<br>`$order``->order_type = 4;`<br>`$order``->to_virtual_warehouse_no =``'gyy001'``;`<br>`$order``->is_pre_check = true;`<br>`$order``->insufficient_stock_not_pre_check = false;`<br>`$order``->pre_time =``'2022-04-09 11:11'``;`<br>`$order``->remark =``'api_test'``;`<br>`$order``->is_check = true;`<br>`$detail``=``new``stdClass();`<br>`$detail``->warehouse_no =``'lzx'``;`<br>`$detail``->spec_no =``'all3'``;`<br>`$detail``->num = 2;`<br>`$detail``->purchase_num = 3;`<br>`$detail``->factory_num = 4;`<br>`$detail``->price = 5;`<br>`$detailList``=``array``();`<br>`array_push``(``$detailList``,``$detail``);`<br>`try``{`<br>```$response``=``$client``->call(``"setting.strategy.VirtualWarehouse.create"``,``$order``,``$detailList``);`<br>```echo``json_encode(``$response``, JSON_PRETTY_PRINT);`<br>`}``catch``(exception``$e``)`<br>`{`<br>```echo``"exception info:"``.``$e``->getMessage();`<br>`}`<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>`$order``=``new``stdClass();`<br>`$order``->virtual_warehouse_no =``'yxfxnc001'``;`<br>`$order``->order_type = 4;`<br>`$order``->to_virtual_warehouse_no =``'gyy001'``;`<br>`$order``->is_pre_check = true;`<br>`$order``->insufficient_stock_not_pre_check = false;`<br>`$order``->pre_time =``'2022-04-09 11:11'``;`<br>`$order``->remark =``'api_test'``;`<br>`$order``->is_check = true;`<br>`$detail``=``new``stdClass();`<br>`$detail``->warehouse_no =``'lzx'``;`<br>`$detail``->spec_no =``'all3'``;`<br>`$detail``->num = 2;`<br>`$detail``->purchase_num = 3;`<br>`$detail``->factory_num = 4;`<br>`$detail``->price = 5;`<br>`$detailList``=``array``();`<br>`array_push``(``$detailList``,``$detail``);`<br>`try``{`<br>```$response``=``$client``->call(``"setting.strategy.VirtualWarehouse.create"``,``$order``,``$detailList``);`<br>```echo``json_encode(``$response``, JSON_PRETTY_PRINT);`<br>`}``catch``(exception``$e``)`<br>`{`<br>```echo``"exception info:"``.``$e``->getMessage();`<br>`}`<br>`?>` |
 
 **6.响应示** **例**
 
@@ -268,7 +107,7 @@ SN码查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"message"``:``"VO202203290031"``,`<br>```"status"``: 0`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"message"``:``"VO202203290031"``,`<br>```"status"``: 0`<br>```}`<br>`}` |
 
 6.2 异常响应示例
 
@@ -276,34 +115,4 @@ SN码查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3 | `{`<br>```"status"``: 100,`<br>```"message"``:``"虚拟仓不存在:lzx"` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"虚拟仓不存在:lzx"` |

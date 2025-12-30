@@ -2,59 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=aftersales.refund.RawRefund.upload2"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-售后类
-
-退货入库单查询
-
-原始退款单推送
-
-创建退货预入库
-
-退换单查询
-
-预入库单据查询
-
-退货预入库单取消
-
-历史退换单查询
-
-原始退款单查询
-
-原始退款单推送2
-
-退货入库单推送
-
-快速退货
-
-历史退货入库单查询
-
-历史原始退款单查询
-
-退货物流包裹查询
-
-当前位置： API文档 > 售后类
-
 ****aftersales.refund.RawRefund.upload2**** **（原始退款单推送2）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -73,13 +21,6 @@ title: "API文档"
 | **2.1 举例说明：** 自研商城、分销系统、全渠道等系统对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -161,10 +102,10 @@ title: "API文档"
 | --- | --- |
 | Json格式请求报文 | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18 | `[``"LCJ"``, [{`<br>`"refund_no"``:``"lztest"``,`<br>`"num"``: 1,`<br>`"tid"``:``"TID6NAFAmwYMM"``,`<br>`"oid"``:``"deb718e2afe5"``,`<br>`"type"``: 1,`<br>`"status"``: 2,`<br>`"refund_version"``:``"1"``,`<br>`"refund_amount"``: 1,`<br>`"actual_refund_amount"``: 1,`<br>`"title"``:``"test"``,`<br>`"logistics_name"``:``""``,`<br>`"logistics_no"``:``""``,`<br>`"buyer_nick"``:``"123444"``,`<br>`"refund_time"``:``"2020-05-22 09:07:18"``,`<br>`"is_aftersale"``: 0,`<br>`"reason"``:``""`<br>`}]]` | |
+|  | `[``"LCJ"``, [{`<br>`"refund_no"``:``"lztest"``,`<br>`"num"``: 1,`<br>`"tid"``:``"TID6NAFAmwYMM"``,`<br>`"oid"``:``"deb718e2afe5"``,`<br>`"type"``: 1,`<br>`"status"``: 2,`<br>`"refund_version"``:``"1"``,`<br>`"refund_amount"``: 1,`<br>`"actual_refund_amount"``: 1,`<br>`"title"``:``"test"``,`<br>`"logistics_name"``:``""``,`<br>`"logistics_no"``:``""``,`<br>`"buyer_nick"``:``"123444"``,`<br>`"refund_time"``:``"2020-05-22 09:07:18"``,`<br>`"is_aftersale"``: 0,`<br>`"reason"``:``""`<br>`}]]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once(``'wdtsdk.php'``);`<br>``<br>`$client =``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$shopNo=``'LCJ'``;`<br>``<br>`$orderList = array();`<br>``<br>`$orderList1 =``new``stdClass();`<br>`$orderList1->refund_no=``'lztest'``;`<br>`$orderList1->num=``1``;`<br>`$orderList1->tid=``'TID6NAFAmwYMM'``;`<br>`$orderList1->oid=``'deb718e2afe5'``;`<br>`$orderList1->type=``1``;`<br>`$orderList1->status=``2``;`<br>`$orderList1->refund_version=``'1'``;`<br>`$orderList1->refund_amount=``1``;`<br>`$orderList1->actual_refund_amount=``1``;`<br>`$orderList1->title=``'test'``;`<br>`$orderList1->logistics_name=``''``;`<br>`$orderList1->logistics_no=``''``;`<br>`$orderList1->buyer_nick=``'可用库存'``;`<br>`$orderList1->is_aftersale=``0``;`<br>`$orderList1->reason=``''``;`<br>``<br>`array_push($orderList, $orderList1);`<br>``<br>`$data = $client->call(``"aftersales.refund.RawRefund.upload2"``, $shopNo, $orderList);`<br>`?>` | |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once(``'wdtsdk.php'``);`<br>``<br>`$client =``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$shopNo=``'LCJ'``;`<br>``<br>`$orderList = array();`<br>``<br>`$orderList1 =``new``stdClass();`<br>`$orderList1->refund_no=``'lztest'``;`<br>`$orderList1->num=``1``;`<br>`$orderList1->tid=``'TID6NAFAmwYMM'``;`<br>`$orderList1->oid=``'deb718e2afe5'``;`<br>`$orderList1->type=``1``;`<br>`$orderList1->status=``2``;`<br>`$orderList1->refund_version=``'1'``;`<br>`$orderList1->refund_amount=``1``;`<br>`$orderList1->actual_refund_amount=``1``;`<br>`$orderList1->title=``'test'``;`<br>`$orderList1->logistics_name=``''``;`<br>`$orderList1->logistics_no=``''``;`<br>`$orderList1->buyer_nick=``'可用库存'``;`<br>`$orderList1->is_aftersale=``0``;`<br>`$orderList1->reason=``''``;`<br>``<br>`array_push($orderList, $orderList1);`<br>``<br>`$data = $client->call(``"aftersales.refund.RawRefund.upload2"``, $shopNo, $orderList);`<br>`?>` | |
 | JAVA |  |
 | C# |  |
 
@@ -176,7 +117,7 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"chg_count"``: 1,`<br>```"error_list"``: [],`<br>```"new_count"``: 2`<br>```}`<br>`}` | |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"chg_count"``: 1,`<br>```"error_list"``: [],`<br>```"new_count"``: 2`<br>```}`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -184,12 +125,4 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"chg_count"``: 0,`<br>```"error_list"``: [`<br>```{`<br>```"error"``:``"店铺权限不足"``,`<br>```"no"``:``"lztest"`<br>```}`<br>```],`<br>```"new_count"``: 0`<br>```}`<br>`}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"chg_count"``: 0,`<br>```"error_list"``: [`<br>```{`<br>```"error"``:``"店铺权限不足"``,`<br>```"no"``:``"lztest"`<br>```}`<br>```],`<br>```"new_count"``: 0`<br>```}`<br>`}` | |

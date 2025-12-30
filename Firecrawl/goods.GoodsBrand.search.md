@@ -2,69 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=goods.GoodsBrand.search"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-货品类
-
-货品推送
-
-组合装查询
-
-货品档案查询
-
-平台货品查询
-
-平台货品推送
-
-物料清单推送
-
-生产单推送
-
-生产单查询
-
-货品分类查询
-
-品牌查询
-
-组合装创建/更新
-
-平台类目查询
-
-货品批量推送
-
-物料清单查询
-
-条码上传
-
-货品推送2
-
-新建分类
-
-货品品牌新建/更新
-
-生产结算单查询
-
-当前位置： API文档 > 货品类
-
 **goods.GoodsBrand.search** **（品牌查询）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -83,13 +21,6 @@ title: "API文档"
 | **2.1 举例说明：**自研商城、SCM、SRM、财务系统、SAP等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -167,11 +98,11 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6 | `[{`<br>```"brand_no"``:``"brand_no"``,`<br>```"brand_name"``:``"brand_name"``,`<br>```"start_time"``:``"2022-02-11"``,`<br>```"end_time"``:``"2022-02-13"`<br>`}]` |
+|  | `[{`<br>```"brand_no"``:``"brand_no"``,`<br>```"brand_name"``:``"brand_name"``,`<br>```"start_time"``:``"2022-02-11"``,`<br>```"end_time"``:``"2022-02-13"`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->start_time =``"2022-02-11"``;`<br>`$parMap``->end_time =``"2022-02-11"``;`<br>`$parMap``->brand_no =``"brand_no"``;`<br>`$parMap``->brand_name =``"brand_name"``;`<br>``<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>`$data``=``$client``->pageCall(``"goods.GoodsBrand.search"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->start_time =``"2022-02-11"``;`<br>`$parMap``->end_time =``"2022-02-11"``;`<br>`$parMap``->brand_no =``"brand_no"``;`<br>`$parMap``->brand_name =``"brand_name"``;`<br>``<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>`$data``=``$client``->pageCall(``"goods.GoodsBrand.search"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
 
 **6.响应示** **例**
 
@@ -181,7 +112,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"detail_list"``: [{`<br>```"brand_no"``:``"BD202201250001"``,`<br>```"created"``:``"2022-01-25 16:40:06"``,`<br>```"is_disabled"``: 0,`<br>```"modified"``:``"2022-01-25 16:40:06"``,`<br>```"brand_name"``:``"香蕉你个巴拉"``,`<br>```"remark"``:``""``,`<br>```"brand_id"``: 34`<br>```}]`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"detail_list"``: [{`<br>```"brand_no"``:``"BD202201250001"``,`<br>```"created"``:``"2022-01-25 16:40:06"``,`<br>```"is_disabled"``: 0,`<br>```"modified"``:``"2022-01-25 16:40:06"``,`<br>```"brand_name"``:``"香蕉你个巴拉"``,`<br>```"remark"``:``""``,`<br>```"brand_id"``: 34`<br>```}]`<br>```}`<br>`}` |
 
 6.2 异常响应示例
 
@@ -189,34 +120,4 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"status"``: 100,`<br>```"message"``:``"errormsg"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"errormsg"`<br>`}` |

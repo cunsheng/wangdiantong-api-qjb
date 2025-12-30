@@ -54,7 +54,7 @@ def clean_md_file(file_path):
     body_text = re.sub(r'^.*¥标准.*$\n?', '', body_text, flags=re.MULTILINE)
 
     # 2. 删除连续的数字行号垃圾数据 (如 "1<br>2<br>3...")
-    # body_text = re.sub(r'(\d+<br>)+\d+', '', body_text)
+    body_text = re.sub(r'(\d+<br>)+\d+', '', body_text)
 
     # 3. 预处理：分离标题和紧接的内容
     # 例如： "**3.请求参数说明** 3.1 请求地址" -> "**3.请求参数说明**\n3.1 请求地址"

@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=sales.TradeQuery.queryWithDetail"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 ****sales.TradeQuery.queryWithDetail**（订单查询）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -138,13 +32,6 @@ JIT退货单查询
 | **2.1 举例说明：**财务系统、SAP、数据分析等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -415,11 +302,11 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `[{`<br>`"start_time"``:``"2020-01-01 00:00:00"``,`<br>`"end_time"``:``"2020-01-20 00:00:00"`<br>`}]` |
+|  | `[{`<br>`"start_time"``:``"2020-01-01 00:00:00"``,`<br>`"end_time"``:``"2020-01-20 00:00:00"`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16 | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->start_time =``"2020-01-01 00:00:00"``;`<br>`$parMap``->end_time =``"2020-01-20 00:00:00"``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$response``=``$client``->pageCall(``"sales.TradeQuery.queryWithDetail"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
+|  | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->start_time =``"2020-01-01 00:00:00"``;`<br>`$parMap``->end_time =``"2020-01-20 00:00:00"``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$response``=``$client``->pageCall(``"sales.TradeQuery.queryWithDetail"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
 
 |     |     |
 | --- | --- |
@@ -437,7 +324,7 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>112<br>113<br>114<br>115<br>116<br>117<br>118<br>119<br>120<br>121<br>122<br>123<br>124<br>125<br>126<br>127<br>128<br>129<br>130<br>131<br>132<br>133<br>134<br>135<br>136<br>137<br>138<br>139<br>140<br>141<br>142<br>143<br>144<br>145<br>146<br>147<br>148<br>149<br>150<br>151<br>152<br>153<br>154<br>155<br>156<br>157<br>158<br>159<br>160<br>161<br>162<br>163<br>164<br>165<br>166<br>167<br>168<br>169<br>170<br>171<br>172<br>173<br>174<br>175<br>176<br>177<br>178<br>179<br>180<br>181<br>182 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [`<br>```{`<br>```"fenxiao_nick"``:``""``,`<br>```"post_amount"``: 0,`<br>```"estimate_consign_time"``:``""``,`<br>```"trade_time"``: 1673366400000,`<br>```"receiver_ring"``:``""``,`<br>```"remark_flag"``: 0,`<br>```"detail_list"``: [`<br>```{`<br>```"trade_id"``: 1028159,`<br>```"platform_id"``: 127,`<br>```"src_oid"``:``"zd2023010898998"``,`<br>```"src_tid"``:``"zd2023010898998"``,`<br>```"gift_type"``: 0,`<br>```"goods_gift_relation"``:``""``,`<br>```"refund_status"``: 0,`<br>```"guarantee_mode"``: 1,`<br>```"delivery_term"``: 1,`<br>```"num"``: 1,`<br>```"price"``: 10,`<br>```"refund_num"``: 0,`<br>```"order_price"``: 10,`<br>```"share_price"``: 10,`<br>```"adjust"``: 0,`<br>```"suite_id"``: 0,`<br>```"bind_oid"``:``""``,`<br>```"print_suite_mode"``: 0,`<br>```"flag"``: 0,`<br>```"stock_state"``: 0,`<br>```"is_consigned"``:``false``,`<br>```"is_received"``: 0,`<br>```"cid"``: 0,`<br>```"modified_date"``:``"2023-01-11 14:36:01"``,`<br>```"created_date"``:``"2023-01-11 14:31:12"``,`<br>```"discount"``: 0,`<br>```"share_amount"``: 10,`<br>```"paid"``: 0,`<br>```"goods_name"``:``"zzdd"``,`<br>```"tax_rate"``: 0,`<br>```"goods_no"``:``"951027"``,`<br>```"spec_name"``:``"测试"``,`<br>```"spec_no"``:``"951027"``,`<br>```"spec_code"``:``"951027"``,`<br>```"suite_no"``:``""``,`<br>```"suite_name"``:``""``,`<br>```"suite_num"``: 0,`<br>```"suite_amount"``: 0,`<br>```"suite_discount"``: 0,`<br>```"api_goods_name"``:``"951027"``,`<br>```"api_spec_name"``:``""``,`<br>```"commission"``: 0,`<br>```"goods_type"``: 1,`<br>```"from_mask"``: 0,`<br>```"remark"``:``""``,`<br>```"modified"``: 1673418961000,`<br>```"img_url"``:``""``,`<br>```"platform_status"``: 30,`<br>```"actual_num"``: 1,`<br>```"created"``: 1673418672000,`<br>```"prop1"``:``"杏色"``,`<br>```"prop2"``:``"22222"``,`<br>```"weight"``: 0,`<br>```"api_goods_id"``:``"951027"``,`<br>```"api_spec_id"``:``"951027"``,`<br>```"rec_id"``: 1271983,`<br>```"pay_status"``: 2,`<br>```"barcode"``:``"951027"``,`<br>```"spec_id"``: 235348,`<br>```"goods_id"``: 83223,`<br>```"post_amount"``: 0,`<br>```"tid"``:``"zd2023010898998"``,`<br>```"invoice_content"``:``""``,`<br>```"share_post_price"``: 0,`<br>```"pay_time"``:``""`<br>```}`<br>```],`<br>```"bad_reason"``: 0,`<br>```"discount"``: 0,`<br>```"pay_account"``:``"123456789"``,`<br>```"package_id"``: 0,`<br>```"raw_goods_count"``: 1,`<br>```"fchecker_name"``:``"系统"``,`<br>```"trade_id"``: 1028159,`<br>```"trade_label"``:``""``,`<br>```"checker_name"``:``"zd3"``,`<br>```"large_type"``: 0,`<br>```"refund_status"``: 0,`<br>```"receiver_province"``: 0,`<br>```"buyer_message"``:``""``,`<br>```"logistics_code"``:``"KDLL001"``,`<br>```"shop_platform_id"``: 127,`<br>```"trade_mask"``: 0,`<br>```"src_tids"``:``"zd2023010898998"``,`<br>```"shop_id"``: 290,`<br>```"package_cost"``:``"0.0000"``,`<br>```"checkouter_name"``:``"系统"``,`<br>```"id_card_type"``: 0,`<br>```"freeze_reason"``:``"无"``,`<br>```"single_spec_no"``:``"951027"``,`<br>```"sub_platform_id"``: 0,`<br>```"goods_count"``: 1,`<br>```"invoice_content"``:``""``,`<br>```"post_cost"``: 0,`<br>```"receiver_name"``:``"zd"``,`<br>```"commission"``: 0,`<br>```"currency"``:``""``,`<br>```"trade_from"``: 1,`<br>```"delivery_term"``: 1,`<br>```"gift_mask"``: 0,`<br>```"logistics_no"``:``"2022301110001"``,`<br>```"goods_cost"``: 11,`<br>```"receiver_district"``: 0,`<br>```"receivable"``: 10,`<br>```"receiver_mobile"``:``"11111"``,`<br>```"cs_remark"``:``""``,`<br>```"receiver_address"``:``"1111"``,`<br>```"ext_cod_fee"``: 0,`<br>```"customer_name"``:``"zd"``,`<br>```"customer_id"``: 716844,`<br>```"warehouse_id"``: 311,`<br>```"logistics_name"``:``"wdt_快弟来了"``,`<br>```"warehouse_type"``: 1,`<br>```"consign_time"``: 1673418961000,`<br>```"raw_goods_type_count"``: 1,`<br>```"receiver_dtb"``:``"无 无"``,`<br>```"other_cost"``: 0,`<br>```"print_remark"``:``""``,`<br>```"other_amount"``: 0,`<br>```"tax_rate"``: 0,`<br>```"to_deliver_time"``:``""``,`<br>```"shop_remark"``:``"ljcs"``,`<br>```"invoice_id"``: 0,`<br>```"modified"``:``"2023-01-11 14:37:00"``,`<br>```"shop_no"``:``"wdtapi3-test"``,`<br>```"receiver_area"``:``"1111"``,`<br>```"customer_no"``:``"KH202103011079"``,`<br>```"created"``: 1673418672000,`<br>```"weight"``: 0,`<br>```"tax"``: 0,`<br>```"shop_name"``:``"wdtapi3-test"``,`<br>```"pay_time"``:``"2023-01-11 00:00:00"``,`<br>```"volume"``: 0,`<br>```"is_sealed"``:``false``,`<br>```"trade_no"``:``"JY202301110027"``,`<br>```"check_time"``:``"2023-01-11 14:31:51"``,`<br>```"customer_type"``: 0,`<br>```"salesman_name"``:``"系统"``,`<br>```"receiver_city"``: 0,`<br>```"invoice_title"``:``""``,`<br>```"goods_type_count"``: 1,`<br>```"cod_amount"``: 50,`<br>```"flag_name"``:``"无"``,`<br>```"logistics_id"``: 332,`<br>```"receiver_telno"``:``""``,`<br>```"receiver_zip"``:``"987654"``,`<br>```"warehouse_no"``:``"wdtapi3-test"``,`<br>```"trade_status"``: 110,`<br>```"invoice_type"``: 0,`<br>```"new_trade_label"``:``"0"``,`<br>```"profit"``: -1,`<br>```"goods_amount"``: 10,`<br>```"stockout_no"``:``"CK202301115"``,`<br>```"version_id"``: 1,`<br>```"buyer_nick"``:``"zd"``,`<br>```"cancel_reason"``:``"无"``,`<br>```"fenxiao_type"``: 0,`<br>```"revert_reason"``:``"无"``,`<br>```"platform_id"``: 127,`<br>```"package_name"``:``"未知"``,`<br>```"paid"``: 0,`<br>```"trade_type"``: 1,`<br>```"logistics_type_name"``:``"快弟来了"``,`<br>```"delay_to_time"``:``""`<br>```}`<br>```]`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [`<br>```{`<br>```"fenxiao_nick"``:``""``,`<br>```"post_amount"``: 0,`<br>```"estimate_consign_time"``:``""``,`<br>```"trade_time"``: 1673366400000,`<br>```"receiver_ring"``:``""``,`<br>```"remark_flag"``: 0,`<br>```"detail_list"``: [`<br>```{`<br>```"trade_id"``: 1028159,`<br>```"platform_id"``: 127,`<br>```"src_oid"``:``"zd2023010898998"``,`<br>```"src_tid"``:``"zd2023010898998"``,`<br>```"gift_type"``: 0,`<br>```"goods_gift_relation"``:``""``,`<br>```"refund_status"``: 0,`<br>```"guarantee_mode"``: 1,`<br>```"delivery_term"``: 1,`<br>```"num"``: 1,`<br>```"price"``: 10,`<br>```"refund_num"``: 0,`<br>```"order_price"``: 10,`<br>```"share_price"``: 10,`<br>```"adjust"``: 0,`<br>```"suite_id"``: 0,`<br>```"bind_oid"``:``""``,`<br>```"print_suite_mode"``: 0,`<br>```"flag"``: 0,`<br>```"stock_state"``: 0,`<br>```"is_consigned"``:``false``,`<br>```"is_received"``: 0,`<br>```"cid"``: 0,`<br>```"modified_date"``:``"2023-01-11 14:36:01"``,`<br>```"created_date"``:``"2023-01-11 14:31:12"``,`<br>```"discount"``: 0,`<br>```"share_amount"``: 10,`<br>```"paid"``: 0,`<br>```"goods_name"``:``"zzdd"``,`<br>```"tax_rate"``: 0,`<br>```"goods_no"``:``"951027"``,`<br>```"spec_name"``:``"测试"``,`<br>```"spec_no"``:``"951027"``,`<br>```"spec_code"``:``"951027"``,`<br>```"suite_no"``:``""``,`<br>```"suite_name"``:``""``,`<br>```"suite_num"``: 0,`<br>```"suite_amount"``: 0,`<br>```"suite_discount"``: 0,`<br>```"api_goods_name"``:``"951027"``,`<br>```"api_spec_name"``:``""``,`<br>```"commission"``: 0,`<br>```"goods_type"``: 1,`<br>```"from_mask"``: 0,`<br>```"remark"``:``""``,`<br>```"modified"``: 1673418961000,`<br>```"img_url"``:``""``,`<br>```"platform_status"``: 30,`<br>```"actual_num"``: 1,`<br>```"created"``: 1673418672000,`<br>```"prop1"``:``"杏色"``,`<br>```"prop2"``:``"22222"``,`<br>```"weight"``: 0,`<br>```"api_goods_id"``:``"951027"``,`<br>```"api_spec_id"``:``"951027"``,`<br>```"rec_id"``: 1271983,`<br>```"pay_status"``: 2,`<br>```"barcode"``:``"951027"``,`<br>```"spec_id"``: 235348,`<br>```"goods_id"``: 83223,`<br>```"post_amount"``: 0,`<br>```"tid"``:``"zd2023010898998"``,`<br>```"invoice_content"``:``""``,`<br>```"share_post_price"``: 0,`<br>```"pay_time"``:``""`<br>```}`<br>```],`<br>```"bad_reason"``: 0,`<br>```"discount"``: 0,`<br>```"pay_account"``:``"123456789"``,`<br>```"package_id"``: 0,`<br>```"raw_goods_count"``: 1,`<br>```"fchecker_name"``:``"系统"``,`<br>```"trade_id"``: 1028159,`<br>```"trade_label"``:``""``,`<br>```"checker_name"``:``"zd3"``,`<br>```"large_type"``: 0,`<br>```"refund_status"``: 0,`<br>```"receiver_province"``: 0,`<br>```"buyer_message"``:``""``,`<br>```"logistics_code"``:``"KDLL001"``,`<br>```"shop_platform_id"``: 127,`<br>```"trade_mask"``: 0,`<br>```"src_tids"``:``"zd2023010898998"``,`<br>```"shop_id"``: 290,`<br>```"package_cost"``:``"0.0000"``,`<br>```"checkouter_name"``:``"系统"``,`<br>```"id_card_type"``: 0,`<br>```"freeze_reason"``:``"无"``,`<br>```"single_spec_no"``:``"951027"``,`<br>```"sub_platform_id"``: 0,`<br>```"goods_count"``: 1,`<br>```"invoice_content"``:``""``,`<br>```"post_cost"``: 0,`<br>```"receiver_name"``:``"zd"``,`<br>```"commission"``: 0,`<br>```"currency"``:``""``,`<br>```"trade_from"``: 1,`<br>```"delivery_term"``: 1,`<br>```"gift_mask"``: 0,`<br>```"logistics_no"``:``"2022301110001"``,`<br>```"goods_cost"``: 11,`<br>```"receiver_district"``: 0,`<br>```"receivable"``: 10,`<br>```"receiver_mobile"``:``"11111"``,`<br>```"cs_remark"``:``""``,`<br>```"receiver_address"``:``"1111"``,`<br>```"ext_cod_fee"``: 0,`<br>```"customer_name"``:``"zd"``,`<br>```"customer_id"``: 716844,`<br>```"warehouse_id"``: 311,`<br>```"logistics_name"``:``"wdt_快弟来了"``,`<br>```"warehouse_type"``: 1,`<br>```"consign_time"``: 1673418961000,`<br>```"raw_goods_type_count"``: 1,`<br>```"receiver_dtb"``:``"无 无"``,`<br>```"other_cost"``: 0,`<br>```"print_remark"``:``""``,`<br>```"other_amount"``: 0,`<br>```"tax_rate"``: 0,`<br>```"to_deliver_time"``:``""``,`<br>```"shop_remark"``:``"ljcs"``,`<br>```"invoice_id"``: 0,`<br>```"modified"``:``"2023-01-11 14:37:00"``,`<br>```"shop_no"``:``"wdtapi3-test"``,`<br>```"receiver_area"``:``"1111"``,`<br>```"customer_no"``:``"KH202103011079"``,`<br>```"created"``: 1673418672000,`<br>```"weight"``: 0,`<br>```"tax"``: 0,`<br>```"shop_name"``:``"wdtapi3-test"``,`<br>```"pay_time"``:``"2023-01-11 00:00:00"``,`<br>```"volume"``: 0,`<br>```"is_sealed"``:``false``,`<br>```"trade_no"``:``"JY202301110027"``,`<br>```"check_time"``:``"2023-01-11 14:31:51"``,`<br>```"customer_type"``: 0,`<br>```"salesman_name"``:``"系统"``,`<br>```"receiver_city"``: 0,`<br>```"invoice_title"``:``""``,`<br>```"goods_type_count"``: 1,`<br>```"cod_amount"``: 50,`<br>```"flag_name"``:``"无"``,`<br>```"logistics_id"``: 332,`<br>```"receiver_telno"``:``""``,`<br>```"receiver_zip"``:``"987654"``,`<br>```"warehouse_no"``:``"wdtapi3-test"``,`<br>```"trade_status"``: 110,`<br>```"invoice_type"``: 0,`<br>```"new_trade_label"``:``"0"``,`<br>```"profit"``: -1,`<br>```"goods_amount"``: 10,`<br>```"stockout_no"``:``"CK202301115"``,`<br>```"version_id"``: 1,`<br>```"buyer_nick"``:``"zd"``,`<br>```"cancel_reason"``:``"无"``,`<br>```"fenxiao_type"``: 0,`<br>```"revert_reason"``:``"无"``,`<br>```"platform_id"``: 127,`<br>```"package_name"``:``"未知"``,`<br>```"paid"``: 0,`<br>```"trade_type"``: 1,`<br>```"logistics_type_name"``:``"快弟来了"``,`<br>```"delay_to_time"``:``""`<br>```}`<br>```]`<br>```}`<br>`}` |
 
 6.2 异常响应示例
 
@@ -448,35 +335,3 @@ JIT退货单查询
 | 1 | `{``"status"``:100,``"message"``:``"您的查询时间过宽,查询时间不能大于60分钟"``}` |
 
 106、自定义类型六
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-4.1 公共响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1

@@ -2,57 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=setting.Address.provinceSearch"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-基础类
-
-物流公司查询
-
-供应商查询
-
-仓库查询
-
-店铺查询
-
-供应商信息推送
-
-店铺更新
-
-员工查询
-
-虚拟仓仓库查询
-
-退换原因查询
-
-地址查询-省
-
-地址查询-市
-
-地址查询-区
-
-虚拟仓信息查询
-
-当前位置： API文档 > 基础类
-
 **setting.Address.provinceSearch（地址查询-省** **）**
-
-**¥标准**
 
 **1.接口说明**
 
@@ -70,13 +20,6 @@ title: "API文档"
 | **2.1 举例说明：**财务系统、SAP、线下ERP、数据分析等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -146,10 +89,10 @@ title: "API文档"
 | --- | --- |
 | Json格式请求报文 | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6 | `[`<br>```{`<br>```"end_time"``:``"2024-02-01"``,`<br>```"start_time"``:``"2024-01-01"`<br>```}`<br>`]` | |
+|  | `[`<br>```{`<br>```"end_time"``:``"2024-02-01"``,`<br>```"start_time"``:``"2024-01-01"`<br>```}`<br>`]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`$client =``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>``<br>`$params =``new``stdClass();`<br>`$params->start_time =``'2022-06-05 11:42:56'``;`<br>`$params->end_time =``'2022-07-19 11:42:56'``;`<br>``<br>`$pager =``new``Pager(``1``,``0``,``true``);`<br>`$data = $client->pageCall(``"setting.Address.provinceSearch"``, $pager, $params);` | |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`$client =``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>``<br>`$params =``new``stdClass();`<br>`$params->start_time =``'2022-06-05 11:42:56'``;`<br>`$params->end_time =``'2022-07-19 11:42:56'``;`<br>``<br>`$pager =``new``Pager(``1``,``0``,``true``);`<br>`$data = $client->pageCall(``"setting.Address.provinceSearch"``, $pager, $params);` | |
 | JAVA |  |
 | C# |  |
 
@@ -161,7 +104,7 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20 | `{`<br>```"data"``: {`<br>```"detail_list"``: [`<br>```{`<br>```"country_id"``: 0,`<br>```"modified"``:``"2022-03-08 10:16:01"``,`<br>```"name"``:``"北京"``,`<br>```"province_id"``: 110000`<br>```},`<br>```{`<br>```"country_id"``: 0,`<br>```"modified"``:``"2022-03-08 10:16:01"``,`<br>```"name"``:``"天津"``,`<br>```"province_id"``: 120000`<br>```}`<br>```],`<br>```"total_count"``: 35`<br>```},`<br>```"status"``: 0`<br>`}` | |
+|  | `{`<br>```"data"``: {`<br>```"detail_list"``: [`<br>```{`<br>```"country_id"``: 0,`<br>```"modified"``:``"2022-03-08 10:16:01"``,`<br>```"name"``:``"北京"``,`<br>```"province_id"``: 110000`<br>```},`<br>```{`<br>```"country_id"``: 0,`<br>```"modified"``:``"2022-03-08 10:16:01"``,`<br>```"name"``:``"天津"``,`<br>```"province_id"``: 120000`<br>```}`<br>```],`<br>```"total_count"``: 35`<br>```},`<br>```"status"``: 0`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -169,12 +112,4 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"message"``:``"此方法仅支持分页查询"``,`<br>```"status"``: 100`<br>`}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"message"``:``"此方法仅支持分页查询"``,`<br>```"status"``: 100`<br>`}` | |

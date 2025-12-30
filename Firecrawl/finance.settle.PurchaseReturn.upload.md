@@ -2,83 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=finance.settle.PurchaseReturn.upload"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-采购类
-
-供应商货品查询
-
-采购退货单及明细查询
-
-采购退货单取消
-
-采购退货单新建
-
-采购入库单推送
-
-采购单及明细查询
-
-采购单新建
-
-采购结算单查询
-
-采购入库单查询
-
-采购退货出库单查询
-
-采购入库单取消
-
-采购单取消
-
-采购单停止等待
-
-采购退货单停止等待
-
-供应商货品推送
-
-采购退货出库单创建
-
-采购单标记更新
-
-采购申请单创建
-
-采购申请单查询
-
-采购退货批量取消
-
-创建采购结算单
-
-采购单取消（新）
-
-采购申请单取消
-
-采购申请单停止引用
-
-预约入库单查询
-
-创建采购退货结算单
-
-当前位置： API文档 > 采购类
-
 **finance.settle.PurchaseReturn.upload（创建采购退货结算单** **）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -95,13 +19,6 @@ title: "API文档"
 | **2.1 举例说明：** |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -169,10 +86,10 @@ title: "API文档"
 | --- | --- |
 | Json格式请求报文 | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21 | `[`<br>```{`<br>```"return_no"``:``"CR202410240004"``,`<br>```"post_fee"``:``"12"``,`<br>```"logistics_no"``:``"test999"``,`<br>```"invoice_type"``:``"1"``,`<br>```"remark"``:``"testremark"``,`<br>```"fuzzy_query"``:``"0"``,`<br>```"is_check"``: 1,`<br>```"logistics_company_no"``:``"testttt"`<br>```},`<br>```[`<br>```{`<br>```"settle_num"``:``"1"``,`<br>```"batch_no"``:``""``,`<br>```"price"``:``"20"``,`<br>```"remark"``:``"512023"``,`<br>```"spec_no"``:``"zx1"`<br>```}`<br>```]`<br>`]` | |
+|  | `[`<br>```{`<br>```"return_no"``:``"CR202410240004"``,`<br>```"post_fee"``:``"12"``,`<br>```"logistics_no"``:``"test999"``,`<br>```"invoice_type"``:``"1"``,`<br>```"remark"``:``"testremark"``,`<br>```"fuzzy_query"``:``"0"``,`<br>```"is_check"``: 1,`<br>```"logistics_company_no"``:``"testttt"`<br>```},`<br>```[`<br>```{`<br>```"settle_num"``:``"1"``,`<br>```"batch_no"``:``""``,`<br>```"price"``:``"20"``,`<br>```"remark"``:``"512023"``,`<br>```"spec_no"``:``"zx1"`<br>```}`<br>```]`<br>`]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29 | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`$client = new WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>``<br>`$parMap = new stdClass();`<br>`$parMap->return_no =``"CR202410240004"``;`<br>`//$parMap->logistics_company_no = 'hsdhsdfh';`<br>`//$parMap->logistics_no = '102810840284';`<br>`//$parMap->invoice_type = 1;`<br>`//$parMap->post_fee = 1.5;`<br>`//$parMap->remark = 'remark test';`<br>`//$parMap->is_check = false;`<br>`$detail1 = new stdClass();`<br>`$detail1->spec_no =``'water'``;`<br>`$detail1->settle_num = 2;`<br>`;`<br>`$detail2 = new stdClass();`<br>`$detail2->spec_no =``'mgh1'``;`<br>`$detail2->settle_num = 10;`<br>`$detailList = array($detail1, $detail2);`<br>`$data = $client->call(``"finance.settle.PurchaseReturn.upload"``, $parMap, $detailList);`<br>`?>` | |
+|  | `<?php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`$client = new WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>``<br>`$parMap = new stdClass();`<br>`$parMap->return_no =``"CR202410240004"``;`<br>`//$parMap->logistics_company_no = 'hsdhsdfh';`<br>`//$parMap->logistics_no = '102810840284';`<br>`//$parMap->invoice_type = 1;`<br>`//$parMap->post_fee = 1.5;`<br>`//$parMap->remark = 'remark test';`<br>`//$parMap->is_check = false;`<br>`$detail1 = new stdClass();`<br>`$detail1->spec_no =``'water'``;`<br>`$detail1->settle_num = 2;`<br>`;`<br>`$detail2 = new stdClass();`<br>`$detail2->spec_no =``'mgh1'``;`<br>`$detail2->settle_num = 10;`<br>`$detailList = array($detail1, $detail2);`<br>`$data = $client->call(``"finance.settle.PurchaseReturn.upload"``, $parMap, $detailList);`<br>`?>` | |
 | JAVA |  |
 | C# |  |
 
@@ -184,7 +101,7 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7 | `{`<br>```"status"``: 0,`<br>```"data"``:`<br>```{`<br>```"order_no"``:``"JS202412020004"`<br>```}`<br>`}` | |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``:`<br>```{`<br>```"order_no"``:``"JS202412020004"`<br>```}`<br>`}` | |
 
 #### 6.2 异常响应示例
 
@@ -192,12 +109,4 @@ title: "API文档"
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>```"status"``: 100,`<br>```"message"``:``"模糊搜索无匹配或有多条匹配"`<br>`}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 100,`<br>```"message"``:``"模糊搜索无匹配或有多条匹配"`<br>`}` | |

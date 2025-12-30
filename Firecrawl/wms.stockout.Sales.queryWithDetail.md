@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=wms.stockout.Sales.queryWithDetail"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 ****wms.stockout.Sales.queryWithDetail**（销售出库单查询）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -139,13 +33,6 @@ JIT退货单查询
 
 **3.请求参数说明**
 
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
-
 3.2 公共请求参数
 
 | 名称 | 字段 | 类型 | 长度 | 必须 | 描述 |
@@ -174,7 +61,7 @@ JIT退货单查询
 | --- | --- | --- | --- | --- | --- |
 | 开始时间 | start\_time | String | 40 | y | 起始时间, status\_type =1,2,3 按照出库单修改时间查询, status\_type=0 按照发货时间查询 |
 | 结束时间 | end\_time | String | 40 | y | 结束时间 |
-| 出库单状态 | status\_type | Int | 4 | y | 出库单状态: 默认值为0<br>1.已取消<br>2.在企业版状态中对应status=55(已确认),这里为 待分配~延时发货（此条件会返回延时发货状态的订单）<br>3.按照指定的status状态字段查询<br>0.延时发货&已完成 |
+| 出库单状态 | status\_type | Int | 4 | y | 出库单状态: 默认值为.已取消<br>2.在企业版状态中对应status=55(已确认),这里为 待分配~延时发货（此条件会返回延时发货状态的订单）<br>3.按照指定的status状态字段查询<br>0.延时发货&已完成 |
 | 出库单状态详细 | status | String |  | y | 传status\_type=3情况下，按照修改时间和status查询<br>（status\_type=3的情况下，若不传status字段，按照发货时间查询）<br>出库单状态 **（若多个状态则以“，”隔开）**:  <br>5已取消<br>10待放回(拣货待放回), 小于该值的都是已取消的单子<br>50待审核<br>51缺货<br>52缺货待入库<br>53 WMS已接单<br>54 获取电子面单<br>58 档口锁定<br>60 待分配<br>61 排队中<br>63 待补货<br>65 待处理  <br>70 待发货<br>73 爆款锁定<br>74 预打包<br>75 待拣货<br>77 拣货中,PDA拣货后<br>79 已拣货<br>90 延时发货<br>110已完成<br>-1未发货 |
 | 仓库编号 | warehouse\_no | String | 40 | n | 仓库编号 |
 | 出库单号 | stockout\_no | String | 20 | n | 出库单号（传入出库单号可以不传时间条件） |
@@ -251,7 +138,7 @@ JIT退货单查询
 | 异常原因 | bad\_reason | Int | 4 | y | 异常原因:  <br>0正常<br>1无库存记录<br>2地址发生变化<br>4发票变化<br>8仓库变化<br>16备注变化<br>32平台更换货品<br>64退款 |
 | 大头笔 | receiver\_dtb | String | 128 | y | 大头笔 |
 | 退款状态 | refund\_status | Int | 4 | y | 退款状态:<br>0无退款<br>1申请退款<br>2部分退款<br>3全部退款 |
-| 销售类型 | trade\_type | Int | 4 | y | 销售类型:<br>1网店销售<br>2线下订单<br>3售后换货<br>4批发业务<br>7现款销售<br>8分销订单<br>101 订单自定义属性1<br>102 订单自定义属性2<br>103 订单自定义属性3<br>104 订单自定义属性4<br>105 订单自定义属性5<br>106 订单自定义属性6<br>107 订单自定义属性7<br>108 订单自定义属性8<br>109 订单自定义属性9<br>110 订单自定义属性10<br>（与ERP中自定义类型的映射关系 [，点击链接查看](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98#%E8%AE%A2%E5%8D%95%E6%9F%A5%E8%AF%A2%E3%80%81%E9%94%80%E5%94%AE%E5%87%BA%E5%BA%93%E5%8D%95)） |
+| 销售类型 | trade\_type | Int | 4 | y | 销售类型:<br>1网店销售<br>2线下订单<br>3售后换货<br>4批发业务<br>7现款销售<br>8分销订单<br>101 订单自定义属性 订单自定义属性 订单自定义属性 订单自定义属性 订单自定义属性 订单自定义属性 订单自定义属性 订单自定义属性 订单自定义属性 订单自定义属性10<br>（与ERP中自定义类型的映射关系 [，点击链接查看](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98#%E8%AE%A2%E5%8D%95%E6%9F%A5%E8%AF%A2%E3%80%81%E9%94%80%E5%94%AE%E5%87%BA%E5%BA%93%E5%8D%95)） |
 | 业务员编号 | salesman\_no | String | 40 | y | 业务员为"系统"时不返回 |
 | 业务员姓名 | fullname | String | 40 | y | 业务员为"系统"时不返回 |
 | 拣货员 | picker\_name | String | 50 | y | 拣货员 |
@@ -478,11 +365,11 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `[{`<br>`"start_time"``:``"2019-12-31 00:00:00"``,`<br>`"end_time"``:``"2019-12-31 01:00:00"`<br>`}]` |
+|  | `[{`<br>`"start_time"``:``"2019-12-31 00:00:00"``,`<br>`"end_time"``:``"2019-12-31 01:00:00"`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16 | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$params``=``new``stdClass();`<br>`$params``->start_time =``'2019-12-11 00:00:00'``;`<br>`$params``->end_time =``'2019-12-31 00:00:00'``;`<br>``<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>`$data``=``$client``->pageCall(``"wms.stockout.Sales.queryWithDetail"``,``$pager``,``$params``);`<br>``<br>`?>` |
+|  | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$params``=``new``stdClass();`<br>`$params``->start_time =``'2019-12-11 00:00:00'``;`<br>`$params``->end_time =``'2019-12-31 00:00:00'``;`<br>``<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>`$data``=``$client``->pageCall(``"wms.stockout.Sales.queryWithDetail"``,``$pager``,``$params``);`<br>``<br>`?>` |
 
 ### **6.响应示例**
 
@@ -492,7 +379,7 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>112<br>113<br>114<br>115<br>116<br>117<br>118<br>119<br>120<br>121<br>122<br>123<br>124<br>125<br>126<br>127<br>128<br>129<br>130<br>131<br>132<br>133<br>134<br>135<br>136<br>137<br>138<br>139<br>140<br>141<br>142<br>143<br>144<br>145<br>146<br>147<br>148<br>149<br>150<br>151<br>152<br>153<br>154<br>155<br>156<br>157<br>158<br>159<br>160<br>161<br>162<br>163<br>164<br>165<br>166<br>167<br>168<br>169<br>170<br>171<br>172<br>173<br>174<br>175<br>176<br>177<br>178<br>179<br>180<br>181<br>182<br>183<br>184<br>185<br>186<br>187<br>188<br>189<br>190<br>191<br>192<br>193<br>194<br>195<br>196<br>197<br>198<br>199<br>200<br>201<br>202<br>203<br>204<br>205<br>206<br>207<br>208<br>209<br>210<br>211<br>212<br>213<br>214<br>215<br>216<br>217 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [`<br>```{`<br>```"post_amount"``:``"0.0000"``,`<br>```"fenxiao_nick"``:``""``,`<br>```"error_info"``:``""``,`<br>```"trade_time"``: 1746759592000,`<br>```"pick_group_name"``:``"默认"``,`<br>```"bad_reason"``: 0,`<br>```"discount"``:``"0.0000"``,`<br>```"picker_name"``:``"系统用户"``,`<br>```"trade_id"``: 2054992,`<br>```"trade_label"``:``"其他"``,`<br>```"receiver_country"``: 0,`<br>```"refund_status"``: 0,`<br>```"receiver_province"``: 120000,`<br>```"buyer_message"``:``""``,`<br>```"logistics_code"``:``"ZT0002"``,`<br>```"shop_platform_id"``: 127,`<br>```"shop_id"``: 327,`<br>```"warehouse_name"``:``"wdtapi3-test2"``,`<br>```"nick_name"``:``"syf"``,`<br>```"warehouse_mapping_code"``:``""``,`<br>```"id_card_type"``: 0,`<br>```"status"``: 110,`<br>```"package_fee"``:``"0.0000"``,`<br>```"src_trade_no"``:``"zd202505090001"``,`<br>```"post_fee"``:``"0.0000"``,`<br>```"custom_type"``: 0,`<br>```"sub_platform_id"``: 0,`<br>```"goods_count"``: 1,`<br>```"stockout_id"``: 700611,`<br>```"src_order_no"``:``"JY202505090021"``,`<br>```"invoice_content"``:``""``,`<br>```"receiver_name"``:``"zd"``,`<br>```"sendbill_template_id"``: 0,`<br>```"currency"``:``""``,`<br>```"picklist_no"``:``""``,`<br>```"examiner_name"``:``"系统用户"``,`<br>```"logistics_type"``: 5,`<br>```"trade_from"``: 2,`<br>```"delivery_term"``: 1,`<br>```"logistics_no"``:``"2025000501321"``,`<br>```"consigner_name"``:``"zd"``,`<br>```"receiver_district"``: 120105,`<br>```"goods_total_amount"``:``"3.0000"``,`<br>```"receivable"``: 3,`<br>```"receiver_mobile"``:``"18466197764"``,`<br>```"stock_check_time"``: 1746759828000,`<br>```"cs_remark"``:``""``,`<br>```"receiver_address"``:``"13"``,`<br>```"customer_name"``:``"zd"``,`<br>```"printer_name"``:``"系统用户"``,`<br>```"customer_id"``: 10446058,`<br>```"warehouse_id"``: 344,`<br>```"logistics_name"``:``"中通0002"``,`<br>```"details_list"``: [`<br>```{`<br>```"rec_id"``: 920840,`<br>```"stockout_id"``: 700611,`<br>```"spec_id"``: 644718,`<br>```"goods_count"``: 1,`<br>```"src_order_type"``: 1,`<br>```"base_unit_id"``: 5,`<br>```"unit_id"``: 170,`<br>```"unit_ratio"``: 1,`<br>```"num2"``: 1,`<br>```"num"``: 1,`<br>```"position_id"``: 0,`<br>```"batch_id"``: 0,`<br>```"is_examined"``: 0,`<br>```"scan_type"``: 0,`<br>```"modified_date"``:``"2025-05-09 11:03:47"``,`<br>```"created_date"``:``"2025-05-09 11:03:47"``,`<br>```"goods_amount"``: 3,`<br>```"brand_no"``:``"BRAND"``,`<br>```"brand_name"``:``"无"``,`<br>```"api_goods_name"``:``"zd20231108"``,`<br>```"remark"``:``""``,`<br>```"goods_name"``:``"zd20231108"``,`<br>```"goods_no"``:``"zd20231108"``,`<br>```"spec_name"``:``"zd20231108"``,`<br>```"spec_code"``:``"zd20231108"``,`<br>```"spec_no"``:``"zd20231108"``,`<br>```"weight"``: 0,`<br>```"goods_id"``: 423231,`<br>```"prop1"``:``"456"``,`<br>```"prop2"``:``"456"``,`<br>```"prop3"``:``""``,`<br>```"prop4"``:``""``,`<br>```"prop5"``:``""``,`<br>```"prop6"``:``""``,`<br>```"platform_id"``: 0,`<br>```"refund_status"``: 0,`<br>```"barcode"``:``"zd20231108"``,`<br>```"unit_name"``:``"辆"``,`<br>```"sale_order_id"``: 2560202,`<br>```"gift_type"``: 0,`<br>```"src_oid"``:``"AD202505090002"``,`<br>```"src_tid"``:``"zd202505090001"``,`<br>```"from_mask"``: 0,`<br>```"goods_type"``: 1,`<br>```"good_prop1"``:``""``,`<br>```"good_prop2"``:``"123"``,`<br>```"good_prop3"``:``""``,`<br>```"good_prop4"``:``""``,`<br>```"good_prop5"``:``""``,`<br>```"good_prop6"``:``""``,`<br>```"suite_no"``:``""``,`<br>```"src_order_detail_id"``: 2560202,`<br>```"is_package"``:``false``,`<br>```"class_id"``: 0,`<br>```"suite_num"``: 0,`<br>```"class_name"``:``"无"``,`<br>```"sell_price"``: 3,`<br>```"market_price"``: 3,`<br>```"share_price"``: 3,`<br>```"total_amount"``: 0,`<br>```"cost_price"``: 0,`<br>```"discount"``: 0,`<br>```"share_amount"``: 3,`<br>```"tax_rate"``: 0,`<br>```"share_post_amount"``: 6,`<br>```"paid"``: 9,`<br>```"position_details_list"``: [`<br>```{`<br>```"rec_id"``: 306518,`<br>```"stockout_detail_id"``: 920840,`<br>```"position_id"``: -6,`<br>```"position_no"``:``"其它未上架"``,`<br>```"batch_no"``:``""``,`<br>```"expire_date"``:``""``,`<br>```"production_date"``:``""``,`<br>```"position_goods_count"``: 1`<br>```}`<br>```]`<br>```}`<br>```],`<br>```"consign_time"``:``"2025-05-09 11:04:07"``,`<br>```"warehouse_type"``: 1,`<br>```"operator_id"``: 660,`<br>```"receiver_dtb"``:``"天津市 河北区"``,`<br>```"print_remark"``:``""``,`<br>```"employee_no"``:``"zd"``,`<br>```"tax_rate"``:``"0.0000"``,`<br>```"shop_remark"``:``""``,`<br>```"stockout_flag_name"``:``"无"``,`<br>```"outer_no"``:``""``,`<br>```"invoice_id"``: 0,`<br>```"modified"``:``"2025-05-09 11:04:07"``,`<br>```"order_type"``: 1,`<br>```"pick_group"``: 0,`<br>```"shop_no"``:``"wdtapi3-test2"``,`<br>```"picklist_seq"``: 0,`<br>```"seq_no"``: 1,`<br>```"receiver_area"``:``"天津 天津市 河北区"``,`<br>```"customer_no"``:``"KH202307190002"``,`<br>```"src_order_id"``: 2054992,`<br>```"created"``: 1746759731000,`<br>```"weight"``: 0,`<br>```"block_reason"``: 0,`<br>```"tax"``:``"0.0000"``,`<br>```"shop_name"``:``"wdtapi3-test2"``,`<br>```"pay_time"``: 1746759592000,`<br>```"goods_total_cost"``:``"0.0000"``,`<br>```"trade_no"``:``"JY202505090021"``,`<br>```"consign_status"``: 0,`<br>```"order_no"``:``"CK202505095"``,`<br>```"receiver_city"``: 120100,`<br>```"invoice_title"``:``""``,`<br>```"goods_type_count"``: 1,`<br>```"id_card"``:``""``,`<br>```"remark"``:``""``,`<br>```"calc_post_cost"``:``"0.0000"``,`<br>```"cod_amount"``:``"0.0000"``,`<br>```"flag_name"``:``"无"``,`<br>```"logistics_id"``: 420,`<br>```"warehouse_no"``:``"wdtapi3-test2"``,`<br>```"receiver_telno"``:``""``,`<br>```"receiver_zip"``:``"014500"``,`<br>```"trade_status"``: 96,`<br>```"invoice_type"``: 0,`<br>```"new_trade_label"``:``"1"``,`<br>```"batch_no"``:``""``,`<br>```"packager_name"``:``"系统用户"``,`<br>```"salesman_no"``:``"zd"``,`<br>```"platform_id"``: 0,`<br>```"paid"``:``"9.0000"``,`<br>```"trade_type"``: 2,`<br>```"logistics_print_status"``: 0,`<br>```"created_date"``:``"2025-05-09 11:03:48"``,`<br>```"fullname"``:``"zd"``,`<br>```"logistics_list"``: [`<br>```{`<br>```"rec_id"``: 12670612,`<br>```"stockout_id"``: 700611,`<br>```"logistics_id"``: 420,`<br>```"logistics_no"``:``"2025000501321"``,`<br>```"calc_weight"``: 0,`<br>```"weight"``: 0,`<br>```"remark"``:``""``,`<br>```"length"``: 0,`<br>```"width"``: 0,`<br>```"height"``: 0,`<br>```"package_name"``:``"无包装"``,`<br>```"logistics_name"``:``"中通0002"``,`<br>```"volume"``:``"0.000000000000"``,`<br>```"postage"``:``"0.0000"`<br>```}`<br>```]`<br>```}`<br>```]`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [`<br>```{`<br>```"post_amount"``:``"0.0000"``,`<br>```"fenxiao_nick"``:``""``,`<br>```"error_info"``:``""``,`<br>```"trade_time"``: 1746759592000,`<br>```"pick_group_name"``:``"默认"``,`<br>```"bad_reason"``: 0,`<br>```"discount"``:``"0.0000"``,`<br>```"picker_name"``:``"系统用户"``,`<br>```"trade_id"``: 2054992,`<br>```"trade_label"``:``"其他"``,`<br>```"receiver_country"``: 0,`<br>```"refund_status"``: 0,`<br>```"receiver_province"``: 120000,`<br>```"buyer_message"``:``""``,`<br>```"logistics_code"``:``"ZT0002"``,`<br>```"shop_platform_id"``: 127,`<br>```"shop_id"``: 327,`<br>```"warehouse_name"``:``"wdtapi3-test2"``,`<br>```"nick_name"``:``"syf"``,`<br>```"warehouse_mapping_code"``:``""``,`<br>```"id_card_type"``: 0,`<br>```"status"``: 110,`<br>```"package_fee"``:``"0.0000"``,`<br>```"src_trade_no"``:``"zd202505090001"``,`<br>```"post_fee"``:``"0.0000"``,`<br>```"custom_type"``: 0,`<br>```"sub_platform_id"``: 0,`<br>```"goods_count"``: 1,`<br>```"stockout_id"``: 700611,`<br>```"src_order_no"``:``"JY202505090021"``,`<br>```"invoice_content"``:``""``,`<br>```"receiver_name"``:``"zd"``,`<br>```"sendbill_template_id"``: 0,`<br>```"currency"``:``""``,`<br>```"picklist_no"``:``""``,`<br>```"examiner_name"``:``"系统用户"``,`<br>```"logistics_type"``: 5,`<br>```"trade_from"``: 2,`<br>```"delivery_term"``: 1,`<br>```"logistics_no"``:``"2025000501321"``,`<br>```"consigner_name"``:``"zd"``,`<br>```"receiver_district"``: 120105,`<br>```"goods_total_amount"``:``"3.0000"``,`<br>```"receivable"``: 3,`<br>```"receiver_mobile"``:``"18466197764"``,`<br>```"stock_check_time"``: 1746759828000,`<br>```"cs_remark"``:``""``,`<br>```"receiver_address"``:``"13"``,`<br>```"customer_name"``:``"zd"``,`<br>```"printer_name"``:``"系统用户"``,`<br>```"customer_id"``: 10446058,`<br>```"warehouse_id"``: 344,`<br>```"logistics_name"``:``"中通0002"``,`<br>```"details_list"``: [`<br>```{`<br>```"rec_id"``: 920840,`<br>```"stockout_id"``: 700611,`<br>```"spec_id"``: 644718,`<br>```"goods_count"``: 1,`<br>```"src_order_type"``: 1,`<br>```"base_unit_id"``: 5,`<br>```"unit_id"``: 170,`<br>```"unit_ratio"``: 1,`<br>```"num2"``: 1,`<br>```"num"``: 1,`<br>```"position_id"``: 0,`<br>```"batch_id"``: 0,`<br>```"is_examined"``: 0,`<br>```"scan_type"``: 0,`<br>```"modified_date"``:``"2025-05-09 11:03:47"``,`<br>```"created_date"``:``"2025-05-09 11:03:47"``,`<br>```"goods_amount"``: 3,`<br>```"brand_no"``:``"BRAND"``,`<br>```"brand_name"``:``"无"``,`<br>```"api_goods_name"``:``"zd20231108"``,`<br>```"remark"``:``""``,`<br>```"goods_name"``:``"zd20231108"``,`<br>```"goods_no"``:``"zd20231108"``,`<br>```"spec_name"``:``"zd20231108"``,`<br>```"spec_code"``:``"zd20231108"``,`<br>```"spec_no"``:``"zd20231108"``,`<br>```"weight"``: 0,`<br>```"goods_id"``: 423231,`<br>```"prop1"``:``"456"``,`<br>```"prop2"``:``"456"``,`<br>```"prop3"``:``""``,`<br>```"prop4"``:``""``,`<br>```"prop5"``:``""``,`<br>```"prop6"``:``""``,`<br>```"platform_id"``: 0,`<br>```"refund_status"``: 0,`<br>```"barcode"``:``"zd20231108"``,`<br>```"unit_name"``:``"辆"``,`<br>```"sale_order_id"``: 2560202,`<br>```"gift_type"``: 0,`<br>```"src_oid"``:``"AD202505090002"``,`<br>```"src_tid"``:``"zd202505090001"``,`<br>```"from_mask"``: 0,`<br>```"goods_type"``: 1,`<br>```"good_prop1"``:``""``,`<br>```"good_prop2"``:``"123"``,`<br>```"good_prop3"``:``""``,`<br>```"good_prop4"``:``""``,`<br>```"good_prop5"``:``""``,`<br>```"good_prop6"``:``""``,`<br>```"suite_no"``:``""``,`<br>```"src_order_detail_id"``: 2560202,`<br>```"is_package"``:``false``,`<br>```"class_id"``: 0,`<br>```"suite_num"``: 0,`<br>```"class_name"``:``"无"``,`<br>```"sell_price"``: 3,`<br>```"market_price"``: 3,`<br>```"share_price"``: 3,`<br>```"total_amount"``: 0,`<br>```"cost_price"``: 0,`<br>```"discount"``: 0,`<br>```"share_amount"``: 3,`<br>```"tax_rate"``: 0,`<br>```"share_post_amount"``: 6,`<br>```"paid"``: 9,`<br>```"position_details_list"``: [`<br>```{`<br>```"rec_id"``: 306518,`<br>```"stockout_detail_id"``: 920840,`<br>```"position_id"``: -6,`<br>```"position_no"``:``"其它未上架"``,`<br>```"batch_no"``:``""``,`<br>```"expire_date"``:``""``,`<br>```"production_date"``:``""``,`<br>```"position_goods_count"``: 1`<br>```}`<br>```]`<br>```}`<br>```],`<br>```"consign_time"``:``"2025-05-09 11:04:07"``,`<br>```"warehouse_type"``: 1,`<br>```"operator_id"``: 660,`<br>```"receiver_dtb"``:``"天津市 河北区"``,`<br>```"print_remark"``:``""``,`<br>```"employee_no"``:``"zd"``,`<br>```"tax_rate"``:``"0.0000"``,`<br>```"shop_remark"``:``""``,`<br>```"stockout_flag_name"``:``"无"``,`<br>```"outer_no"``:``""``,`<br>```"invoice_id"``: 0,`<br>```"modified"``:``"2025-05-09 11:04:07"``,`<br>```"order_type"``: 1,`<br>```"pick_group"``: 0,`<br>```"shop_no"``:``"wdtapi3-test2"``,`<br>```"picklist_seq"``: 0,`<br>```"seq_no"``: 1,`<br>```"receiver_area"``:``"天津 天津市 河北区"``,`<br>```"customer_no"``:``"KH202307190002"``,`<br>```"src_order_id"``: 2054992,`<br>```"created"``: 1746759731000,`<br>```"weight"``: 0,`<br>```"block_reason"``: 0,`<br>```"tax"``:``"0.0000"``,`<br>```"shop_name"``:``"wdtapi3-test2"``,`<br>```"pay_time"``: 1746759592000,`<br>```"goods_total_cost"``:``"0.0000"``,`<br>```"trade_no"``:``"JY202505090021"``,`<br>```"consign_status"``: 0,`<br>```"order_no"``:``"CK202505095"``,`<br>```"receiver_city"``: 120100,`<br>```"invoice_title"``:``""``,`<br>```"goods_type_count"``: 1,`<br>```"id_card"``:``""``,`<br>```"remark"``:``""``,`<br>```"calc_post_cost"``:``"0.0000"``,`<br>```"cod_amount"``:``"0.0000"``,`<br>```"flag_name"``:``"无"``,`<br>```"logistics_id"``: 420,`<br>```"warehouse_no"``:``"wdtapi3-test2"``,`<br>```"receiver_telno"``:``""``,`<br>```"receiver_zip"``:``"014500"``,`<br>```"trade_status"``: 96,`<br>```"invoice_type"``: 0,`<br>```"new_trade_label"``:``"1"``,`<br>```"batch_no"``:``""``,`<br>```"packager_name"``:``"系统用户"``,`<br>```"salesman_no"``:``"zd"``,`<br>```"platform_id"``: 0,`<br>```"paid"``:``"9.0000"``,`<br>```"trade_type"``: 2,`<br>```"logistics_print_status"``: 0,`<br>```"created_date"``:``"2025-05-09 11:03:48"``,`<br>```"fullname"``:``"zd"``,`<br>```"logistics_list"``: [`<br>```{`<br>```"rec_id"``: 12670612,`<br>```"stockout_id"``: 700611,`<br>```"logistics_id"``: 420,`<br>```"logistics_no"``:``"2025000501321"``,`<br>```"calc_weight"``: 0,`<br>```"weight"``: 0,`<br>```"remark"``:``""``,`<br>```"length"``: 0,`<br>```"width"``: 0,`<br>```"height"``: 0,`<br>```"package_name"``:``"无包装"``,`<br>```"logistics_name"``:``"中通0002"``,`<br>```"volume"``:``"0.000000000000"``,`<br>```"postage"``:``"0.0000"`<br>```}`<br>```]`<br>```}`<br>```]`<br>```}`<br>`}` |
 
 #### 6.2 异常响应示例
 
@@ -500,36 +387,4 @@ JIT退货单查询
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>`"status"``: 100,`<br>`"message"``:``"仓库不存在"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-4.1 公共响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>`"status"``: 100,`<br>`"message"``:``"仓库不存在"`<br>`}` |

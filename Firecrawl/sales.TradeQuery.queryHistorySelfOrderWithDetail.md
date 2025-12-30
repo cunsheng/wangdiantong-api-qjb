@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=sales.TradeQuery.queryHistorySelfOrderWithDetail"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 **sales.TradeQuery.queryHistorySelfOrderWithDetail（历史订单查询--仅返回自有平台、线下平台订单）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -127,13 +21,6 @@ JIT退货单查询
 | **2.1 举例说明：**财务系统、SAP、数据分析等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -345,7 +232,7 @@ JIT退货单查询
 | 1 | `[{``"start_time"``:``"2018-10-05 14:21:41"``,``"end_time"``:``"2018-10-20 14:21:41"``}]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15 | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>`$pars``=``array`<br>`(`<br>```'start_time'``=>``'2020-06-15 10:05:36'``,`<br>```'end_time'``=>``'2020-06-17 11:05:36'`<br>`);`<br>`$pager``=``new``Pager(50, 0, true);`<br>`$data``=``$client``->pageCall(``"sales.TradeQuery.queryHistorySelfOrderWithDetail"``,``$pager``,``$pars``);``//分页方法`<br>`$php_json``= json_encode(``$data``);`<br>`echo``$php_json``;`<br>``<br>`?>` | |
+|  | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>`$pars``=``array`<br>`(`<br>```'start_time'``=>``'2020-06-15 10:05:36'``,`<br>```'end_time'``=>``'2020-06-17 11:05:36'`<br>`);`<br>`$pager``=``new``Pager(50, 0, true);`<br>`$data``=``$client``->pageCall(``"sales.TradeQuery.queryHistorySelfOrderWithDetail"``,``$pager``,``$pars``);``//分页方法`<br>`$php_json``= json_encode(``$data``);`<br>`echo``$php_json``;`<br>``<br>`?>` | |
 | JAVA |  |
 | C# |  |
 
@@ -357,7 +244,7 @@ JIT退货单查询
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>112<br>113<br>114<br>115<br>116<br>117<br>118<br>119<br>120<br>121<br>122<br>123<br>124<br>125<br>126<br>127<br>128<br>129<br>130<br>131<br>132<br>133<br>134<br>135<br>136<br>137<br>138<br>139<br>140<br>141 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [`<br>```{`<br>```"logistics_name"``:``"邮政123"``,`<br>```"warehouse_type"``: 1,`<br>```"fenxiao_nick"``:``""``,`<br>```"consign_time"``: 1611821521000,`<br>```"post_amount"``: 0.0000,`<br>```"trade_time"``: 1611049692000,`<br>```"receiver_ring"``:``""``,`<br>```"raw_goods_type_count"``: 1,`<br>```"remark_flag"``: 0,`<br>```"receiver_dtb"``:``"杭州市 江干区"``,`<br>```"detail_list"``: [`<br>```{`<br>```"rec_id"``: 1045331,`<br>```"trade_id"``: 842375,`<br>```"platform_id"``: 0,`<br>```"src_oid"``:``"AD202101190001"``,`<br>```"src_tid"``:``"ZY202012240121"``,`<br>```"gift_type"``: 0,`<br>```"refund_status"``: 0,`<br>```"guarantee_mode"``: 2,`<br>```"delivery_term"``: 1,`<br>```"num"``: 1.0000,`<br>```"price"``: 0.0000,`<br>```"refund_num"``: 0.0000,`<br>```"order_price"``: 0.0000,`<br>```"share_price"``: 0.0000,`<br>```"adjust"``: 0.0000,`<br>```"discount"``: 0.0000,`<br>```"share_amount"``: 0.0000,`<br>```"paid"``: 0.0000,`<br>```"goods_name"``:``"老爸推荐--检测合格304不锈钢儿童筷子(1双)"``,`<br>```"tax_rate"``: 0.0000,`<br>```"goods_no"``:``"BC00000101"``,`<br>```"spec_name"``:``"老爸推荐--检测合格304不锈钢儿童筷子(1双)"``,`<br>```"spec_no"``:``"BC00000101"``,`<br>```"spec_code"``:``"shuang"``,`<br>```"suite_no"``:``""``,`<br>```"suite_name"``:``""``,`<br>```"suite_num"``: 0.0000,`<br>```"suite_amount"``: 0.0000,`<br>```"suite_discount"``: 0.0000,`<br>```"api_goods_name"``:``"老爸推荐--检测合格304不锈钢儿童筷子(1双)"``,`<br>```"api_spec_name"``:``"老爸推荐--检测合格304不锈钢儿童筷子(1双)"``,`<br>```"commission"``: 0.0000,`<br>```"goods_type"``: 1,`<br>```"from_mask"``: 0,`<br>```"remark"``:``""``,`<br>```"modified"``: 1611821521000,`<br>```"img_url"``:``""``,`<br>```"platform_status"``: 0,`<br>```"created"``: 1611049724000,`<br>```"prop2"``:``""``,`<br>```"weight"``: 0.0000,`<br>```"api_goods_id"``:``""``,`<br>```"api_spec_id"``:``""`<br>```}`<br>```],`<br>```"bad_reason"``: 0,`<br>```"print_remark"``:``""``,`<br>```"discount"``: 0.0000,`<br>```"other_amount"``: 0.0000,`<br>```"pay_account"``:``""``,`<br>```"tax_rate"``: 0.0000,`<br>```"raw_goods_count"``: 1.0000,`<br>```"to_deliver_time"``:``""``,`<br>```"fchecker_name"``:``"系统"``,`<br>```"trade_id"``: 842375,`<br>```"trade_label"``:``""``,`<br>```"shop_remark"``:``"1"``,`<br>```"invoice_id"``: 0,`<br>```"modified"``:``"2021-01-29 01:49:40"``,`<br>```"shop_no"``:``"wdtapi3-test"``,`<br>```"checker_name"``:``"admin"``,`<br>```"receiver_area"``:``"浙江省 杭州市 江干区"``,`<br>```"customer_no"``:``"KH202101150020"``,`<br>```"refund_status"``: 0,`<br>```"receiver_province"``: 330000,`<br>```"buyer_message"``:``""``,`<br>```"created"``: 1611049724000,`<br>```"weight"``: 0.0000,`<br>```"tax"``: 0.0000,`<br>```"logistics_code"``:``"wtt123"``,`<br>```"shop_name"``:``"wdtapi3-test"``,`<br>```"shop_platform_id"``: 127,`<br>```"pay_time"``:``"2021-01-19 17:48:12"``,`<br>```"src_tids"``:``"ZY202012240121"``,`<br>```"shop_id"``: 290,`<br>```"checkouter_name"``:``"系统"``,`<br>```"trade_no"``:``"ORDER202101190014"``,`<br>```"id_card_type"``: 0,`<br>```"freeze_reason"``:``"无"``,`<br>```"single_spec_no"``:``"BC00000101"``,`<br>```"salesman_name"``:``"admin"``,`<br>```"receiver_city"``: 330100,`<br>```"invoice_title"``:``""``,`<br>```"goods_type_count"``: 1,`<br>```"sub_platform_id"``: 0,`<br>```"goods_count"``: 1.0000,`<br>```"cod_amount"``: 0.0000,`<br>```"flag_name"``:``"无"``,`<br>```"receiver_telno"``:``""``,`<br>```"receiver_zip"``:``""``,`<br>```"warehouse_no"``:``"wdtapi3-test"``,`<br>```"invoice_content"``:``""``,`<br>```"trade_status"``: 110,`<br>```"post_cost"``: 0.0000,`<br>```"receiver_name"``:``"chend270"``,`<br>```"commission"``: 0.0000,`<br>```"invoice_type"``: 0,`<br>```"currency"``:``""``,`<br>```"profit"``: 0.0000,`<br>```"trade_from"``: 2,`<br>```"delivery_term"``: 1,`<br>```"logistics_no"``:``"765432342323232"``,`<br>```"goods_amount"``: 0.0000,`<br>```"goods_cost"``: 0.0000,`<br>```"receiver_district"``: 330104,`<br>```"stockout_no"``:``"CKDH2021012820"``,`<br>```"receivable"``: 0.0000,`<br>```"version_id"``: 3,`<br>```"receiver_mobile"``:``"132222222228"``,`<br>```"buyer_nick"``:``"MO2"``,`<br>```"fenxiao_type"``: 0,`<br>```"cs_remark"``:``""``,`<br>```"platform_id"``: 0,`<br>```"trade_type"``: 2,`<br>```"receiver_address"``:``"绿谷"``,`<br>```"logistics_type_name"``:``"中国邮政"``,`<br>```"ext_cod_fee"``: 0.0000,`<br>```"customer_name"``:``"chend270"``,`<br>```"delay_to_time"``:``""`<br>```}`<br>```]`<br>```}`<br>`}` | |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [`<br>```{`<br>```"logistics_name"``:``"邮政123"``,`<br>```"warehouse_type"``: 1,`<br>```"fenxiao_nick"``:``""``,`<br>```"consign_time"``: 1611821521000,`<br>```"post_amount"``: 0.0000,`<br>```"trade_time"``: 1611049692000,`<br>```"receiver_ring"``:``""``,`<br>```"raw_goods_type_count"``: 1,`<br>```"remark_flag"``: 0,`<br>```"receiver_dtb"``:``"杭州市 江干区"``,`<br>```"detail_list"``: [`<br>```{`<br>```"rec_id"``: 1045331,`<br>```"trade_id"``: 842375,`<br>```"platform_id"``: 0,`<br>```"src_oid"``:``"AD202101190001"``,`<br>```"src_tid"``:``"ZY202012240121"``,`<br>```"gift_type"``: 0,`<br>```"refund_status"``: 0,`<br>```"guarantee_mode"``: 2,`<br>```"delivery_term"``: 1,`<br>```"num"``: 1.0000,`<br>```"price"``: 0.0000,`<br>```"refund_num"``: 0.0000,`<br>```"order_price"``: 0.0000,`<br>```"share_price"``: 0.0000,`<br>```"adjust"``: 0.0000,`<br>```"discount"``: 0.0000,`<br>```"share_amount"``: 0.0000,`<br>```"paid"``: 0.0000,`<br>```"goods_name"``:``"老爸推荐--检测合格304不锈钢儿童筷子(1双)"``,`<br>```"tax_rate"``: 0.0000,`<br>```"goods_no"``:``"BC00000101"``,`<br>```"spec_name"``:``"老爸推荐--检测合格304不锈钢儿童筷子(1双)"``,`<br>```"spec_no"``:``"BC00000101"``,`<br>```"spec_code"``:``"shuang"``,`<br>```"suite_no"``:``""``,`<br>```"suite_name"``:``""``,`<br>```"suite_num"``: 0.0000,`<br>```"suite_amount"``: 0.0000,`<br>```"suite_discount"``: 0.0000,`<br>```"api_goods_name"``:``"老爸推荐--检测合格304不锈钢儿童筷子(1双)"``,`<br>```"api_spec_name"``:``"老爸推荐--检测合格304不锈钢儿童筷子(1双)"``,`<br>```"commission"``: 0.0000,`<br>```"goods_type"``: 1,`<br>```"from_mask"``: 0,`<br>```"remark"``:``""``,`<br>```"modified"``: 1611821521000,`<br>```"img_url"``:``""``,`<br>```"platform_status"``: 0,`<br>```"created"``: 1611049724000,`<br>```"prop2"``:``""``,`<br>```"weight"``: 0.0000,`<br>```"api_goods_id"``:``""``,`<br>```"api_spec_id"``:``""`<br>```}`<br>```],`<br>```"bad_reason"``: 0,`<br>```"print_remark"``:``""``,`<br>```"discount"``: 0.0000,`<br>```"other_amount"``: 0.0000,`<br>```"pay_account"``:``""``,`<br>```"tax_rate"``: 0.0000,`<br>```"raw_goods_count"``: 1.0000,`<br>```"to_deliver_time"``:``""``,`<br>```"fchecker_name"``:``"系统"``,`<br>```"trade_id"``: 842375,`<br>```"trade_label"``:``""``,`<br>```"shop_remark"``:``"1"``,`<br>```"invoice_id"``: 0,`<br>```"modified"``:``"2021-01-29 01:49:40"``,`<br>```"shop_no"``:``"wdtapi3-test"``,`<br>```"checker_name"``:``"admin"``,`<br>```"receiver_area"``:``"浙江省 杭州市 江干区"``,`<br>```"customer_no"``:``"KH202101150020"``,`<br>```"refund_status"``: 0,`<br>```"receiver_province"``: 330000,`<br>```"buyer_message"``:``""``,`<br>```"created"``: 1611049724000,`<br>```"weight"``: 0.0000,`<br>```"tax"``: 0.0000,`<br>```"logistics_code"``:``"wtt123"``,`<br>```"shop_name"``:``"wdtapi3-test"``,`<br>```"shop_platform_id"``: 127,`<br>```"pay_time"``:``"2021-01-19 17:48:12"``,`<br>```"src_tids"``:``"ZY202012240121"``,`<br>```"shop_id"``: 290,`<br>```"checkouter_name"``:``"系统"``,`<br>```"trade_no"``:``"ORDER202101190014"``,`<br>```"id_card_type"``: 0,`<br>```"freeze_reason"``:``"无"``,`<br>```"single_spec_no"``:``"BC00000101"``,`<br>```"salesman_name"``:``"admin"``,`<br>```"receiver_city"``: 330100,`<br>```"invoice_title"``:``""``,`<br>```"goods_type_count"``: 1,`<br>```"sub_platform_id"``: 0,`<br>```"goods_count"``: 1.0000,`<br>```"cod_amount"``: 0.0000,`<br>```"flag_name"``:``"无"``,`<br>```"receiver_telno"``:``""``,`<br>```"receiver_zip"``:``""``,`<br>```"warehouse_no"``:``"wdtapi3-test"``,`<br>```"invoice_content"``:``""``,`<br>```"trade_status"``: 110,`<br>```"post_cost"``: 0.0000,`<br>```"receiver_name"``:``"chend270"``,`<br>```"commission"``: 0.0000,`<br>```"invoice_type"``: 0,`<br>```"currency"``:``""``,`<br>```"profit"``: 0.0000,`<br>```"trade_from"``: 2,`<br>```"delivery_term"``: 1,`<br>```"logistics_no"``:``"765432342323232"``,`<br>```"goods_amount"``: 0.0000,`<br>```"goods_cost"``: 0.0000,`<br>```"receiver_district"``: 330104,`<br>```"stockout_no"``:``"CKDH2021012820"``,`<br>```"receivable"``: 0.0000,`<br>```"version_id"``: 3,`<br>```"receiver_mobile"``:``"132222222228"``,`<br>```"buyer_nick"``:``"MO2"``,`<br>```"fenxiao_type"``: 0,`<br>```"cs_remark"``:``""``,`<br>```"platform_id"``: 0,`<br>```"trade_type"``: 2,`<br>```"receiver_address"``:``"绿谷"``,`<br>```"logistics_type_name"``:``"中国邮政"``,`<br>```"ext_cod_fee"``: 0.0000,`<br>```"customer_name"``:``"chend270"``,`<br>```"delay_to_time"``:``""`<br>```}`<br>```]`<br>```}`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -366,11 +253,3 @@ JIT退货单查询
 | JSON | |     |     |
 | --- | --- |
 | 1 | `{``"status"``:100,``"message"``:``"您的查询时间过宽,查询时间不能大于60分钟"``}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1

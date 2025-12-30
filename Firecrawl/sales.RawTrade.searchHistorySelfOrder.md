@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=sales.RawTrade.searchHistorySelfOrder"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-[登录](javascript:gologin()) [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 **sales.RawTrade.searchHistorySelfOrder（历史原始单查询--仅返回自有平台、线下平台订单）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -127,13 +21,6 @@ JIT退货单查询
 | **2.1 举例说明：** 财务系统、SAP、数据分析等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi [查看正式环境动态获取方式](javascript:view_document('zhengshihuanjing') "查看正式环境动态获取方式") |
 
 3.2 公共请求参数
 
@@ -306,7 +193,7 @@ JIT退货单查询
 | 1 | `[{``"tid"``:``"TID-TgKngjNFhj"``}]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17 | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->tid =``'TID-TgKngjNFhj'``;`<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>``<br>`try``{`<br>```$data``=``$client``->pageCall(``"sales.RawTrade.searchHistorySelfOrder"``,``$pager``,``$parMap``);`<br>`}``catch``(WdtErpException``$e``)`<br>`{`<br>```echo``$e``->getMessage();`<br>`}`<br>`?>` | |
+|  | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``)`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->tid =``'TID-TgKngjNFhj'``;`<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>``<br>`try``{`<br>```$data``=``$client``->pageCall(``"sales.RawTrade.searchHistorySelfOrder"``,``$pager``,``$parMap``);`<br>`}``catch``(WdtErpException``$e``)`<br>`{`<br>```echo``$e``->getMessage();`<br>`}`<br>`?>` | |
 | JAVA |  |
 | C# |  |
 
@@ -318,7 +205,7 @@ JIT退货单查询
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"buyer_area"``:``""``,`<br>```"post_amount"``: 0,`<br>```"trade_time"``:``"2021-01-29 18:06:43"``,`<br>```"receiver_ring"``:``""``,`<br>```"bad_reason"``:``""``,`<br>```"buyer_name"``:``""``,`<br>```"discount"``: 0,`<br>```"other_amount"``: 0,`<br>```"pay_account"``:``""``,`<br>```"tid"``:``"1000000026482026"``,`<br>```"to_deliver_time"``:``""``,`<br>```"platform_cost"``: 0,`<br>```"modified"``:``"2021-01-29 18:37:11"``,`<br>```"receiver_country"``: 0,`<br>```"shop_no"``:``"wdtapi3-test"``,`<br>```"buyer_email"``:``""``,`<br>```"receiver_area"``:``"北京市北京市东城区"``,`<br>```"refund_status"``: 2,`<br>```"buyer_message"``:``""``,`<br>```"receiver_province"``: 110000,`<br>```"created"``:``"2021-01-29 18:06:59"``,`<br>```"received"``: 0,`<br>```"trade_orders"``: [{`<br>```"rec_id"``: 7615840,`<br>```"tid"``:``"1000000026482026"``,`<br>```"oid"``:``"QJB16119148202804961"``,`<br>```"platform_id"``: 127,`<br>```"status"``: 80,`<br>```"process_status"``: 20,`<br>```"refund_status"``: 5,`<br>```"goods_name"``:``"品牌桶包"``,`<br>```"goods_no"``:``"PMJHBBYQ"``,`<br>```"goods_id"``:``"1022"``,`<br>```"spec_no"``:``"PMJHBBYQ00101"``,`<br>```"spec_name"``:``"夜空黑"``,`<br>```"spec_id"``:``"1046"``,`<br>```"spec_code"``:``""``,`<br>```"num"``: 2,`<br>```"price"``: 480,`<br>```"discount"``: 0,`<br>```"adjust_amount"``: 0,`<br>```"share_discount"``: 0,`<br>```"total_amount"``: 960,`<br>```"share_amount"``: 960,`<br>```"refund_amount"``: 10,`<br>```"remark"``:``""``,`<br>```"modified"``:``"2021-01-29 18:37:11"``,`<br>```"created"``:``"2021-01-29 18:06:59"``,`<br>```"end_time"``:``""`<br>```}],`<br>```"shop_platform_id"``: 127,`<br>```"pay_time"``:``"2021-01-29 18:06:44"``,`<br>```"shop_id"``: 442,`<br>```"union_name"``:``"aaaa-"``,`<br>```"is_auto_wms"``:``false``,`<br>```"process_status"``: 70,`<br>```"pay_id"``:``""``,`<br>```"receiver_city"``: 110100,`<br>```"remark"``:``""``,`<br>```"sub_platform_id"``: 0,`<br>```"goods_count"``: 2,`<br>```"discount_list"``: [],`<br>```"pay_status"``: 2,`<br>```"receiver_telno"``:``""``,`<br>```"warehouse_no"``:``""``,`<br>```"trade_status"``: 80,`<br>```"receiver_name"``:``"晓五"``,`<br>```"currency"``:``""``,`<br>```"guarantee_mode"``: 1,`<br>```"order_count"``: 1,`<br>```"delivery_term"``: 1,`<br>```"goods_amount"``: 960,`<br>```"receiver_district"``: 110101,`<br>```"end_time"``:``""``,`<br>```"pay_method"``: 1,`<br>```"receivable"``: 960,`<br>```"rec_id"``: 5047556,`<br>```"receiver_mobile"``:``"111111111111"``,`<br>```"buyer_nick"``:``"aaaa"``,`<br>```"platform_id"``: 127,`<br>```"paid"``: 0,`<br>```"receiver_address"``:``"我退酒有UI"`<br>```}]`<br>```}`<br>`}` | |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"buyer_area"``:``""``,`<br>```"post_amount"``: 0,`<br>```"trade_time"``:``"2021-01-29 18:06:43"``,`<br>```"receiver_ring"``:``""``,`<br>```"bad_reason"``:``""``,`<br>```"buyer_name"``:``""``,`<br>```"discount"``: 0,`<br>```"other_amount"``: 0,`<br>```"pay_account"``:``""``,`<br>```"tid"``:``"1000000026482026"``,`<br>```"to_deliver_time"``:``""``,`<br>```"platform_cost"``: 0,`<br>```"modified"``:``"2021-01-29 18:37:11"``,`<br>```"receiver_country"``: 0,`<br>```"shop_no"``:``"wdtapi3-test"``,`<br>```"buyer_email"``:``""``,`<br>```"receiver_area"``:``"北京市北京市东城区"``,`<br>```"refund_status"``: 2,`<br>```"buyer_message"``:``""``,`<br>```"receiver_province"``: 110000,`<br>```"created"``:``"2021-01-29 18:06:59"``,`<br>```"received"``: 0,`<br>```"trade_orders"``: [{`<br>```"rec_id"``: 7615840,`<br>```"tid"``:``"1000000026482026"``,`<br>```"oid"``:``"QJB16119148202804961"``,`<br>```"platform_id"``: 127,`<br>```"status"``: 80,`<br>```"process_status"``: 20,`<br>```"refund_status"``: 5,`<br>```"goods_name"``:``"品牌桶包"``,`<br>```"goods_no"``:``"PMJHBBYQ"``,`<br>```"goods_id"``:``"1022"``,`<br>```"spec_no"``:``"PMJHBBYQ00101"``,`<br>```"spec_name"``:``"夜空黑"``,`<br>```"spec_id"``:``"1046"``,`<br>```"spec_code"``:``""``,`<br>```"num"``: 2,`<br>```"price"``: 480,`<br>```"discount"``: 0,`<br>```"adjust_amount"``: 0,`<br>```"share_discount"``: 0,`<br>```"total_amount"``: 960,`<br>```"share_amount"``: 960,`<br>```"refund_amount"``: 10,`<br>```"remark"``:``""``,`<br>```"modified"``:``"2021-01-29 18:37:11"``,`<br>```"created"``:``"2021-01-29 18:06:59"``,`<br>```"end_time"``:``""`<br>```}],`<br>```"shop_platform_id"``: 127,`<br>```"pay_time"``:``"2021-01-29 18:06:44"``,`<br>```"shop_id"``: 442,`<br>```"union_name"``:``"aaaa-"``,`<br>```"is_auto_wms"``:``false``,`<br>```"process_status"``: 70,`<br>```"pay_id"``:``""``,`<br>```"receiver_city"``: 110100,`<br>```"remark"``:``""``,`<br>```"sub_platform_id"``: 0,`<br>```"goods_count"``: 2,`<br>```"discount_list"``: [],`<br>```"pay_status"``: 2,`<br>```"receiver_telno"``:``""``,`<br>```"warehouse_no"``:``""``,`<br>```"trade_status"``: 80,`<br>```"receiver_name"``:``"晓五"``,`<br>```"currency"``:``""``,`<br>```"guarantee_mode"``: 1,`<br>```"order_count"``: 1,`<br>```"delivery_term"``: 1,`<br>```"goods_amount"``: 960,`<br>```"receiver_district"``: 110101,`<br>```"end_time"``:``""``,`<br>```"pay_method"``: 1,`<br>```"receivable"``: 960,`<br>```"rec_id"``: 5047556,`<br>```"receiver_mobile"``:``"111111111111"``,`<br>```"buyer_nick"``:``"aaaa"``,`<br>```"platform_id"``: 127,`<br>```"paid"``: 0,`<br>```"receiver_address"``:``"我退酒有UI"`<br>```}]`<br>```}`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -327,11 +214,3 @@ JIT退货单查询
 | JSON | |     |     |
 | --- | --- |
 | 1 | `{``"status"``:100,``"message"``:``"您的查询时间过宽,查询时间不能大于30天"``}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-[常用工具](javascript:dgoto('G%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7'))
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1

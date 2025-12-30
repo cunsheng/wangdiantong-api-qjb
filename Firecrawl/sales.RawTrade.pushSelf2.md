@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=sales.RawTrade.pushSelf2"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 **sales.RawTrade.pushSelf2（原始** **单推送2）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -125,13 +19,6 @@ JIT退货单查询
 | **2.1 举例说明：** 自研商城、分销系统、全渠道等系统对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -278,10 +165,10 @@ rawTradeList
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89 | `[``"test"``, [{`<br>`"is_auto_wms"``:``false``,`<br>`"post_amount"``: 2,`<br>`"other_amount"``: 5.2,`<br>`"discount"``: 1,`<br>`"platform_cost"``: 0,`<br>`"cod_amount"``:``""``,`<br>`"received"``:``""``,`<br>`"tid"``:``"tid-aqyYHjEldp"``,`<br>`"process_status"``: 10,`<br>`"trade_status"``: 30,`<br>`"refund_status"``: 0,`<br>`"pay_status"``: 2,`<br>`"order_count"``: 2,`<br>`"pay_method"``: 2,`<br>`"trade_time"``:``"2020-03-20 18:24:37"``,`<br>`"pay_time"``:``"2020-03-20 18:24:37"``,`<br>`"end_time"``:``"2020-03-20 18:24:37"``,`<br>`"buyer_nick"``:``"test_openapi"``,`<br>`"buyer_message"``:``"test_openapi"``,`<br>`"buyer_email"``:``"test_openapi@gmail.com"``,`<br>`"buyer_area"``:``"test_area"``,`<br>`"receiver_name"``:``"receiver_name"``,`<br>`"receiver_area"``:``"北京 北京市 朝阳区"``,`<br>`"receiver_address"``:``"春天街道春天花园小区1号楼1单元101"``,`<br>`"receiver_zip"``:``"014500"``,`<br>`"receiver_mobile"``:``"15612340987"``,`<br>`"receiver_telno"``:``"02288888888"``,`<br>`"invoice_type"``: 0,`<br>`"invoice_title"``:``""``,`<br>`"invoice_content"``:``""``,`<br>`"logistics_type"``: -1,`<br>`"consign_interval"``: 0,`<br>`"delivery_term"``: 1,`<br>`"to_deliver_time"``:``""``,`<br>`"pay_id"``:``""``,`<br>`"pay_account"``:``""``,`<br>`"remark"``:``""``,`<br>`"remark_flag"``: 0,`<br>`"goods_count"``: 6,`<br>`"receivable"``: 17.6`<br>`}],`<br>`[{`<br>`"tid"``:``"tid-aqyYHjEldp"``,`<br>`"oid"``:``"tid-aqyYHjEldp-0"``,`<br>`"order_type"``: 0,`<br>`"status"``: 30,`<br>`"refund_status"``: 0,`<br>`"goods_id"``:``"openapi_gid-0"``,`<br>`"spec_id"``:``"openapi_sid-0"``,`<br>`"goods_no"``:``"api_gno-0"``,`<br>`"spec_no"``:``"api_sno-0"``,`<br>`"goods_name"``:``"api_gname-0"``,`<br>`"spec_name"``:``"api_sname-0"``,`<br>`"num"``: 3,`<br>`"price"``: 2.5,`<br>`"adjust_amount"``: 2,`<br>`"refund_amount"``:``""``,`<br>`"discount"``: 0.5,`<br>`"share_discount"``: 0.2,`<br>`"total_amount"``: 9,`<br>`"cid"``:``""``,`<br>`"remark"``:``""``,`<br>`"json"``:``""`<br>`}, {`<br>`"tid"``:``"tid-aqyYHjEldp"``,`<br>`"oid"``:``"tid-aqyYHjEldp-1"``,`<br>`"order_type"``: 0,`<br>`"status"``: 30,`<br>`"refund_status"``: 0,`<br>`"goods_id"``:``"openapi_gid-1"``,`<br>`"spec_id"``:``"openapi_sid-1"``,`<br>`"goods_no"``:``"api_gno-1"``,`<br>`"spec_no"``:``"api_sno-1"``,`<br>`"goods_name"``:``"api_gname-1"``,`<br>`"spec_name"``:``"api_sname-1"``,`<br>`"num"``: 3,`<br>`"price"``: 2.5,`<br>`"adjust_amount"``: 2,`<br>`"refund_amount"``:``""``,`<br>`"discount"``: 0.5,`<br>`"share_discount"``: 0.2,`<br>`"total_amount"``: 9,`<br>`"share_amount"``: 8.8,`<br>`"cid"``:``""``,`<br>`"remark"``:``""``,`<br>`"json"``:``""`<br>`}]`<br>`]` | |
+|  | `[``"test"``, [{`<br>`"is_auto_wms"``:``false``,`<br>`"post_amount"``: 2,`<br>`"other_amount"``: 5.2,`<br>`"discount"``: 1,`<br>`"platform_cost"``: 0,`<br>`"cod_amount"``:``""``,`<br>`"received"``:``""``,`<br>`"tid"``:``"tid-aqyYHjEldp"``,`<br>`"process_status"``: 10,`<br>`"trade_status"``: 30,`<br>`"refund_status"``: 0,`<br>`"pay_status"``: 2,`<br>`"order_count"``: 2,`<br>`"pay_method"``: 2,`<br>`"trade_time"``:``"2020-03-20 18:24:37"``,`<br>`"pay_time"``:``"2020-03-20 18:24:37"``,`<br>`"end_time"``:``"2020-03-20 18:24:37"``,`<br>`"buyer_nick"``:``"test_openapi"``,`<br>`"buyer_message"``:``"test_openapi"``,`<br>`"buyer_email"``:``"test_openapi@gmail.com"``,`<br>`"buyer_area"``:``"test_area"``,`<br>`"receiver_name"``:``"receiver_name"``,`<br>`"receiver_area"``:``"北京 北京市 朝阳区"``,`<br>`"receiver_address"``:``"春天街道春天花园小区1号楼1单元101"``,`<br>`"receiver_zip"``:``"014500"``,`<br>`"receiver_mobile"``:``"15612340987"``,`<br>`"receiver_telno"``:``"02288888888"``,`<br>`"invoice_type"``: 0,`<br>`"invoice_title"``:``""``,`<br>`"invoice_content"``:``""``,`<br>`"logistics_type"``: -1,`<br>`"consign_interval"``: 0,`<br>`"delivery_term"``: 1,`<br>`"to_deliver_time"``:``""``,`<br>`"pay_id"``:``""``,`<br>`"pay_account"``:``""``,`<br>`"remark"``:``""``,`<br>`"remark_flag"``: 0,`<br>`"goods_count"``: 6,`<br>`"receivable"``: 17.6`<br>`}],`<br>`[{`<br>`"tid"``:``"tid-aqyYHjEldp"``,`<br>`"oid"``:``"tid-aqyYHjEldp-0"``,`<br>`"order_type"``: 0,`<br>`"status"``: 30,`<br>`"refund_status"``: 0,`<br>`"goods_id"``:``"openapi_gid-0"``,`<br>`"spec_id"``:``"openapi_sid-0"``,`<br>`"goods_no"``:``"api_gno-0"``,`<br>`"spec_no"``:``"api_sno-0"``,`<br>`"goods_name"``:``"api_gname-0"``,`<br>`"spec_name"``:``"api_sname-0"``,`<br>`"num"``: 3,`<br>`"price"``: 2.5,`<br>`"adjust_amount"``: 2,`<br>`"refund_amount"``:``""``,`<br>`"discount"``: 0.5,`<br>`"share_discount"``: 0.2,`<br>`"total_amount"``: 9,`<br>`"cid"``:``""``,`<br>`"remark"``:``""``,`<br>`"json"``:``""`<br>`}, {`<br>`"tid"``:``"tid-aqyYHjEldp"``,`<br>`"oid"``:``"tid-aqyYHjEldp-1"``,`<br>`"order_type"``: 0,`<br>`"status"``: 30,`<br>`"refund_status"``: 0,`<br>`"goods_id"``:``"openapi_gid-1"``,`<br>`"spec_id"``:``"openapi_sid-1"``,`<br>`"goods_no"``:``"api_gno-1"``,`<br>`"spec_no"``:``"api_sno-1"``,`<br>`"goods_name"``:``"api_gname-1"``,`<br>`"spec_name"``:``"api_sname-1"``,`<br>`"num"``: 3,`<br>`"price"``: 2.5,`<br>`"adjust_amount"``: 2,`<br>`"refund_amount"``:``""``,`<br>`"discount"``: 0.5,`<br>`"share_discount"``: 0.2,`<br>`"total_amount"``: 9,`<br>`"share_amount"``: 8.8,`<br>`"cid"``:``""``,`<br>`"remark"``:``""``,`<br>`"json"``:``""`<br>`}]`<br>`]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>112<br>113<br>114<br>115<br>116<br>117<br>118 | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`function``str_rand(``$length``= 10,``$char``=``'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'``) {`<br>```if``(!``is_int``(``$length``) ||``$length``< 0) {`<br>```return``false;`<br>```}`<br>``<br>```$string``=``''``;`<br>```for``(``$i``=``$length``;``$i``> 0;``$i``--) {`<br>```$string``.=``$char``[mt_rand(0,``strlen``(``$char``) - 1)];`<br>```}`<br>``<br>```return``$string``;`<br>`}`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$rawTrade``=``new``stdClass();`<br>`$rawTrade``->is_auto_wms=false;`<br>`// $rawTrade->warehouse_no='pos_inner'; // 非自流转订单不需要设置此字段.`<br>``<br>`$rawTrade``->post_amount=2.0000;`<br>`$rawTrade``->other_amount=5.2000;`<br>`$rawTrade``->discount=1.0000;`<br>`// $rawTrade->receivable='';`<br>`$rawTrade``->platform_cost=0.0000;`<br>`$rawTrade``->cod_amount=``''``;`<br>`$rawTrade``->received=``''``;`<br>`$rawTrade``->goods_amount =``$rawTrade``->receivable -``$rawTrade``->post_amount +``$rawTrade``->discount;`<br>``<br>`$rawTrade``->tid=``'tid-'``.str_rand();`<br>`$rawTrade``->process_status=10;`<br>`$rawTrade``->trade_status=30;`<br>`$rawTrade``->refund_status=0;`<br>`$rawTrade``->pay_status=2;`<br>``<br>`// !!`<br>`$rawTrade``->order_count=2;`<br>`// $rawTrade->goods_count='';`<br>`$rawTrade``->pay_method=2;``//1在线转帐 2现金，3银行转账，4邮局汇款 5预付款 6刷卡`<br>`$rawTrade``->trade_time=``date``(``'Y-m-d H:i:s'``);`<br>`$rawTrade``->pay_time=``date``(``'Y-m-d H:i:s'``);`<br>`$rawTrade``->end_time=``date``(``'Y-m-d H:i:s'``);`<br>``<br>`$rawTrade``->buyer_nick=``'test_openapi'``;`<br>`$rawTrade``->buyer_message=``'test_openapi'``;`<br>`$rawTrade``->buyer_email=``'test_openapi@gmail.com'``;`<br>`$rawTrade``->buyer_area=``'test_area'``;`<br>``<br>`$rawTrade``->receiver_province=``'3'``;`<br>`$rawTrade``->receiver_name=``'receiver_name'``;`<br>`$rawTrade``->receiver_area=``'85 West Lancaster Court Paramus, NJ 07652'``;`<br>`$rawTrade``->receiver_address=``'ABCDEFG'``;`<br>`$rawTrade``->receiver_zip=``'014500'``;`<br>`$rawTrade``->receiver_mobile=``'15612340987'``;`<br>`$rawTrade``->receiver_telno=``''``;`<br>``<br>`$rawTrade``->invoice_type=0;`<br>`$rawTrade``->invoice_title=``''``;`<br>`$rawTrade``->invoice_content=``''``;`<br>``<br>`$rawTrade``->logistics_type=-1;`<br>`$rawTrade``->consign_interval=0;`<br>`$rawTrade``->delivery_term=1;`<br>`$rawTrade``->to_deliver_time=``''``;`<br>`$rawTrade``->pay_id=``''``;`<br>`$rawTrade``->pay_account=``''``;`<br>`$rawTrade``->remark=``''``;`<br>`$rawTrade``->remark_flag=0;`<br>``<br>`$tradeOderList``=``array``();`<br>`for``(``$j``=0;``$j``<``$rawTrade``->order_count;``$j``++)`<br>`{`<br>`$tradeOrder``=``new``stdClass();`<br>``<br>`$tradeOrder``->tid =``$rawTrade``->tid;`<br>`$tradeOrder``->oid =``$tradeOrder``->tid.``'-'``.``$j``;`<br>`$tradeOrder``->order_type = 0;`<br>``<br>`$tradeOrder``->status = 30;`<br>`$tradeOrder``->refund_status = 0;`<br>``<br>`$tradeOrder``->goods_id =``'openapi_gid'``.``'-'``.``$j``;`<br>`$tradeOrder``->spec_id =``'openapi_sid'``.``'-'``.``$j``;`<br>`$tradeOrder``->goods_no =``'api_gno'``.``'-'``.``$j``;`<br>`$tradeOrder``->spec_no =``'api_sno'``.``'-'``.``$j``;`<br>`$tradeOrder``->goods_name =``'api_gname'``.``'-'``.``$j``;`<br>`$tradeOrder``->spec_name =``'api_sname'``.``'-'``.``$j``;`<br>`$tradeOrder``->num = 3.0000;`<br>`$tradeOrder``->price = 2.5000;`<br>`$tradeOrder``->adjust_amount = 2.0000;`<br>`$tradeOrder``->refund_amount =``''``;`<br>`$tradeOrder``->discount = 0.5000;``// 优惠金额`<br>`$tradeOrder``->share_discount = 0.2000;``//分摊优惠金额`<br>`$tradeOrder``->total_amount =``$tradeOrder``->price *``$tradeOrder``->num +``$tradeOrder``->adjust_amount -``$tradeOrder``->discount;`<br>`// 页面的分摊优惠 = total_amount - 分摊优惠金额, 此参数不需要传入`<br>``<br>`$tradeOrder``->cid =``''``;`<br>`$tradeOrder``->remark =``''``;`<br>`$tradeOrder``->json =``''``;`<br>``<br>``<br>`// 处理主单部分数据`<br>`$rawTrade``->goods_count +=``$tradeOrder``->num;`<br>`$rawTrade``->receivable +=``$tradeOrder``->share_amount;`<br>`$tradeOderList``[``$j``] =``$tradeOrder``;`<br>`}`<br>``<br>``<br>`$shopNo``=``"test"``;`<br>`$data``=``$client``->call(``"sales.RawTrade.pushSelf"``,``$shopNo``, [``$rawTrade``],``$tradeOderList``);`<br>``<br>`var_dump(``$data``);`<br>`?>` | |
+|  | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`function``str_rand(``$length``= 10,``$char``=``'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'``) {`<br>```if``(!``is_int``(``$length``) ||``$length``< 0) {`<br>```return``false;`<br>```}`<br>``<br>```$string``=``''``;`<br>```for``(``$i``=``$length``;``$i``> 0;``$i``--) {`<br>```$string``.=``$char``[mt_rand(0,``strlen``(``$char``) - 1)];`<br>```}`<br>``<br>```return``$string``;`<br>`}`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$rawTrade``=``new``stdClass();`<br>`$rawTrade``->is_auto_wms=false;`<br>`// $rawTrade->warehouse_no='pos_inner'; // 非自流转订单不需要设置此字段.`<br>``<br>`$rawTrade``->post_amount=2.0000;`<br>`$rawTrade``->other_amount=5.2000;`<br>`$rawTrade``->discount=1.0000;`<br>`// $rawTrade->receivable='';`<br>`$rawTrade``->platform_cost=0.0000;`<br>`$rawTrade``->cod_amount=``''``;`<br>`$rawTrade``->received=``''``;`<br>`$rawTrade``->goods_amount =``$rawTrade``->receivable -``$rawTrade``->post_amount +``$rawTrade``->discount;`<br>``<br>`$rawTrade``->tid=``'tid-'``.str_rand();`<br>`$rawTrade``->process_status=10;`<br>`$rawTrade``->trade_status=30;`<br>`$rawTrade``->refund_status=0;`<br>`$rawTrade``->pay_status=2;`<br>``<br>`// !!`<br>`$rawTrade``->order_count=2;`<br>`// $rawTrade->goods_count='';`<br>`$rawTrade``->pay_method=2;``//1在线转帐 2现金，3银行转账，4邮局汇款 5预付款 6刷卡`<br>`$rawTrade``->trade_time=``date``(``'Y-m-d H:i:s'``);`<br>`$rawTrade``->pay_time=``date``(``'Y-m-d H:i:s'``);`<br>`$rawTrade``->end_time=``date``(``'Y-m-d H:i:s'``);`<br>``<br>`$rawTrade``->buyer_nick=``'test_openapi'``;`<br>`$rawTrade``->buyer_message=``'test_openapi'``;`<br>`$rawTrade``->buyer_email=``'test_openapi@gmail.com'``;`<br>`$rawTrade``->buyer_area=``'test_area'``;`<br>``<br>`$rawTrade``->receiver_province=``'3'``;`<br>`$rawTrade``->receiver_name=``'receiver_name'``;`<br>`$rawTrade``->receiver_area=``'85 West Lancaster Court Paramus, NJ 07652'``;`<br>`$rawTrade``->receiver_address=``'ABCDEFG'``;`<br>`$rawTrade``->receiver_zip=``'014500'``;`<br>`$rawTrade``->receiver_mobile=``'15612340987'``;`<br>`$rawTrade``->receiver_telno=``''``;`<br>``<br>`$rawTrade``->invoice_type=0;`<br>`$rawTrade``->invoice_title=``''``;`<br>`$rawTrade``->invoice_content=``''``;`<br>``<br>`$rawTrade``->logistics_type=-1;`<br>`$rawTrade``->consign_interval=0;`<br>`$rawTrade``->delivery_term=1;`<br>`$rawTrade``->to_deliver_time=``''``;`<br>`$rawTrade``->pay_id=``''``;`<br>`$rawTrade``->pay_account=``''``;`<br>`$rawTrade``->remark=``''``;`<br>`$rawTrade``->remark_flag=0;`<br>``<br>`$tradeOderList``=``array``();`<br>`for``(``$j``=0;``$j``<``$rawTrade``->order_count;``$j``++)`<br>`{`<br>`$tradeOrder``=``new``stdClass();`<br>``<br>`$tradeOrder``->tid =``$rawTrade``->tid;`<br>`$tradeOrder``->oid =``$tradeOrder``->tid.``'-'``.``$j``;`<br>`$tradeOrder``->order_type = 0;`<br>``<br>`$tradeOrder``->status = 30;`<br>`$tradeOrder``->refund_status = 0;`<br>``<br>`$tradeOrder``->goods_id =``'openapi_gid'``.``'-'``.``$j``;`<br>`$tradeOrder``->spec_id =``'openapi_sid'``.``'-'``.``$j``;`<br>`$tradeOrder``->goods_no =``'api_gno'``.``'-'``.``$j``;`<br>`$tradeOrder``->spec_no =``'api_sno'``.``'-'``.``$j``;`<br>`$tradeOrder``->goods_name =``'api_gname'``.``'-'``.``$j``;`<br>`$tradeOrder``->spec_name =``'api_sname'``.``'-'``.``$j``;`<br>`$tradeOrder``->num = 3.0000;`<br>`$tradeOrder``->price = 2.5000;`<br>`$tradeOrder``->adjust_amount = 2.0000;`<br>`$tradeOrder``->refund_amount =``''``;`<br>`$tradeOrder``->discount = 0.5000;``// 优惠金额`<br>`$tradeOrder``->share_discount = 0.2000;``//分摊优惠金额`<br>`$tradeOrder``->total_amount =``$tradeOrder``->price *``$tradeOrder``->num +``$tradeOrder``->adjust_amount -``$tradeOrder``->discount;`<br>`// 页面的分摊优惠 = total_amount - 分摊优惠金额, 此参数不需要传入`<br>``<br>`$tradeOrder``->cid =``''``;`<br>`$tradeOrder``->remark =``''``;`<br>`$tradeOrder``->json =``''``;`<br>``<br>``<br>`// 处理主单部分数据`<br>`$rawTrade``->goods_count +=``$tradeOrder``->num;`<br>`$rawTrade``->receivable +=``$tradeOrder``->share_amount;`<br>`$tradeOderList``[``$j``] =``$tradeOrder``;`<br>`}`<br>``<br>``<br>`$shopNo``=``"test"``;`<br>`$data``=``$client``->call(``"sales.RawTrade.pushSelf"``,``$shopNo``, [``$rawTrade``],``$tradeOderList``);`<br>``<br>`var_dump(``$data``);`<br>`?>` | |
 | JAVA |  |
 | C# |  |
 
@@ -293,7 +180,7 @@ rawTradeList
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"chg_count"``: 2,`<br>```"error_list"``: [],`<br>```"new_count"``: 0`<br>```}`<br>`}` | |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"chg_count"``: 2,`<br>```"error_list"``: [],`<br>```"new_count"``: 0`<br>```}`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -301,12 +188,4 @@ rawTradeList
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"chg_count"``: 0,`<br>```"error_list"``: [`<br>```{`<br>```"error"``:``"XXXXXXXXX"``,`<br>```"no"``:``"ceshi20230109002"`<br>```}`<br>```],`<br>```"new_count"``: 1`<br>```}`<br>`}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"chg_count"``: 0,`<br>```"error_list"``: [`<br>```{`<br>```"error"``:``"XXXXXXXXX"``,`<br>```"no"``:``"ceshi20230109002"`<br>```}`<br>```],`<br>```"new_count"``: 1`<br>```}`<br>`}` | |

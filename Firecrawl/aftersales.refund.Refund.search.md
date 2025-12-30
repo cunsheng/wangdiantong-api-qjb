@@ -2,59 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=aftersales.refund.Refund.search"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-售后类
-
-退货入库单查询
-
-原始退款单推送
-
-创建退货预入库
-
-退换单查询
-
-预入库单据查询
-
-退货预入库单取消
-
-历史退换单查询
-
-原始退款单查询
-
-原始退款单推送2
-
-退货入库单推送
-
-快速退货
-
-历史退货入库单查询
-
-历史原始退款单查询
-
-退货物流包裹查询
-
-当前位置： API文档 > 售后类
-
 **aftersales.refund.Refund.search**（退换单查询）
-
-**¥标准**
 
 **1.接口说明**
 
@@ -82,13 +30,6 @@ title: "API文档"
 | **2.1 举例说明：** 自研商城、分销系统、全渠道等系统对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -357,11 +298,11 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `[{`<br>`"modified_from"``:``"2020-01-01 00:00:00"``,`<br>`"modified_to"``:``"2020-01-20 00:00:00"`<br>`}]` |
+|  | `[{`<br>`"modified_from"``:``"2020-01-01 00:00:00"``,`<br>`"modified_to"``:``"2020-01-20 00:00:00"`<br>`}]` |
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16 | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->modified_from=``"2020-01-01 00:00:00"``;`<br>`$parMap``->modified_to=``"2020-01-20 00:00:00"``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$response``=``$client``->pageCall(``"aftersales.refund.Refund.search"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
+|  | `<php`<br>`header(``"Content-Type: text/html; charset=UTF-8"``);`<br>`date_default_timezone_set(``"Asia/Shanghai"``);`<br>`require_once``(``'wdtsdk.php'``);`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>``<br>`$parMap``=``new``stdClass();`<br>`$parMap``->modified_from=``"2020-01-01 00:00:00"``;`<br>`$parMap``->modified_to=``"2020-01-20 00:00:00"``;`<br>``<br>`$pager``=``new``Pager(1, 0, true);`<br>``<br>`$response``=``$client``->pageCall(``"aftersales.refund.Refund.search"``,``$pager``,``$parMap``);`<br>``<br>`?>` |
 
 **6.响应示** **例**
 
@@ -371,7 +312,7 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>107<br>108 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"warehouse_type"``: 1,`<br>```"provider_refund_no"``:``""``,`<br>```"detail_list"``: [{`<br>```"rec_id"``: 1137182,`<br>```"refund_id"``: 1130899,`<br>```"platform_id"``: 127,`<br>```"oid"``:``"lj2323823489293842938343422"``,`<br>```"tid"``:``"lj8234232389293842938422344"``,`<br>```"trade_no"``:``"A18449"``,`<br>```"checked_cost_price"``: 0,`<br>```"num"``: 1,`<br>```"price"``: 1,`<br>```"original_price"``: 1,`<br>```"refund_num"``: 1,`<br>```"total_amount"``: 1,`<br>```"refund_amount"``: 0,`<br>```"is_guarantee"``:``true``,`<br>```"goods_no"``:``"hcf"``,`<br>```"goods_name"``:``"hcf"``,`<br>```"spec_name"``:``"hcf"``,`<br>```"spec_no"``:``"hcf"``,`<br>```"spec_code"``:``"hcf"``,`<br>```"barcode"``:``"hcf"``,`<br>```"stockin_num"``: 0,`<br>```"remark"``:``""``,`<br>```"api_goods_name"``:``"hcf"``,`<br>```"sales_trade_id"``: 2740715,`<br>```"api_spec_name"``:``"hcf"``,`<br>```"trade_order_id"``: 5271780,`<br>```"modified"``: 1686712380000,`<br>```"goods_id"``:``"hcf"``,`<br>```"spec_id"``:``"hcf"``,`<br>```"sys_goods_id"``: 105064,`<br>```"sys_spec_id"``: 273312,`<br>```"discount"``: 0,`<br>```"paid"``: 0,`<br>```"suite_id"``: 0,`<br>```"suite_no"``:``""``,`<br>```"suite_name"``:``""``,`<br>```"suite_num"``: 0,`<br>```"created"``:``"2023-06-14 11:05:17"``,`<br>```"modified_date"``:``"2023-06-14 11:13:00"``,`<br>```"raw_refund_no"``:``"TKljcs2202180006"``,`<br>```"raw_refund_nos"``:``"TKljcs2202180006"`<br>```}],`<br>```"refund_no"``:``"TK2306140001"``,`<br>```"bad_reason"``: 0,`<br>```"return_telno"``:``""``,`<br>```"type"``: 2,`<br>```"trade_id"``: 2740715,`<br>```"modified"``: 1686712380000,`<br>```"shop_no"``:``"wdtapi3-test"``,`<br>```"created"``: 1686711917000,`<br>```"trade_no_list"``:``"A18449"``,`<br>```"return_logistics_no"``:``"238943957239"``,`<br>```"return_goods_amount"``: 1,`<br>```"modified_date"``:``"2023-06-14 11:13:00"``,`<br>```"shop_platform_id"``: 127,`<br>```"refund_id"``: 1130899,`<br>```"shop_id"``: 711,`<br>```"src_tids"``:``"lj8234232389293842938422344"``,`<br>```"actual_refund_amount"``: 0,`<br>```"refund_time"``:``"2022-06-08 00:00:00"``,`<br>```"receive_amount"``: 0,`<br>```"pay_id"``:``"1495759864643715076"``,`<br>```"status"``: 30,`<br>```"check_time"``:``"2023-06-14 11:13:00"``,`<br>```"return_mask_info"``:``""``,`<br>```"tmp_data"``: 624,`<br>```"tid_list"``:``"lj8234232389293842938422344"``,`<br>```"remark"``:``""``,`<br>```"sub_platform_id"``: 0,`<br>```"stockin_status"``: 1,`<br>```"flag_name"``:``"无"``,`<br>```"return_goods_count"``: 1,`<br>```"receiver_telno"``:``"18621578833"``,`<br>```"receiver_name"``:``"Tony"``,`<br>```"refund_reason"``:``"1"``,`<br>```"return_warehouse_id"``: 624,`<br>```"note_count"``: 0,`<br>```"from_type"``: 0,`<br>```"raw_refund_nos"``:``"TKljcs2202180006"``,`<br>```"amount_detail_list"``: [],`<br>```"consign_mode"``: 0,`<br>```"guarantee_refund_amount"``: 0,`<br>```"return_logistics_name"``:``"中通"``,`<br>```"settle_time"``:``""``,`<br>```"reason_id"``: 0,`<br>```"buyer_nick"``:``"lj"``,`<br>```"operator_name"``:``"系统"``,`<br>```"revert_reason"``: 0,`<br>```"return_warehouse_no"``:``"wdtapi3-test"``,`<br>```"direct_refund_amount"``: 0,`<br>```"platform_id"``:``"127"``,`<br>```"sync_return"``:``true``,`<br>```"customer_name"``:``"lj"``,`<br>```"reason_name"``:``"无"``,`<br>```"customer_id"``: 17588392,`<br>```"return_mask"``: 0,`<br>```"revert_reason_name"``:``"无"`<br>```}]`<br>```}`<br>`}` |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 1,`<br>```"order"``: [{`<br>```"warehouse_type"``: 1,`<br>```"provider_refund_no"``:``""``,`<br>```"detail_list"``: [{`<br>```"rec_id"``: 1137182,`<br>```"refund_id"``: 1130899,`<br>```"platform_id"``: 127,`<br>```"oid"``:``"lj2323823489293842938343422"``,`<br>```"tid"``:``"lj8234232389293842938422344"``,`<br>```"trade_no"``:``"A18449"``,`<br>```"checked_cost_price"``: 0,`<br>```"num"``: 1,`<br>```"price"``: 1,`<br>```"original_price"``: 1,`<br>```"refund_num"``: 1,`<br>```"total_amount"``: 1,`<br>```"refund_amount"``: 0,`<br>```"is_guarantee"``:``true``,`<br>```"goods_no"``:``"hcf"``,`<br>```"goods_name"``:``"hcf"``,`<br>```"spec_name"``:``"hcf"``,`<br>```"spec_no"``:``"hcf"``,`<br>```"spec_code"``:``"hcf"``,`<br>```"barcode"``:``"hcf"``,`<br>```"stockin_num"``: 0,`<br>```"remark"``:``""``,`<br>```"api_goods_name"``:``"hcf"``,`<br>```"sales_trade_id"``: 2740715,`<br>```"api_spec_name"``:``"hcf"``,`<br>```"trade_order_id"``: 5271780,`<br>```"modified"``: 1686712380000,`<br>```"goods_id"``:``"hcf"``,`<br>```"spec_id"``:``"hcf"``,`<br>```"sys_goods_id"``: 105064,`<br>```"sys_spec_id"``: 273312,`<br>```"discount"``: 0,`<br>```"paid"``: 0,`<br>```"suite_id"``: 0,`<br>```"suite_no"``:``""``,`<br>```"suite_name"``:``""``,`<br>```"suite_num"``: 0,`<br>```"created"``:``"2023-06-14 11:05:17"``,`<br>```"modified_date"``:``"2023-06-14 11:13:00"``,`<br>```"raw_refund_no"``:``"TKljcs2202180006"``,`<br>```"raw_refund_nos"``:``"TKljcs2202180006"`<br>```}],`<br>```"refund_no"``:``"TK2306140001"``,`<br>```"bad_reason"``: 0,`<br>```"return_telno"``:``""``,`<br>```"type"``: 2,`<br>```"trade_id"``: 2740715,`<br>```"modified"``: 1686712380000,`<br>```"shop_no"``:``"wdtapi3-test"``,`<br>```"created"``: 1686711917000,`<br>```"trade_no_list"``:``"A18449"``,`<br>```"return_logistics_no"``:``"238943957239"``,`<br>```"return_goods_amount"``: 1,`<br>```"modified_date"``:``"2023-06-14 11:13:00"``,`<br>```"shop_platform_id"``: 127,`<br>```"refund_id"``: 1130899,`<br>```"shop_id"``: 711,`<br>```"src_tids"``:``"lj8234232389293842938422344"``,`<br>```"actual_refund_amount"``: 0,`<br>```"refund_time"``:``"2022-06-08 00:00:00"``,`<br>```"receive_amount"``: 0,`<br>```"pay_id"``:``"1495759864643715076"``,`<br>```"status"``: 30,`<br>```"check_time"``:``"2023-06-14 11:13:00"``,`<br>```"return_mask_info"``:``""``,`<br>```"tmp_data"``: 624,`<br>```"tid_list"``:``"lj8234232389293842938422344"``,`<br>```"remark"``:``""``,`<br>```"sub_platform_id"``: 0,`<br>```"stockin_status"``: 1,`<br>```"flag_name"``:``"无"``,`<br>```"return_goods_count"``: 1,`<br>```"receiver_telno"``:``"18621578833"``,`<br>```"receiver_name"``:``"Tony"``,`<br>```"refund_reason"``:``"1"``,`<br>```"return_warehouse_id"``: 624,`<br>```"note_count"``: 0,`<br>```"from_type"``: 0,`<br>```"raw_refund_nos"``:``"TKljcs2202180006"``,`<br>```"amount_detail_list"``: [],`<br>```"consign_mode"``: 0,`<br>```"guarantee_refund_amount"``: 0,`<br>```"return_logistics_name"``:``"中通"``,`<br>```"settle_time"``:``""``,`<br>```"reason_id"``: 0,`<br>```"buyer_nick"``:``"lj"``,`<br>```"operator_name"``:``"系统"``,`<br>```"revert_reason"``: 0,`<br>```"return_warehouse_no"``:``"wdtapi3-test"``,`<br>```"direct_refund_amount"``: 0,`<br>```"platform_id"``:``"127"``,`<br>```"sync_return"``:``true``,`<br>```"customer_name"``:``"lj"``,`<br>```"reason_name"``:``"无"``,`<br>```"customer_id"``: 17588392,`<br>```"return_mask"``: 0,`<br>```"revert_reason_name"``:``"无"`<br>```}]`<br>```}`<br>`}` |
 
 6.2 异常响应示例
 
@@ -379,36 +320,4 @@ title: "API文档"
 
 |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4 | `{`<br>`"status"``: 100,`<br>`"message"``:``"参数中必须包含起止时间"`<br>`}` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3 业务请求参数
-
-4.响应参数
-
-4.1 公共响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1 正常响应示例
-
-6.2 异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
+|  | `{`<br>`"status"``: 100,`<br>`"message"``:``"参数中必须包含起止时间"`<br>`}` |

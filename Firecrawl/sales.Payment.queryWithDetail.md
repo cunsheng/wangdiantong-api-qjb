@@ -2,113 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=sales.Payment.queryWithDetail"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-订单类
-
-销售出库单查询
-
-物流同步状态回传
-
-原始单推送
-
-订单查询
-
-待同步列表查询
-
-重量回传
-
-重量回传2
-
-发票信息查询
-
-发票信息更新
-
-平台账单查询
-
-平台账单推送
-
-取消当前同步
-
-库存同步失败
-
-库存同步成功
-
-获取自有平台货品需要同步信息
-
-历史销售出库单查询
-
-历史订单查询
-
-平台对账单查询
-
-原始单查询
-
-被合并订单查询
-
-收付款单查询
-
-重量回传3
-
-库存同步计算查询
-
-重量回传4
-
-订单客服备注修改
-
-物流单查询
-
-历史原始单查询
-
-JIT退货单查询
-
-原始单推送2
-
-销售出库实际出库明细查询
-
-销售收付单查询
-
-已完成订单推送
-
-已取消出库单查询
-
-订单日志查询
-
-订单标签查询
-
-订单转异常订单
-
-库存同步计算查询（批量）
-
-订单查询（仅返回自有平台、线下平台订单信息）
-
-历史原始单查询（仅返回自有平台、线下平台订单）
-
-历史订单查询（仅返回自有平台、线下平台订单）
-
-原始单查询（仅返回自有平台、线下平台订单）
-
-当前位置： API文档 > 订单类
-
 ### **sales.Payment.queryWithDetail（销售收付单查询）**
-
-### **¥标准**
 
 **1.接口说明**
 
@@ -132,13 +26,6 @@ JIT退货单查询
 | **2.1 举例说明：** |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -236,10 +123,10 @@ JIT退货单查询
 | --- | --- |
 | Json格式请求报文 | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6 | `[`<br>```{`<br>```"start_time"``:``"2022-12-01 00:00:00"``,`<br>```"end_time"``:``"2022-12-28 17:59:59"`<br>```}`<br>`]` | |
+|  | `[`<br>```{`<br>```"start_time"``:``"2022-12-01 00:00:00"``,`<br>```"end_time"``:``"2022-12-28 17:59:59"`<br>```}`<br>`]` | |
 | PHP | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19 | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>`$parMap``=``new``stdClass();`<br>``<br>`$parMap``->start_time =``'2022-12-01 00:00:00'``;`<br>`$parMap``->end_time =``'2022-12-28 17:59:59'``;`<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>``<br>`try``{`<br>```$data``=``$client``->pageCall(``"sales.Payment.queryWithDetail"``,``$pager``,``$parMap``);`<br>`}``catch``(WdtErpException``$e``)`<br>`{`<br>```echo``$e``->getMessage();`<br>`}`<br>`?>` | |
+|  | `<?php`<br>`include``'wdtsdk.php'``;`<br>``<br>`$client``=``new``WdtErpClient(``"url"``,``"wdtapi3"``,``"appkey"``,``"secret"``);`<br>`$parMap``=``new``stdClass();`<br>``<br>`$parMap``->start_time =``'2022-12-01 00:00:00'``;`<br>`$parMap``->end_time =``'2022-12-28 17:59:59'``;`<br>``<br>`$pager``=``new``Pager(2, 0, true);`<br>``<br>`try``{`<br>```$data``=``$client``->pageCall(``"sales.Payment.queryWithDetail"``,``$pager``,``$parMap``);`<br>`}``catch``(WdtErpException``$e``)`<br>`{`<br>```echo``$e``->getMessage();`<br>`}`<br>`?>` | |
 
 **6.响应示** **例**
 
@@ -249,7 +136,7 @@ JIT退货单查询
 | --- | --- |
 | JSON | |     |     |
 | --- | --- |
-| 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39 | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 25,`<br>```"payment_list"``: [`<br>```{`<br>```"operator_id"``: 149,`<br>```"remark"``:``"手工建单,立即收款199.0000元"``,`<br>```"pay_account"``:``""``,`<br>```"account_bank"``:``""``,`<br>```"checker_id"``: 149,`<br>```"sales_order_no"``:``"AT202212120003-9"``,`<br>```"verify_amount"``: 199.0000,`<br>```"payment_id"``: 14412,`<br>```"sales_order_id"``: 0,`<br>```"error_type"``: 0,`<br>```"account_name"``:``"现金-A"``,`<br>```"refund_amount"``: 0.0000,`<br>```"order_type"``: 2,`<br>```"is_refund"``:``false``,`<br>```"shop_no"``:``"00212"``,`<br>```"checker_name"``:``"gwc"``,`<br>```"refund_type"``: 0,`<br>```"created"``:``"2022-12-28 16:40:58"``,`<br>```"version_id"``: 0,`<br>```"pay_time"``:``"2022-12-28 16:40:58"``,`<br>```"shop_id"``: 57,`<br>```"real_amount"``: 199.0000,`<br>```"buyer_nick"``:``"xi9"``,`<br>```"operator_name"``:``"gwc"``,`<br>```"account_id"``: 1,`<br>```"payment_no"``:``"SF2022122800014"``,`<br>```"receive_amount"``: 199.0000,`<br>```"raw_nos"``:``""``,`<br>```"status"``: 40`<br>```}`<br>```]`<br>```}`<br>`}` | |
+|  | `{`<br>```"status"``: 0,`<br>```"data"``: {`<br>```"total_count"``: 25,`<br>```"payment_list"``: [`<br>```{`<br>```"operator_id"``: 149,`<br>```"remark"``:``"手工建单,立即收款199.0000元"``,`<br>```"pay_account"``:``""``,`<br>```"account_bank"``:``""``,`<br>```"checker_id"``: 149,`<br>```"sales_order_no"``:``"AT202212120003-9"``,`<br>```"verify_amount"``: 199.0000,`<br>```"payment_id"``: 14412,`<br>```"sales_order_id"``: 0,`<br>```"error_type"``: 0,`<br>```"account_name"``:``"现金-A"``,`<br>```"refund_amount"``: 0.0000,`<br>```"order_type"``: 2,`<br>```"is_refund"``:``false``,`<br>```"shop_no"``:``"00212"``,`<br>```"checker_name"``:``"gwc"``,`<br>```"refund_type"``: 0,`<br>```"created"``:``"2022-12-28 16:40:58"``,`<br>```"version_id"``: 0,`<br>```"pay_time"``:``"2022-12-28 16:40:58"``,`<br>```"shop_id"``: 57,`<br>```"real_amount"``: 199.0000,`<br>```"buyer_nick"``:``"xi9"``,`<br>```"operator_name"``:``"gwc"``,`<br>```"account_id"``: 1,`<br>```"payment_no"``:``"SF2022122800014"``,`<br>```"receive_amount"``: 199.0000,`<br>```"raw_nos"``:``""``,`<br>```"status"``: 40`<br>```}`<br>```]`<br>```}`<br>`}` | |
 
 6.2 异常响应示例
 
@@ -258,11 +145,3 @@ JIT退货单查询
 | JSON | |     |     |
 | --- | --- |
 | 1 | `{``"status"``:100,``"message"``:``"您的查询时间过宽,查询时间不能大于30天"``}` | |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1

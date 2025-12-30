@@ -2,83 +2,7 @@
 url: "https://open.wangdian.cn/qjb/open/apidoc/doc?path=wms.stockin.Purchase.queryWithDetail"
 title: "API文档"
 ---
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_profile.png?v=49b3bbcb)个人资料
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_password.png?v=e9e3a6f7)修改密码
-
-
-![](https://open.wangdian.cn/assets/open_res/icon_normal_exit.png?v=4b481af7)退出
-
-
-[慧策开放平台-旗舰版](https://open.wangdian.cn/open)
-
-[首页](https://open.wangdian.cn/qjb/open/welcome) [自助对接](https://open.wangdian.cn/qjb/open/abut) [API文档](https://open.wangdian.cn/qjb/open/apidoc) [文档中心](https://open.wangdian.cn/qjb/open/guide?path=qjbguide_kfzn) [支持中心](https://open.wangdian.cn/qjb/open/support?path=%E6%89%80%E6%9C%89%E9%97%AE%E9%A2%98) [平台公告](https://open.wangdian.cn/qjb/open/notice?path=%E6%89%80%E6%9C%89%E5%85%AC%E5%91%8A)
-
-登录 [注册](https://open.wangdian.cn/qjb/open/user/register)
-
-所有接口
-
-采购类
-
-供应商货品查询
-
-采购退货单及明细查询
-
-采购退货单取消
-
-采购退货单新建
-
-采购入库单推送
-
-采购单及明细查询
-
-采购单新建
-
-采购结算单查询
-
-采购入库单查询
-
-采购退货出库单查询
-
-采购入库单取消
-
-采购单取消
-
-采购单停止等待
-
-采购退货单停止等待
-
-供应商货品推送
-
-采购退货出库单创建
-
-采购单标记更新
-
-采购申请单创建
-
-采购申请单查询
-
-采购退货批量取消
-
-创建采购结算单
-
-采购单取消（新）
-
-采购申请单取消
-
-采购申请单停止引用
-
-预约入库单查询
-
-创建采购退货结算单
-
-当前位置： API文档 > 采购类
-
 **wms.stockin.Purchase.queryWithDetail** **（采购入库单查询）**
-
-**[查看收费规则](https://open.wangdian.cn/open/guide?path=guide_fwfgz "查看收费规则")****¥标准**
 
 **1.接口说明**
 
@@ -97,13 +21,6 @@ title: "API文档"
 | **2.1** **举例说明：**财务系统、SAP、线下ERP、数据分析等系统的对接 |
 
 **3.请求参数说明**
-
-3.1 请求地址
-
-| 环境 | HTTP地址 |
-| --- | --- |
-| 测试环境 | http://47.92.239.46/openapi |
-| 正式环境 | http://wdt.wangdian.cn/openapi |
 
 3.2 公共请求参数
 
@@ -247,7 +164,6 @@ $paraMap = new stdClass();
 $paraMap->start_time =   "2024-04-20 00:00:00";
 $paraMap->end_time =   "2024-04-222 00:00:00";
 
-
 $pager = new Pager(1, 0, true);
 $response =   $client->pageCall("wms.stockin.Purchase.queryWithDetail",$pager, $paraMap);
 
@@ -275,33 +191,3 @@ $response =   $client->pageCall("wms.stockin.Purchase.queryWithDetail",$page
 |     |     |
 | --- | --- |
 | json | ```<br>{<br>    "code": 2102,<br>    "message": "start_time和end_time为空或不是有效的时间格式[0000-00-00 00:00:00] "<br>}<br>``` |
-
-常用工具
-
-[SDK下载](https://open.wangdian.cn/open/guide?path=guide_sdk_qjb)
-
-1.接口说明
-
-2.调用场景
-
-3.请求参数说明
-
-3.1 请求地址
-
-3.2 公共请求参数
-
-3.3业务请求参数
-
-4.响应参数
-
-5.请求示例
-
-6.响应示例
-
-6.1正常响应示例
-
-6.2异常响应示例
-
-常用工具
-
-北京掌上先机网络科技有限公司 版权所有 京ICP备13053703号-1
