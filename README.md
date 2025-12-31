@@ -1,5 +1,7 @@
 # 旺店通 (Wangdiantong) API 文档索引项目
 
+> **Context7 文档索引**: [https://context7.com/cunsheng/wangdiantong-api-qjb](https://context7.com/cunsheng/wangdiantong-api-qjb)
+
 ## 项目背景
 
 本项目旨在构建一个专门针对**旺店通旗舰版 API** 的文档索引库。
@@ -54,6 +56,9 @@ python clean_firecrawl_md.py
 *   删除冗余的“请求地址”板块（通常这部分信息在 Context7 索引中属于噪音）。
 
 ### 4. 接入 Context7
+
+本项目已发布至 Context7，可直接访问以下链接获取结构化的 API 文档索引：
+[https://context7.com/cunsheng/wangdiantong-api-qjb](https://context7.com/cunsheng/wangdiantong-api-qjb)
 
 处理完成后的 `Firecrawl/` 目录中的 Markdown 文件即可作为 Context7 的知识库源文件进行索引。
 
